@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_OqI-hO7ZEe-ivPLsWtwVVQ" externalChecksum="7824986:1438690353:77407123">
+  <languageCode>fr_FR</languageCode>
+  <ruleset vocabularyUpdateStamp="_M5Sr8O7ZEe-ivPLsWtwVVQ" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+    <rule/>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="SectionCovrA.selected = covrA.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.selected = covrA.selected" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covrA.selected">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SectionCovrA.selected">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="SectionCovrA.selected" rhs="covrA.selected"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="SectionCovrA.applied = covrA.selected and not covrA.excluded">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.applied = covrA.selected and not covrA.excluded" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covrA.excluded">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SectionCovrA.applied">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covrA.selected">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="SectionCovrA.applied" rhs="covrA.selected and not covrA.excluded"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Dwellings.construction.homeType = 'Tenant' or &#xD;&#xA; Dwellings.construction.homeType = 'Mobile' or &#xD;&#xA; Dwellings.construction.homeType = 'Condo') = SectionCovrA.excluded">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Dwellings.construction.homeType = 'Tenant' or Dwellings.construction.homeType = 'Mobile' or Dwellings.construction.homeType = 'Condo' ) = SectionCovrA.excluded" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SectionCovrA.excluded">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="Dwellings.construction.homeType">
+                <parentTerm text="construction" datatype="Construction" termtype="ENTITY" fulltext="Dwellings.construction" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(Dwellings.construction.homeType = 'Tenant' or &#xD;&#xA; Dwellings.construction.homeType = 'Mobile' or &#xD;&#xA; Dwellings.construction.homeType = 'Condo')" rhs="SectionCovrA.excluded"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="SectionCovrA.amountOfInsurance = covrA.amountOfInsurance*Dwellings.rates.rateValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.amountOfInsurance = covrA.amountOfInsurance * Dwellings.rates.rateValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="SectionCovrA.amountOfInsurance">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covrA.amountOfInsurance">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.1">
+      <opaqueExpression expression="covrA.coverageCode='CoverageA'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="covrA.coverageCode = 'CoverageA'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="covrA.coverageCode">
+              <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.3">
+      <opaqueExpression expression="SectionCovrA.coverageCode='Section1CoverageA'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.coverageCode = 'Section1CoverageA'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="SectionCovrA.coverageCode">
+              <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0">
+      <opaqueExpression expression="Dwellings.rates.rateCode='InflationRate'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Dwellings.rates.rateCode = 'InflationRate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="Dwellings.rates.rateCode">
+              <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.1">
+      <opaqueExpression expression="covrA.amountOfInsurance&lt;>0">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="covrA.amountOfInsurance &lt;> 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covrA.amountOfInsurance">
+              <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Calcule de la TIV GarantieA - Batiment : {SectionCovrA.amountOfInsurance}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calcule de la TIV GarantieA - Batiment :  + SectionCovrA.amountOfInsurance" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="SectionCovrA.amountOfInsurance">
+              <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../../../InsuranceResidentialProcess.ecore#//Dwellings" ruleStatements="#//@ruleset/@ruleStatements.0" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2 #//@ruleset/@filters.3">
+      <extension association="true" entity="../../../InsuranceResidentialProcess.ecore#//Rates" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/rates" filters="#//@ruleset/@filters.2">
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
+      </extension>
+      <extension explicit="true" association="true" entity="../../../InsuranceResidentialProcess.ecore#//Coverages" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/coverages" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.3">
+        <alias value="covrA"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/coverageCode"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/excluded"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/selected"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/amountOfInsurance"/>
+      </extension>
+      <extension association="true" entity="../../../InsuranceResidentialProcess.ecore#//Construction" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/construction">
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Construction/homeType"/>
+      </extension>
+      <extension explicit="true" association="true" entity="../../../InsuranceResidentialProcess.ecore#//Coverages" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/coverages" filters="#//@ruleset/@filters.1">
+        <alias value="SectionCovrA"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/coverageCode"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/excluded"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/selected"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/applied"/>
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/amountOfInsurance"/>
+      </extension>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="32" sashWeightConditionsIf="38">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="SectionCovrA.amountOfInsurance">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.amountOfInsurance" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="SectionCovrA.amountOfInsurance">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="covrA.coverageCode='CoverageA'" filter="#//@ruleset/@filters.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="SectionCovrA.coverageCode='Section1CoverageA'" filter="#//@ruleset/@filters.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="Dwellings.rates.rateCode='InflationRate'" filter="#//@ruleset/@filters.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="covrA.amountOfInsurance&lt;>0" filter="#//@ruleset/@filters.3"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="Dwellings.rates.rateCode='InflationRate'" filter="#//@ruleset/@filters.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="covrA.coverageCode='CoverageA'" filter="#//@ruleset/@filters.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="covrA.amountOfInsurance&lt;>0" filter="#//@ruleset/@filters.3"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.3"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.2">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.0"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.3">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="SectionCovrA.coverageCode='Section1CoverageA'" filter="#//@ruleset/@filters.1"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.3/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.3/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.3/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.3/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.3/@referencedAttributes.4"/>
+          </children>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="49">
+      <filterItemList filter="#//@ruleset/@filters.0">
+        <expressionCell external="covrA.coverageCode='CoverageA'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="covrA.coverageCode = 'CoverageA'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="covrA.coverageCode">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.1">
+        <expressionCell external="SectionCovrA.coverageCode='Section1CoverageA'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.coverageCode = 'Section1CoverageA'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="SectionCovrA.coverageCode">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.2">
+        <expressionCell external="Dwellings.rates.rateCode='InflationRate'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Dwellings.rates.rateCode = 'InflationRate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="Dwellings.rates.rateCode">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Dwellings.rates">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.3">
+        <expressionCell external="covrA.amountOfInsurance&lt;>0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="covrA.amountOfInsurance &lt;> 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covrA.amountOfInsurance">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+    </filterSection>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Calcule de la TIV GarantieA - Batiment : {SectionCovrA.amountOfInsurance}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calcule de la TIV GarantieA - Batiment :  + SectionCovrA.amountOfInsurance" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="SectionCovrA.amountOfInsurance">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="SectionCovrA.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.selected" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SectionCovrA.selected">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="SectionCovrA.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SectionCovrA.applied">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="102">
+        <valueSetCell/>
+        <expressionCell external="(Dwellings.construction.homeType = 'Tenant' or &#xD;&#xA; Dwellings.construction.homeType = 'Mobile' or &#xD;&#xA; Dwellings.construction.homeType = 'Condo')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Dwellings.construction.homeType = 'Tenant' or Dwellings.construction.homeType = 'Mobile' or Dwellings.construction.homeType = 'Condo' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="Dwellings.construction.homeType">
+                <parentTerm text="construction" datatype="Construction" termtype="ENTITY" fulltext="Dwellings.construction">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0"/>
+      <ruleColumnList ruleId="1" columnWidth="414" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="covrA.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.selected = covrA.selected" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covrA.selected">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SectionCovrA.selected">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="covrA.selected and not covrA.excluded">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.applied = covrA.selected and not covrA.excluded" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covrA.excluded">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SectionCovrA.applied">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covrA.selected">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="SectionCovrA.excluded">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Dwellings.construction.homeType = 'Tenant' or Dwellings.construction.homeType = 'Mobile' or Dwellings.construction.homeType = 'Condo' ) = SectionCovrA.excluded" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SectionCovrA.excluded">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA" variable="#//@ruleset/@logicalVariables.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="Dwellings.construction.homeType">
+                <parentTerm text="construction" datatype="Construction" termtype="ENTITY" fulltext="Dwellings.construction">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="covrA.amountOfInsurance*Dwellings.rates.rateValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SectionCovrA.amountOfInsurance = covrA.amountOfInsurance * Dwellings.rates.rateValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="SectionCovrA.amountOfInsurance">
+                <parentTerm text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SectionCovrA" datatype="Coverages" termtype="ENTITY" fulltext="SectionCovrA">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings"/>
+              </terms>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Dwellings.rates">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings"/>
+                </parentTerm>
+              </terms>
+              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covrA.amountOfInsurance">
+                <parentTerm text="covrA" datatype="Coverages" termtype="ENTITY" fulltext="covrA">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>
