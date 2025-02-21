@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_ka0Nwu-jEe--wrrJkG-W4Q" externalChecksum="7824986:1438690353:796423576">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_yaR80u-kEe--wrrJkG-W4Q" externalChecksum="7824986:1438690353:796423576">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_juc3AO-jEe--wrrJkG-W4Q" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+  <ruleset vocabularyUpdateStamp="_aiclAO-kEe--wrrJkG-W4Q" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
     <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
       <action>
         <opaqueExpression expression="rate.rateValue = AttributeOperators.getProtectionFireTaux(Dwellings.lobSubCode, Dwellings.riskAddress.province, pro.fireProtection)">
@@ -77,7 +77,7 @@
       <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/lobSubCode"/>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="51" sashWeightConditionsIf="36">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="33" sashWeightConditionsIf="36">
     <actionSection rowCount="50" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell/>
@@ -150,7 +150,7 @@
     </ruleStatementSection>
     <conditionSection rowCount="50" columnWidthFactor="0.5"/>
     <ruleSection columnCount="20">
-      <ruleColumnList ruleId="0" columnWidth="481" pRule="#//@ruleset/@rules.0">
+      <ruleColumnList ruleId="0" columnWidth="456" pRule="#//@ruleset/@rules.0">
         <actionValueSetCellList valueSet="AttributeOperators.getProtectionFireTaux(Dwellings.lobSubCode, Dwellings.riskAddress.province, pro.fireProtection)">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateValue = AttributeOperators.getProtectionFireTaux ( Dwellings.lobSubCode , Dwellings.riskAddress.province , pro.fireProtection )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
