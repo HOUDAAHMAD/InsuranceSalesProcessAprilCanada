@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_h-RUwfLCEe--PP6p7Wcavg" externalChecksum="7824986:1438690353">
-  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_6T3G8fK_Ee--PP6p7Wcavg" externalChecksum="7824986:1438690353">
-    <testsheet ruleActivityUpdateStamp="_4eikEfK_Ee--PP6p7Wcavg" ruleActivity="rule.ers#//@ruleset" locale="">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_cJcgg_LLEe--PP6p7Wcavg" externalChecksum="7824986:1438690353">
+    <testsheet ruleActivityUpdateStamp="_3-c_s_LIEe--PP6p7Wcavg" ruleActivity="rule.ers#//@ruleset" locale="">
       <input/>
       <output/>
       <expectedOutput/>
@@ -30,6 +30,10 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="InsuranceResidentialProcess.ecore#//Construction/numberOfUnits"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="InsuranceResidentialProcess.ecore#//Construction/wiring"/>
           </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="InsuranceResidentialProcess.ecore#//Dwellings/rates" eClass="InsuranceResidentialProcess.ecore#//Rates">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="tact" eAttribute="InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2.000000" eAttribute="InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
+          </children>
         </children>
       </inputRoot>
       <outputRoot newOrModified="true">
@@ -37,7 +41,11 @@
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="InsuranceResidentialProcess.ecore#//Dwellings/rootForm"/>
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="InsuranceResidentialProcess.ecore#//Dwellings/insurer1517"/>
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="InsuranceResidentialProcess.ecore#//Dwellings/lobSubCode"/>
-          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" eReference="InsuranceResidentialProcess.ecore#//Dwellings/rates" eClass="InsuranceResidentialProcess.ecore#//Rates">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="InsuranceResidentialProcess.ecore#//Dwellings/rates" eClass="InsuranceResidentialProcess.ecore#//Rates">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2.000000" eAttribute="InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="tact" eAttribute="InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" newOrModified="true" eReference="InsuranceResidentialProcess.ecore#//Dwellings/rates" eClass="InsuranceResidentialProcess.ecore#//Rates">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.600000" eAttribute="InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="Total" eAttribute="InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
           </children>
