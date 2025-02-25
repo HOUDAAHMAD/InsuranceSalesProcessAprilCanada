@@ -1,77 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_csiXMPKHEe-1u8XmDcE5EA" externalChecksum="7824986:1438690353:796423576">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_DYZQA_NkEe-MHfUfumEEEQ" externalChecksum="7824986:1438690353:839409246">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_d5mxAfBHEe--wrrJkG-W4Q" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
-    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-      <action>
-        <opaqueExpression expression="rate.rateValue = AttributeOperators.getInflationRateTable(PolicyDetail.policyStatus)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateValue = AttributeOperators.getInflationRateTable ( PolicyDetail.policyStatus )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+  <ruleset vocabularyUpdateStamp="_m6cXwPNaEe-MHfUfumEEEQ" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+    <rule/>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Request.policyDetail.policyStatus = 'NewBusiness'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.policyDetail.policyStatus = 'NewBusiness'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Request.policyDetail.policyStatus" rhs="'NewBusiness'"/>
+      </condition>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="Request.dwellings.rates.rateValue = 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateValue = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rate.rateValue">
-                <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.1/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.1/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.1"/>
-              </terms>
-              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="PolicyDetail.policyStatus">
-                <parentTerm text="PolicyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="PolicyDetail" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
               </terms>
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
       </action>
     </rule>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.1 #//@ruleset/@logicalVariables.1/@extension.0">
-      <opaqueExpression expression="rate.rateCode='InflationRate'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateCode = 'InflationRate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+    <rule>
+      <condition>
+        <opaqueExpression expression="Request.policyDetail.policyStatus = 'Renewal'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.policyDetail.policyStatus = 'Renewal'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Request.policyDetail.policyStatus" rhs="'Renewal'"/>
+      </condition>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="Request.dwellings.rates.rateValue = 1.25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateValue = 1.25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Request.policyDetail.policyStatus = 'Endorsment'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.policyDetail.policyStatus = 'Endorsment'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Request.policyDetail.policyStatus" rhs="'Endorsment'"/>
+      </condition>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="Request.dwellings.rates.rateValue = 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateValue = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Request.policyDetail.policyStatus = 'Cancellation'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.policyDetail.policyStatus = 'Cancellation'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Request.policyDetail.policyStatus" rhs="'Cancellation'"/>
+      </condition>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="Request.dwellings.rates.rateValue = 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateValue = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <opaqueExpression expression="Request.dwellings.rates.rateCode='InflationRate'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateCode = 'InflationRate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
           <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="rate.rateCode">
-              <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.1/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.1"/>
+            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateCode">
+              <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
               </parentTerm>
             </terms>
           </referencedTermList>
         </parserOutput>
       </opaqueExpression>
     </filter>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0" logicalVariable="#//@ruleset/@logicalVariables.1">
-      <text expression="Calcul des taux par garanties pour {rate.rateCode}. Garantie A">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calcul des taux par garanties pour  + rate.rateCode + . Garantie A" expressiontype="BRSTATEMENT">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0 #//@ruleset/@rules.2/@actions.0 #//@ruleset/@rules.3/@actions.0 #//@ruleset/@rules.4/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Garantie A :  Pour le rateCode InfaltionRate le rateValue = {Request.dwellings.rates.rateValue} sachant que le policyStatus = {Request.policyDetail.policyStatus}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Garantie A :  Pour le rateCode InfaltionRate le rateValue =  + Request_dwellings_rates.rateValue +  sachant que le policyStatus =  + Request_policyDetail.policyStatus + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="rate.rateCode">
-              <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.1/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.1"/>
+            <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+              <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+            <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+              <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
               </parentTerm>
             </terms>
           </referencedTermList>
         </parserOutput>
       </text>
     </ruleStatement>
-    <logicalVariable entity="../../../InsuranceResidentialProcess.ecore#//PolicyDetail">
-      <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyStatus"/>
-    </logicalVariable>
-    <logicalVariable entity="../../../InsuranceResidentialProcess.ecore#//Dwellings" ruleStatements="#//@ruleset/@ruleStatements.0" filters="#//@ruleset/@filters.0">
-      <extension explicit="true" association="true" entity="../../../InsuranceResidentialProcess.ecore#//Rates" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/rates" filters="#//@ruleset/@filters.0">
-        <alias value="rate"/>
-        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
-        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
+    <logicalVariable entity="../../../InsuranceResidentialProcess.ecore#//Request" ruleStatements="#//@ruleset/@ruleStatements.0" filters="#//@ruleset/@filters.0">
+      <extension association="true" entity="../../../InsuranceResidentialProcess.ecore#//Dwellings" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Request/dwellings" filters="#//@ruleset/@filters.0">
+        <extension association="true" entity="../../../InsuranceResidentialProcess.ecore#//Rates" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/rates" filters="#//@ruleset/@filters.0">
+          <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
+          <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
+        </extension>
+      </extension>
+      <extension association="true" entity="../../../InsuranceResidentialProcess.ecore#//PolicyDetail" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Request/policyDetail">
+        <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyStatus"/>
       </extension>
     </logicalVariable>
   </ruleset>
   <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="26" sashWeightConditionsIf="30">
-    <actionSection rowCount="50" columnWidthFactor="0.5">
+    <actionSection rowCount="49" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell/>
-        <expressionCell external="rate.rateValue">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateValue" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="Request.dwellings.rates.rateValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateValue" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rate.rateValue">
-                <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.1/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -82,30 +224,37 @@
     <scopeSection>
       <rootNode>
         <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
-        </children>
-        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.1">
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="rate.rateCode='InflationRate'" filter="#//@ruleset/@filters.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="Request.dwellings.rates.rateCode='InflationRate'" filter="#//@ruleset/@filters.0"/>
           </children>
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.1/@extension.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="rate.rateCode='InflationRate'" filter="#//@ruleset/@filters.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="Request.dwellings.rates.rateCode='InflationRate'" filter="#//@ruleset/@filters.0"/>
             </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@extension.0/@referencedAttributes.0"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="Request.dwellings.rates.rateCode='InflationRate'" filter="#//@ruleset/@filters.0"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+            </children>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.0"/>
           </children>
         </children>
       </rootNode>
     </scopeSection>
-    <filterSection rowCount="49">
+    <filterSection rowCount="48">
       <filterItemList filter="#//@ruleset/@filters.0">
-        <expressionCell external="rate.rateCode='InflationRate'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateCode = 'InflationRate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="Request.dwellings.rates.rateCode='InflationRate'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateCode = 'InflationRate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="rate.rateCode">
-                <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.1/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateCode">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -115,13 +264,20 @@
     </filterSection>
     <ruleStatementSection rowCount="49" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
-        <reference external="0"/>
-        <text external="Calcul des taux par garanties pour {rate.rateCode}. Garantie A">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calcul des taux par garanties pour  + rate.rateCode + . Garantie A" expressiontype="BRSTATEMENT">
+        <reference external="A"/>
+        <text external="Garantie A :  Pour le rateCode InfaltionRate le rateValue = {Request.dwellings.rates.rateValue} sachant que le policyStatus = {Request.policyDetail.policyStatus}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Garantie A :  Pour le rateCode InfaltionRate le rateValue =  + Request_dwellings_rates.rateValue +  sachant que le policyStatus =  + Request_policyDetail.policyStatus + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="rate.rateCode">
-                <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.1/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -129,24 +285,151 @@
         </text>
       </ruleStatementItemList>
     </ruleStatementSection>
-    <conditionSection rowCount="50" columnWidthFactor="0.5"/>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="Request.policyDetail.policyStatus">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.policyDetail.policyStatus" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
     <ruleSection columnCount="20">
-      <ruleColumnList ruleId="0" columnWidth="764" pRule="#//@ruleset/@rules.0">
-        <actionValueSetCellList valueSet="AttributeOperators.getInflationRateTable(PolicyDetail.policyStatus)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateValue = AttributeOperators.getInflationRateTable ( PolicyDetail.policyStatus )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+      <ruleColumnList ruleId="0" columnWidth="236" pRule="#//@ruleset/@rules.0"/>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="'NewBusiness'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.policyDetail.policyStatus = 'NewBusiness'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateValue = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rate.rateValue">
-                <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings"/>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings"/>
+              <terms text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
               </terms>
-              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="PolicyDetail.policyStatus">
-                <parentTerm text="PolicyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="PolicyDetail"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="'Renewal'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.policyDetail.policyStatus = 'Renewal'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="1.25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateValue = 1.25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="'Endorsment'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.policyDetail.policyStatus = 'Endorsment'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateValue = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="'Cancellation'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.policyDetail.policyStatus = 'Cancellation'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="Request.policyDetail.policyStatus">
+                <parentTerm text="policyDetail" datatype="PolicyDetail" termtype="ENTITY" fulltext="Request.policyDetail">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.rates.rateValue = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.rates.rateValue">
+                <parentTerm text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="rates" datatype="Rates" termtype="ENTITY" fulltext="Request.dwellings.rates">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
               </terms>
             </referencedTermList>
           </parserOutput>
