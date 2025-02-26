@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_qd6fuvQ4Ee-XfdvuuGXHNA" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="rateFireProtection1-Protected.ers#/ rateFireProtection2-SemiProtected.ers#/ rateFireProtection3-NonProtected.ers#/">
-  <ruleflow majorVersion="1" vocabularyUpdateStamp="_7Vi2AfQ2Ee-XfdvuuGXHNA" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="FireProtection" order="1" ruleActivityUpdateStamp="_qd6fuPQ4Ee-XfdvuuGXHNA" invokes="#//@ruleflow/@flowControlList.0">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_pXVTQvRSEe-XfdvuuGXHNA" externalChecksum="7824986:1438690353:839409246" rulesheetAssets="rateFireProtection1-Protected.ers#/ rateFireProtection2-SemiProtected.ers#/ rateFireProtection3-NonProtected.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_kOhGsPRPEe-XfdvuuGXHNA" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="FireProtection" order="1" ruleActivityUpdateStamp="_pXRB0_RSEe-XfdvuuGXHNA" invokes="#//@ruleflow/@flowControlList.0">
       <condition expression="BuildingProtection.fireProtection">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="BuildingProtection.fireProtection" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
           <referencedTermList>
@@ -12,32 +12,32 @@
         </parserOutput>
       </condition>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection2-SemiProtected" order="2" ruleActivityUpdateStamp="_3k8BQ_QtEe-XfdvuuGXHNA" invokes="rateFireProtection2-SemiProtected.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection2-SemiProtected" order="2" ruleActivityUpdateStamp="_72rgQ_ROEe-XfdvuuGXHNA" invokes="rateFireProtection2-SemiProtected.ers#//@ruleset"/>
         <label expression="'2-SemiProtected'"/>
         <viewExpressions lhs="BuildingProtection.fireProtection" rhs="'2-SemiProtected'"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection1-Protected" order="3" ruleActivityUpdateStamp="_xNZ3c_QtEe-XfdvuuGXHNA" invokes="rateFireProtection1-Protected.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection1-Protected" order="3" ruleActivityUpdateStamp="_3I2fM_ROEe-XfdvuuGXHNA" invokes="rateFireProtection1-Protected.ers#//@ruleset"/>
         <label expression="'1-Protected'"/>
         <viewExpressions lhs="BuildingProtection.fireProtection" rhs="'1-Protected'"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection3-NonProtected" order="4" ruleActivityUpdateStamp="_z4MCs_QtEe-XfdvuuGXHNA" invokes="rateFireProtection3-NonProtected.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection3-NonProtected" order="4" ruleActivityUpdateStamp="_9f0BQ_ROEe-XfdvuuGXHNA" invokes="rateFireProtection3-NonProtected.ers#//@ruleset"/>
         <label expression="'3-NonProtected'"/>
         <viewExpressions lhs="BuildingProtection.fireProtection" rhs="'3-NonProtected'"/>
       </branches>
     </flowControlList>
   </ruleflow>
   <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
-    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="408" y="138" width="360" height="296" activityNode="#//@ruleflow/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@flowControlList.0">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="426" y="138" width="360" height="296" activityNode="#//@ruleflow/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@flowControlList.0">
       <annotations name="Color" value="16777088"/>
-      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="71" y="13" width="247" height="55" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.1/@nextStep.0">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="49" y="12" width="253" height="55" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.1/@nextStep.0">
         <annotations name="Color" value="8454143"/>
       </flowShapeList>
-      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="62" y="97" width="256" height="61" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="49" y="96" width="256" height="61" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
         <annotations name="Color" value="8454143"/>
       </flowShapeList>
-      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="65" y="187" width="253" height="61" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.2" activityNode="#//@ruleflow/@flowControlList.0/@branches.2/@nextStep.0">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="55" y="186" width="253" height="61" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.2" activityNode="#//@ruleflow/@flowControlList.0/@branches.2/@nextStep.0">
         <annotations name="Color" value="8454143"/>
       </flowShapeList>
       <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.1" branch="#//@ruleflow/@flowControlList.0/@branches.0"/>
