@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_nHcvlPQ3Ee-XfdvuuGXHNA" externalChecksum="7824986:1438690353:839409246" rulesheetAssets="UndwerwritingFormVariablesLobSubCode/VarLobSubCode/UndwerwritingFormVariablesLobSubCode.ers#/" ruleflowAssets="TIVRate/RateFireProtection/rateFireProtection.erf#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_7Vi2AfQ2Ee-XfdvuuGXHNA" vocabulary="../InsuranceResidentialProcess.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="UndwerwritingFormVariablesLobSubCode" order="1" ruleActivityUpdateStamp="_FpvhMPNcEe-MHfUfumEEEQ" nextStep="#//@ruleflow/@flowControlList.1" invokes="UndwerwritingFormVariablesLobSubCode/VarLobSubCode/UndwerwritingFormVariablesLobSubCode.ers#//@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection" order="2" ruleActivityUpdateStamp="_7ZKKsfQ2Ee-XfdvuuGXHNA" invokes="TIVRate/RateFireProtection/rateFireProtection.erf#//@ruleflow"/>
+  </ruleflow>
+  <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="235" y="132" width="342" height="61" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0">
+      <annotations name="Color" value="8454143"/>
+    </flowShapeList>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="258" y="283" width="325" height="60" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.1">
+      <annotations name="Color" value="8454016"/>
+    </flowShapeList>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.0" targetShape="#//@ruleflowViewList.0/@flowShapeList.1"/>
+  </ruleflowViewList>
+</com.corticon.rulesemf.assetmodel:RuleflowAsset>

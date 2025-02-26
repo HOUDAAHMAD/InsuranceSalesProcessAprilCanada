@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_m6cXwPNaEe-MHfUfumEEEQ" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_7Vi2AfQ2Ee-XfdvuuGXHNA" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T11:08:54.258+0100" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T11:09:10.369+0100" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -302,6 +302,20 @@
       <comments timestamp="2025-02-16T11:01:47.652+0100" username="ahmad.houda" text="Une politique a un détail de facturation" objects="#//PolicyDetail" type="Note"/>
       <comments timestamp="2025-02-16T11:02:20.899+0100" username="ahmad.houda" text="Une politique peut avoir plusieurs intérêts supplémentaires" objects="#//PolicyDetail" type="Note"/>
       <databaseAccess databasePropertyDisplayCount="50"/>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//fireProtection">
+        <dataTypeName manuallyCreated="true" value="fireProtection"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'1-Protected'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'2-SemiProtected'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'3-NonProtected'"/>
+        </enumerationElements>
+      </customDataTypeList>
     </contents>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Insureds">
@@ -1162,9 +1176,9 @@
         <datastoreCaching manuallyCreated="true" value="false"/>
       </contents>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fireProtection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fireProtection" eType="#//fireProtection">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.0">
           <name manuallyCreated="true" value="fireProtection"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -3018,5 +3032,10 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="fireProtection">
+    <eLiterals name="V0" literal="'1-Protected'"/>
+    <eLiterals name="V1" value="1" literal="'2-SemiProtected'"/>
+    <eLiterals name="V2" value="2" literal="'3-NonProtected'"/>
   </eClassifiers>
 </ecore:EPackage>
