@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_kOhGsPRPEe-XfdvuuGXHNA" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_y7GwgPULEe-8YOhuhRxgJQ" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T11:08:54.258+0100" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T11:09:10.369+0100" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -337,6 +337,41 @@
         </enumerationElements>
         <enumerationElements>
           <value manuallyCreated="true" value="'MB'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//numberOfUnits">
+        <dataTypeName manuallyCreated="true" value="numberOfUnits"/>
+        <baseDataType manuallyCreated="true" value="Integer"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="1"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="2"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="3"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="4"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="5"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="6"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="7"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="8"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="9"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="10"/>
         </enumerationElements>
       </customDataTypeList>
     </contents>
@@ -1144,9 +1179,9 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfUnits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfUnits" lowerBound="1" eType="#//numberOfUnits">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.2">
           <name manuallyCreated="true" value="numberOfUnits"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -3068,5 +3103,17 @@
     <eLiterals name="V3" value="3" literal="'BC'"/>
     <eLiterals name="V4" value="4" literal="'SK'"/>
     <eLiterals name="V5" value="5" literal="'MB'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="numberOfUnits">
+    <eLiterals name="V0" literal="1"/>
+    <eLiterals name="V1" value="1" literal="2"/>
+    <eLiterals name="V2" value="2" literal="3"/>
+    <eLiterals name="V3" value="3" literal="4"/>
+    <eLiterals name="V4" value="4" literal="5"/>
+    <eLiterals name="V5" value="5" literal="6"/>
+    <eLiterals name="V6" value="6" literal="7"/>
+    <eLiterals name="V7" value="7" literal="8"/>
+    <eLiterals name="V8" value="8" literal="9"/>
+    <eLiterals name="V9" value="9" literal="10"/>
   </eClassifiers>
 </ecore:EPackage>
