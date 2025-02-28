@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_y7GwgPULEe-8YOhuhRxgJQ" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_S3WI8fXjEe-FCr-LqeNxeg" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T11:08:54.258+0100" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T11:09:10.369+0100" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -337,6 +337,18 @@
         </enumerationElements>
         <enumerationElements>
           <value manuallyCreated="true" value="'MB'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'NL'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'NB'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'PEI'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'NS'"/>
         </enumerationElements>
       </customDataTypeList>
       <customDataTypeList enumerationDisplayCount="50" eDataType="#//numberOfUnits">
@@ -3096,14 +3108,6 @@
     <eLiterals name="V1" value="1" literal="'2-SemiProtected'"/>
     <eLiterals name="V2" value="2" literal="'3-NonProtected'"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="province">
-    <eLiterals name="V0" literal="'QC'"/>
-    <eLiterals name="V1" value="1" literal="'ON'"/>
-    <eLiterals name="V2" value="2" literal="'AB'"/>
-    <eLiterals name="V3" value="3" literal="'BC'"/>
-    <eLiterals name="V4" value="4" literal="'SK'"/>
-    <eLiterals name="V5" value="5" literal="'MB'"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="numberOfUnits">
     <eLiterals name="V0" literal="1"/>
     <eLiterals name="V1" value="1" literal="2"/>
@@ -3115,5 +3119,17 @@
     <eLiterals name="V7" value="7" literal="8"/>
     <eLiterals name="V8" value="8" literal="9"/>
     <eLiterals name="V9" value="9" literal="10"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="province">
+    <eLiterals name="V0" literal="'QC'"/>
+    <eLiterals name="V1" value="1" literal="'ON'"/>
+    <eLiterals name="V2" value="2" literal="'AB'"/>
+    <eLiterals name="V3" value="3" literal="'BC'"/>
+    <eLiterals name="V4" value="4" literal="'SK'"/>
+    <eLiterals name="V5" value="5" literal="'MB'"/>
+    <eLiterals name="V6" value="6" literal="'NL'"/>
+    <eLiterals name="V7" value="7" literal="'NB'"/>
+    <eLiterals name="V8" value="8" literal="'PEI'"/>
+    <eLiterals name="V9" value="9" literal="'NS'"/>
   </eClassifiers>
 </ecore:EPackage>

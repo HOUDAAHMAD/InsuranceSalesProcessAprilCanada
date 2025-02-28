@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_LYqc0fUSEe-1HacFLuPcpg" externalChecksum="7824986:1438690353:839409246" rulesheetAssets="garantieBgetExcluded.ers#/ garantieBgetApplied.ers#/">
-  <ruleflow majorVersion="1" vocabularyUpdateStamp="_y7GwgPULEe-8YOhuhRxgJQ" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="garantieBgetExcluded" order="1" ruleActivityUpdateStamp="_arb4wPUREe-1HacFLuPcpg" nextStep="#//@ruleflow/@flowControlList.1" invokes="garantieBgetExcluded.ers#//@ruleset"/>
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="garantieBgetApplied" order="2" ruleActivityUpdateStamp="__KxjovUREe-1HacFLuPcpg" invokes="garantieBgetApplied.ers#//@ruleset"/>
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Mx5FQPXxEe-FCr-LqeNxeg" externalChecksum="7824986:1438690353:839409246" rulesheetAssets="garantieBgetExcluded.ers#/ garantieBgetApplied.ers#/ garantieBDependanceAmountMissing.ers#/0 garantieBDependanceAmountNOTMissing.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_S3WI8fXjEe-FCr-LqeNxeg" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="garantieBgetExcluded" order="1" ruleActivityUpdateStamp="_WkqvQPXjEe-FCr-LqeNxeg" nextStep="#//@ruleflow/@flowControlList.1" invokes="garantieBgetExcluded.ers#//@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="garantieBgetApplied" order="2" ruleActivityUpdateStamp="_WmJyefXiEe-FCr-LqeNxeg" nextStep="#//@ruleflow/@flowControlList.2" invokes="garantieBgetApplied.ers#//@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="garantieBDependanceAmountMissing" order="3" ruleActivityUpdateStamp="_hoXsQvXuEe-FCr-LqeNxeg" nextStep="#//@ruleflow/@flowControlList.3" invokes="garantieBDependanceAmountMissing.ers#/0/@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" enabled="false" name="garantieBDependanceAmountNOTMissing" order="4" ruleActivityUpdateStamp="_bx0Ik_XuEe-FCr-LqeNxeg" invokes="garantieBDependanceAmountNOTMissing.ers#//@ruleset"/>
   </ruleflow>
   <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
-    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="96" y="45" width="241" height="36" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="96" y="45" width="301" height="36" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0">
       <annotations name="Color" value="8454143"/>
     </flowShapeList>
-    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="96" y="132" width="241" height="36" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.1">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="96" y="132" width="301" height="36" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.1" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.1">
+      <annotations name="Color" value="8454143"/>
+    </flowShapeList>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="96" y="210" width="307" height="42" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.2" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.1" activityNode="#//@ruleflow/@flowControlList.2">
+      <annotations name="Color" value="8454143"/>
+    </flowShapeList>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="96" y="288" width="307" height="42" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.2" activityNode="#//@ruleflow/@flowControlList.3">
       <annotations name="Color" value="8454143"/>
     </flowShapeList>
     <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.0" targetShape="#//@ruleflowViewList.0/@flowShapeList.1"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.1" targetShape="#//@ruleflowViewList.0/@flowShapeList.2"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.2" targetShape="#//@ruleflowViewList.0/@flowShapeList.3"/>
   </ruleflowViewList>
 </com.corticon.rulesemf.assetmodel:RuleflowAsset>

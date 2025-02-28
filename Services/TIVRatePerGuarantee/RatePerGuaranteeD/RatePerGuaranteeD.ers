@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8017" updateStamp="_Wn6mw_RSEe-XfdvuuGXHNA" externalChecksum="7824986:1438690353:839409246">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_EEHM4_XdEe-FCr-LqeNxeg" externalChecksum="7824986:1438690353:839409246">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_kOhGsPRPEe-XfdvuuGXHNA" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+  <ruleset vocabularyUpdateStamp="_Ii0pUvXcEe-FCr-LqeNxeg" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
     <rule/>
     <rule>
       <condition>
@@ -235,8 +235,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'CondowRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -248,7 +248,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -559,8 +559,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'HomeownerswRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -572,7 +572,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.2">
@@ -667,8 +667,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'HomeownerswRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -680,7 +680,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -829,8 +829,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'RentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -842,7 +842,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -991,8 +991,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'RentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1004,7 +1004,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -1099,8 +1099,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'SeasonalwShortRental'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1112,7 +1112,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -1207,8 +1207,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'SeasonalwShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1220,7 +1220,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -1423,8 +1423,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'SecondarywShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1436,7 +1436,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -1531,8 +1531,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'SecondarywShortRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1544,7 +1544,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -1639,8 +1639,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'ShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1652,7 +1652,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -1747,8 +1747,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'ShortRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1760,7 +1760,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.1">
@@ -1909,8 +1909,8 @@
         <viewExpressions lhs="Request.dwellings.lobSubCode" rhs="'HomeownersBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1922,7 +1922,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB'}"/>
+        <viewExpressions lhs="Request.dwellings.riskAddress.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="Request.dwellings.rates.rateValue = 0.2">
@@ -2195,8 +2195,11 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="46" scrollColumnLeft="35">
-      <ruleColumnList ruleId="0" columnWidth="105" pRule="#//@ruleset/@rules.0"/>
+    <ruleSection columnCount="46" scrollColumnLeft="1">
+      <ruleColumnList ruleId="0" columnWidth="105" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList/>
+        <conditionValueSetCellList/>
+      </ruleColumnList>
       <ruleColumnList ruleId="1" columnWidth="231" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="'CondoPrimaryNamedPeril'">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.lobSubCode = 'CondoPrimaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
@@ -2393,8 +2396,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -2669,8 +2672,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -2761,8 +2764,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -2899,8 +2902,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -3037,8 +3040,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -3129,8 +3132,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -3221,8 +3224,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -3405,8 +3408,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -3497,8 +3500,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -3589,8 +3592,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -3681,8 +3684,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
@@ -3819,8 +3822,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.riskAddress.province = 'ON' or Request.dwellings.riskAddress.province = 'AB' or Request.dwellings.riskAddress.province = 'BC' or Request.dwellings.riskAddress.province = 'SK' or Request.dwellings.riskAddress.province = 'MB' or Request.dwellings.riskAddress.province = 'NL' or Request.dwellings.riskAddress.province = 'NB' or Request.dwellings.riskAddress.province = 'PEI' or Request.dwellings.riskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.riskAddress.province">
                 <parentTerm text="riskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="Request.dwellings.riskAddress">
