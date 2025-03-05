@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_FgmMQ_g-Ee--QKl-7ehkQg" externalChecksum="7824986:1438690353:839409246">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_3nQrU_mlEe-EoJZ7Zlogwg" externalChecksum="7824986:1438690353:839409246">
   <languageCode>fr_FR</languageCode>
   <ruleset vocabularyUpdateStamp="_U9YlAPgrEe--QKl-7ehkQg" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
     <rule>
@@ -166,8 +166,8 @@
       </text>
     </ruleStatement>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
-      <text expression="La valeur du taux est {rate.rateValue}.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux est  + rate.rateValue + ." expressiontype="BRSTATEMENT">
+      <text expression="La valeur du taux sur la valeur total de l'assurance est {rate.rateValue}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux sur la valeur total de l'assurance est  + rate.rateValue + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
             <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rate.rateValue">
               <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -378,8 +378,8 @@
       </ruleStatementItemList>
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
         <reference external="1"/>
-        <text external="La valeur du taux est {rate.rateValue}.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux est  + rate.rateValue + ." expressiontype="BRSTATEMENT">
+        <text external="La valeur du taux sur la valeur total de l'assurance est {rate.rateValue}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux sur la valeur total de l'assurance est  + rate.rateValue + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rate.rateValue">
                 <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Z9JGwfgvEe--QKl-7ehkQg" externalChecksum="7824986:1438690353">
-  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Io2ngPkLEe-O3JvWQEyMdg" externalChecksum="7824986:1438690353">
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_OHe5gfmyEe-i_43aVG371Q" externalChecksum="7824986:1438690353">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_kBuQIvmaEe-EoJZ7Zlogwg" externalChecksum="7824986:1438690353">
     <testsheet ruleActivityUpdateStamp="_ExhwoPkLEe-O3JvWQEyMdg" ruleActivity="garantieDFraisSubsistance.erf#//@ruleflow" locale="">
       <input/>
-      <output>
-        <PostedMessage severity="Info" text="Le montant de l'assurance D est 30,000000."/>
-      </output>
+      <output/>
       <expectedOutput/>
     </testsheet>
     <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
@@ -32,7 +30,7 @@
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/coveragePremium"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/deductible"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/excluded"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/selected"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/selected"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/vacancyEndDate"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/vacancyStartDate"/>
             </children>
@@ -60,7 +58,7 @@
         </children>
       </inputRoot>
       <outputRoot newOrModified="true">
-        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0" eClass="../../../InsuranceResidentialProcess.ecore#//Request">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" eClass="../../../InsuranceResidentialProcess.ecore#//Request">
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" eReference="../../../InsuranceResidentialProcess.ecore#//Request/dwellings" eClass="../../../InsuranceResidentialProcess.ecore#//Dwellings">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/rootForm"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/insurer1517"/>
@@ -79,13 +77,13 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/coverages" eClass="../../../InsuranceResidentialProcess.ecore#//Coverages">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/excluded"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/vacancyStartDate"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/applied"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="false" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/applied"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/deductible"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/coveragePremium"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="30.000000" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/amountOfInsurance"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.000000" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/amountOfInsurance"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/vacancyEndDate"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Section1CoverageD" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/coverageCode"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/selected"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="false" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/selected"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/coverages" eClass="../../../InsuranceResidentialProcess.ecore#//Coverages">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Coverages/excluded"/>
@@ -109,14 +107,12 @@
           </children>
         </children>
       </outputRoot>
-      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
-        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
-      </outputMessageSection>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
       <expectedRoot/>
       <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
     </testsheetViewList>
   </testsheetAssets>
-  <ruletest vocabularyUpdateStamp="_U9YlAPgrEe--QKl-7ehkQg" testsheets="#//@testsheetAssets.0/@testsheet" vocabulary="../../../InsuranceResidentialProcess.ecore#/"/>
+  <ruletest vocabularyUpdateStamp="_tjvMYPmvEe-i_43aVG371Q" testsheets="#//@testsheetAssets.0/@testsheet" vocabulary="../../../InsuranceResidentialProcess.ecore#/"/>
   <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
     <testTabList name="untitled_1"/>
   </ruletestViewList>

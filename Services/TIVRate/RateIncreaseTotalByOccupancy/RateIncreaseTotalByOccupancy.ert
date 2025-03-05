@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_N6pXYfmyEe-i_43aVG371Q" externalChecksum="7824986:1438690353">
-  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_nwg-8PXdEe-FCr-LqeNxeg" externalChecksum="7824986:1438690353">
-    <testsheet ruleActivityUpdateStamp="_nwZqMPXdEe-FCr-LqeNxeg" ruleActivity="rateFireProtection.erf#//@ruleflow" locale="">
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_N7sgQfmyEe-i_43aVG371Q" externalChecksum="7824986:1438690353">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_3pBGMfmiEe-EoJZ7Zlogwg" externalChecksum="7824986:1438690353">
+    <testsheet ruleActivityUpdateStamp="_nwMzZPmiEe-EoJZ7Zlogwg" ruleActivity="RateIncreaseTotalByOccupancy.erf#//@ruleflow" locale="">
       <input/>
       <output>
-        <PostedMessage severity="Info" text="FireProtection = 2-SemiProtected , la valeur du taux est 0,011900 pour le rateCode FireProtectionRate sachant que lobSubCode = CondoPrimaryNamedPeril et province = BC."/>
+        <PostedMessage severity="Info" text="La valeur du taux pour OccupancyAndBuildingAnnualRate est 1,010000, avec effectiveDate = 05/03/20 9:40:05 AM P1"/>
       </output>
       <expectedOutput/>
     </testsheet>
@@ -16,7 +16,7 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/insurer1517"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/insurer2363"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/lobCode"/>
-            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="CondoPrimaryNamedPeril" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/lobSubCode"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/lobSubCode"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/minimumBasePremium"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/numberOfUnitsOwned"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/replacementCostAmount"/>
@@ -25,41 +25,71 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/riskNumber"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/rootForm"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/shutOffValveAccessible"/>
-            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/buildingProtection" eClass="../../../InsuranceResidentialProcess.ecore#//BuildingProtection">
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2-SemiProtected" eAttribute="../../../InsuranceResidentialProcess.ecore#//BuildingProtection/fireProtection"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//BuildingProtection/heritageLaw"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//BuildingProtection/zoning"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//BuildingProtection/zoningLimit"/>
-            </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/rates" eClass="../../../InsuranceResidentialProcess.ecore#//Rates">
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="FireProtectionRate" eAttribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="OccupancyAndBuildingAnnualRate" eAttribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/riskAddress" eClass="../../../InsuranceResidentialProcess.ecore#//RiskAddress">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/city"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/postalCode"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="BC" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/province"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="QC" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/province"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/removed"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/streetName"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/streetNumber"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/unitNumber"/>
             </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/occupancy" eClass="../../../InsuranceResidentialProcess.ecore#//Occupancy">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/familyMemberName"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Owner" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/occupancyType"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/rentalDuration"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/rentedProperty"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/termType"/>
+            </children>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../../InsuranceResidentialProcess.ecore#//Request/policyDetail" eClass="../../../InsuranceResidentialProcess.ecore#//PolicyDetail">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="05/03/20 9:40:05 AM" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/effectiveDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/expirationDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/lobCode"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyNumber"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyStatus"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyVersion"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/term"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/transactionDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/yearsInsured"/>
           </children>
         </children>
       </inputRoot>
       <outputRoot newOrModified="true">
         <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0" eClass="../../../InsuranceResidentialProcess.ecore#//Request">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="../../../InsuranceResidentialProcess.ecore#//Request/policyDetail" eClass="../../../InsuranceResidentialProcess.ecore#//PolicyDetail">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyVersion"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyNumber"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/yearsInsured"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/term"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/lobCode"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyStatus"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/transactionDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="05/03/20 9:40:05 AM" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/effectiveDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//PolicyDetail/expirationDate"/>
+          </children>
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" eReference="../../../InsuranceResidentialProcess.ecore#//Request/dwellings" eClass="../../../InsuranceResidentialProcess.ecore#//Dwellings">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/rootForm"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/insurer1517"/>
-            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="CondoPrimaryNamedPeril" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/lobSubCode"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/lobSubCode"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/occupancy" eClass="../../../InsuranceResidentialProcess.ecore#//Occupancy">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Owne" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/occupancyType"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/rentalDuration"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/rentedProperty"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/termType"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Occupancy/familyMemberName"/>
+            </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/rates" eClass="../../../InsuranceResidentialProcess.ecore#//Rates">
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.011900" eAttribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="FireProtectionRate" eAttribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1.010000" eAttribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="OccupancyAndBuildingAnnualRate" eAttribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/riskAddress" eClass="../../../InsuranceResidentialProcess.ecore#//RiskAddress">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/streetName"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="BC" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/province"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="QC" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/province"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/removed"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/city"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//RiskAddress/streetNumber"/>
@@ -70,12 +100,6 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/resellElectricity"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/repossession"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/replacementCostAmount"/>
-            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="../../../InsuranceResidentialProcess.ecore#//Dwellings/buildingProtection" eClass="../../../InsuranceResidentialProcess.ecore#//BuildingProtection">
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//BuildingProtection/zoning"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2-SemiProtected" eAttribute="../../../InsuranceResidentialProcess.ecore#//BuildingProtection/fireProtection"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//BuildingProtection/heritageLaw"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//BuildingProtection/zoningLimit"/>
-            </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/shutOffValveAccessible"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/evaluationIndicator"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../../InsuranceResidentialProcess.ecore#//Dwellings/insurer2363"/>
