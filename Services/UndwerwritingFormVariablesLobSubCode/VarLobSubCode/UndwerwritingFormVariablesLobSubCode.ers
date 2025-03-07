@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_kX5jo_Q4Ee-XfdvuuGXHNA" externalChecksum="7824986:1438690353:839409246">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_DIFFY_tiEe-MC4NY1i0cOA" externalChecksum="7824986:1438690353:839409246">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_U9YlAPgrEe--QKl-7ehkQg" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+  <ruleset vocabularyUpdateStamp="_wbkMoPtFEe-MC4NY1i0cOA" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
     <rule>
       <condition/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0"/>
@@ -4244,8 +4244,8 @@
       </text>
     </ruleStatement>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.1 #//@ruleset/@rules.1/@actions.1 #//@ruleset/@rules.2/@actions.1 #//@ruleset/@rules.3/@actions.1 #//@ruleset/@rules.4/@actions.1 #//@ruleset/@rules.5/@actions.1 #//@ruleset/@rules.6/@actions.1 #//@ruleset/@rules.7/@actions.1 #//@ruleset/@rules.8/@actions.1 #//@ruleset/@rules.9/@actions.1 #//@ruleset/@rules.10/@actions.1 #//@ruleset/@rules.11/@actions.1 #//@ruleset/@rules.12/@actions.1 #//@ruleset/@rules.13/@actions.1 #//@ruleset/@rules.14/@actions.1 #//@ruleset/@rules.15/@actions.1 #//@ruleset/@rules.16/@actions.1 #//@ruleset/@rules.17/@actions.1 #//@ruleset/@rules.18/@actions.1 #//@ruleset/@rules.19/@actions.1 #//@ruleset/@rules.20/@actions.1 #//@ruleset/@rules.21/@actions.1 #//@ruleset/@rules.22/@actions.1 #//@ruleset/@rules.23/@actions.1 #//@ruleset/@rules.24/@actions.1 #//@ruleset/@rules.25/@actions.1 #//@ruleset/@rules.26/@actions.1 #//@ruleset/@rules.27/@actions.1 #//@ruleset/@rules.28/@actions.1 #//@ruleset/@rules.29/@actions.1 #//@ruleset/@rules.30/@actions.1 #//@ruleset/@rules.31/@actions.1" logicalVariable="#//@ruleset/@logicalVariables.0">
-      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.occupancy.termType}.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings_occupancy.termType + ." expressiontype="BRSTATEMENT">
+      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, termType = {Request.dwellings.occupancy.termType}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , termType =  + Request_dwellings_occupancy.termType + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
             <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.occupancy.termType">
               <parentTerm text="occupancy" datatype="Occupancy" termtype="ENTITY" fulltext="Request.dwellings.occupancy" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -4264,8 +4264,8 @@
       </text>
     </ruleStatement>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.2 #//@ruleset/@rules.2/@actions.2 #//@ruleset/@rules.3/@actions.2 #//@ruleset/@rules.4/@actions.2 #//@ruleset/@rules.5/@actions.2 #//@ruleset/@rules.6/@actions.2 #//@ruleset/@rules.7/@actions.2 #//@ruleset/@rules.8/@actions.2 #//@ruleset/@rules.9/@actions.2 #//@ruleset/@rules.10/@actions.2 #//@ruleset/@rules.11/@actions.2 #//@ruleset/@rules.12/@actions.2 #//@ruleset/@rules.13/@actions.2 #//@ruleset/@rules.14/@actions.2 #//@ruleset/@rules.15/@actions.2 #//@ruleset/@rules.16/@actions.2 #//@ruleset/@rules.17/@actions.2 #//@ruleset/@rules.18/@actions.2 #//@ruleset/@rules.19/@actions.2 #//@ruleset/@rules.20/@actions.2 #//@ruleset/@rules.21/@actions.2 #//@ruleset/@rules.22/@actions.2 #//@ruleset/@rules.23/@actions.2 #//@ruleset/@rules.24/@actions.2 #//@ruleset/@rules.25/@actions.2 #//@ruleset/@rules.26/@actions.2 #//@ruleset/@rules.27/@actions.2 #//@ruleset/@rules.28/@actions.2 #//@ruleset/@rules.29/@actions.2 #//@ruleset/@rules.30/@actions.2 #//@ruleset/@rules.31/@actions.2" logicalVariable="#//@ruleset/@logicalVariables.0">
-      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.construction.homeType}.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings_construction.homeType + ." expressiontype="BRSTATEMENT">
+      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, homeType = {Request.dwellings.construction.homeType}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , homeType =  + Request_dwellings_construction.homeType + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
             <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.construction.homeType">
               <parentTerm text="construction" datatype="Construction" termtype="ENTITY" fulltext="Request.dwellings.construction" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -4284,8 +4284,8 @@
       </text>
     </ruleStatement>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.3 #//@ruleset/@rules.2/@actions.3 #//@ruleset/@rules.3/@actions.3 #//@ruleset/@rules.4/@actions.3 #//@ruleset/@rules.5/@actions.3 #//@ruleset/@rules.6/@actions.3 #//@ruleset/@rules.7/@actions.3 #//@ruleset/@rules.8/@actions.3 #//@ruleset/@rules.9/@actions.3 #//@ruleset/@rules.10/@actions.3 #//@ruleset/@rules.11/@actions.3 #//@ruleset/@rules.12/@actions.3 #//@ruleset/@rules.13/@actions.3 #//@ruleset/@rules.14/@actions.3 #//@ruleset/@rules.15/@actions.3 #//@ruleset/@rules.16/@actions.3 #//@ruleset/@rules.17/@actions.3 #//@ruleset/@rules.18/@actions.3 #//@ruleset/@rules.19/@actions.3 #//@ruleset/@rules.20/@actions.3 #//@ruleset/@rules.21/@actions.3 #//@ruleset/@rules.22/@actions.3 #//@ruleset/@rules.23/@actions.3 #//@ruleset/@rules.24/@actions.3 #//@ruleset/@rules.25/@actions.3 #//@ruleset/@rules.26/@actions.3 #//@ruleset/@rules.27/@actions.3 #//@ruleset/@rules.28/@actions.3 #//@ruleset/@rules.29/@actions.3 #//@ruleset/@rules.30/@actions.3 #//@ruleset/@rules.31/@actions.3" logicalVariable="#//@ruleset/@logicalVariables.0">
-      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.rootForm}.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings.rootForm + ." expressiontype="BRSTATEMENT">
+      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, rootForm = {Request.dwellings.rootForm}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , rootForm =  + Request_dwellings.rootForm + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
             <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.rootForm">
               <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -4302,8 +4302,8 @@
       </text>
     </ruleStatement>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.4 #//@ruleset/@rules.2/@actions.4 #//@ruleset/@rules.3/@actions.4 #//@ruleset/@rules.4/@actions.4 #//@ruleset/@rules.5/@actions.4 #//@ruleset/@rules.6/@actions.4 #//@ruleset/@rules.7/@actions.4 #//@ruleset/@rules.8/@actions.4 #//@ruleset/@rules.9/@actions.4 #//@ruleset/@rules.10/@actions.4 #//@ruleset/@rules.11/@actions.4 #//@ruleset/@rules.12/@actions.4 #//@ruleset/@rules.13/@actions.4 #//@ruleset/@rules.14/@actions.4 #//@ruleset/@rules.15/@actions.4 #//@ruleset/@rules.16/@actions.4 #//@ruleset/@rules.17/@actions.4 #//@ruleset/@rules.18/@actions.4 #//@ruleset/@rules.19/@actions.4 #//@ruleset/@rules.20/@actions.4 #//@ruleset/@rules.21/@actions.4 #//@ruleset/@rules.22/@actions.4 #//@ruleset/@rules.23/@actions.4 #//@ruleset/@rules.24/@actions.4 #//@ruleset/@rules.25/@actions.4 #//@ruleset/@rules.26/@actions.4 #//@ruleset/@rules.27/@actions.4 #//@ruleset/@rules.28/@actions.4 #//@ruleset/@rules.29/@actions.4 #//@ruleset/@rules.30/@actions.4 #//@ruleset/@rules.31/@actions.4" logicalVariable="#//@ruleset/@logicalVariables.0">
-      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.insurer1517}.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings.insurer1517 + ." expressiontype="BRSTATEMENT">
+      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, insurer1517 = {Request.dwellings.insurer1517}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , insurer1517 =  + Request_dwellings.insurer1517 + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
             <terms text="insurer1517" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.insurer1517">
               <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -4320,8 +4320,8 @@
       </text>
     </ruleStatement>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.5 #//@ruleset/@rules.2/@actions.5 #//@ruleset/@rules.3/@actions.5 #//@ruleset/@rules.4/@actions.5 #//@ruleset/@rules.5/@actions.5 #//@ruleset/@rules.6/@actions.5 #//@ruleset/@rules.7/@actions.5 #//@ruleset/@rules.8/@actions.5 #//@ruleset/@rules.9/@actions.5 #//@ruleset/@rules.10/@actions.5 #//@ruleset/@rules.11/@actions.5 #//@ruleset/@rules.12/@actions.5 #//@ruleset/@rules.13/@actions.5 #//@ruleset/@rules.14/@actions.5 #//@ruleset/@rules.15/@actions.5 #//@ruleset/@rules.16/@actions.5 #//@ruleset/@rules.17/@actions.5 #//@ruleset/@rules.18/@actions.5 #//@ruleset/@rules.19/@actions.5 #//@ruleset/@rules.20/@actions.5 #//@ruleset/@rules.21/@actions.5 #//@ruleset/@rules.22/@actions.5 #//@ruleset/@rules.23/@actions.5 #//@ruleset/@rules.24/@actions.5 #//@ruleset/@rules.25/@actions.5 #//@ruleset/@rules.26/@actions.5 #//@ruleset/@rules.27/@actions.5 #//@ruleset/@rules.28/@actions.5 #//@ruleset/@rules.29/@actions.5 #//@ruleset/@rules.30/@actions.5 #//@ruleset/@rules.31/@actions.5" logicalVariable="#//@ruleset/@logicalVariables.0">
-      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.insurer2363}.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings.insurer2363 + ." expressiontype="BRSTATEMENT">
+      <text expression="Pour lobSubCode = {Request.dwellings.lobSubCode}, insurer2336 = {Request.dwellings.insurer2363}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , insurer2336 =  + Request_dwellings.insurer2363 + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
             <terms text="insurer2363" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.insurer2363">
               <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -4490,8 +4490,8 @@
       </ruleStatementItemList>
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
         <reference external="B"/>
-        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.occupancy.termType}.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings_occupancy.termType + ." expressiontype="BRSTATEMENT">
+        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, termType = {Request.dwellings.occupancy.termType}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , termType =  + Request_dwellings_occupancy.termType + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.occupancy.termType">
                 <parentTerm text="occupancy" datatype="Occupancy" termtype="ENTITY" fulltext="Request.dwellings.occupancy">
@@ -4511,8 +4511,8 @@
       </ruleStatementItemList>
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
         <reference external="C"/>
-        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.construction.homeType}.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings_construction.homeType + ." expressiontype="BRSTATEMENT">
+        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, homeType = {Request.dwellings.construction.homeType}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , homeType =  + Request_dwellings_construction.homeType + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.construction.homeType">
                 <parentTerm text="construction" datatype="Construction" termtype="ENTITY" fulltext="Request.dwellings.construction">
@@ -4532,8 +4532,8 @@
       </ruleStatementItemList>
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
         <reference external="D"/>
-        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.rootForm}.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings.rootForm + ." expressiontype="BRSTATEMENT">
+        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, rootForm = {Request.dwellings.rootForm}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , rootForm =  + Request_dwellings.rootForm + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="Request.dwellings.rootForm">
                 <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
@@ -4551,8 +4551,8 @@
       </ruleStatementItemList>
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.4">
         <reference external="E"/>
-        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.insurer1517}.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings.insurer1517 + ." expressiontype="BRSTATEMENT">
+        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, insurer1517 = {Request.dwellings.insurer1517}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , insurer1517 =  + Request_dwellings.insurer1517 + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="insurer1517" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.insurer1517">
                 <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
@@ -4570,8 +4570,8 @@
       </ruleStatementItemList>
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.5">
         <reference external="F"/>
-        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, occupancyType = {Request.dwellings.insurer2363}.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , occupancyType =  + Request_dwellings.insurer2363 + ." expressiontype="BRSTATEMENT">
+        <text external="Pour lobSubCode = {Request.dwellings.lobSubCode}, insurer2336 = {Request.dwellings.insurer2363}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + Request_dwellings.lobSubCode + , insurer2336 =  + Request_dwellings.insurer2363 + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="insurer2363" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Request.dwellings.insurer2363">
                 <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
