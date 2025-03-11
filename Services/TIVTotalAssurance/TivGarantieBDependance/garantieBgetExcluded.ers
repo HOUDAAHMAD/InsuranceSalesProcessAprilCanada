@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_1d5yYPkGEe-O3JvWQEyMdg" externalChecksum="7824986:1438690353:839409246">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_vNCdkf5yEe-SVOE6HupIaQ" externalChecksum="7824986:1438690353:839409246">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_U9YlAPgrEe--QKl-7ehkQg" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+  <ruleset vocabularyUpdateStamp="_ygU-0P5oEe-SVOE6HupIaQ" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
     <rule>
       <condition/>
       <action>
-        <opaqueExpression expression="co.excluded = T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="co.excluded = F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="co.excluded">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -50,8 +50,8 @@
         <viewExpressions lhs="dw.lobSubCode+rs.province" rhs="'VacantDwellingQC'"/>
       </condition>
       <action>
-        <opaqueExpression expression="co.excluded = F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="co.excluded = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="co.excluded">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -95,8 +95,8 @@
         <viewExpressions lhs="dw.lobSubCode+rs.province" rhs="'MobileHomeTrailerQC'"/>
       </condition>
       <action>
-        <opaqueExpression expression="co.excluded = F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="co.excluded = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="co.excluded">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -140,8 +140,8 @@
         <viewExpressions lhs="dw.lobSubCode+rs.province" rhs="'VacantDwellingON'"/>
       </condition>
       <action>
-        <opaqueExpression expression="co.excluded = F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="co.excluded = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="co.excluded">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -647,8 +647,8 @@
     <ruleSection columnCount="20">
       <ruleColumnList ruleId="0" columnWidth="148" pRule="#//@ruleset/@rules.0">
         <conditionValueSetCellList/>
-        <actionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="co.excluded">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
@@ -687,8 +687,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="co.excluded">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
@@ -727,8 +727,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="co.excluded">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
@@ -767,8 +767,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.excluded = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="excluded" datatype="Boolean" termtype="ATTRIBUTE" fulltext="co.excluded">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
