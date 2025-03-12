@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_I55qEP6DEe-SVOE6HupIaQ" externalChecksum="7824986:1438690353:839409246">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_ztLtQP9JEe-6W-41nAMLwA" externalChecksum="7824986:1438690353:839409246">
   <languageCode>fr_FR</languageCode>
   <ruleset vocabularyUpdateStamp="_ygU-0P5oEe-SVOE6HupIaQ" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
     <rule>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action>
         <opaqueExpression expression="rate+=Rates.newUnique[rateCode='TIVRate']">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate += Rates.newUnique [ Rates.rateCode = 'TIVRate' ]" datatype="Rates" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -29,7 +29,7 @@
         </opaqueExpression>
       </action>
     </rule>
-    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
       <condition>
         <opaqueExpression expression="rate.rateCode = 'TIVRate'">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateCode = 'TIVRate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
@@ -158,16 +158,9 @@
         </parserOutput>
       </opaqueExpression>
     </filter>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-      <text expression="Création du taux avec code = TIVRate.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Création du taux avec code = TIVRate." expressiontype="BRSTATEMENT">
-          <referencedTermList/>
-        </parserOutput>
-      </text>
-    </ruleStatement>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-      <text expression="La valeur du taux sur la valeur total de l'assurance est {rate.rateValue}.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux sur la valeur total de l'assurance est  + rate.rateValue + ." expressiontype="BRSTATEMENT">
+      <text expression="La valeur du taux sur la valeur total de l'assurance est {rate.rateValue}. Facteur modifiant la valeur totale de l'assurance.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux sur la valeur total de l'assurance est  + rate.rateValue + . Facteur modifiant la valeur totale de l'assurance." expressiontype="BRSTATEMENT">
           <referencedTermList>
             <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rate.rateValue">
               <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -182,7 +175,7 @@
     </ruleStatement>
     <logicalVariable entity="../../../InsuranceResidentialProcess.ecore#//Request" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2 #//@ruleset/@filters.3">
       <extension association="true" entity="../../../InsuranceResidentialProcess.ecore#//Dwellings" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Request/dwellings" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2 #//@ruleset/@filters.3">
-        <extension explicit="true" association="true" entity="../../../InsuranceResidentialProcess.ecore#//Rates" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/rates" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1">
+        <extension explicit="true" association="true" entity="../../../InsuranceResidentialProcess.ecore#//Rates" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/rates" ruleStatements="#//@ruleset/@ruleStatements.0">
           <alias value="rate"/>
           <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
           <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateValue"/>
@@ -209,7 +202,7 @@
       <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Rates/rateCode"/>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="33" sashWeightConditionsIf="80">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="33" sashWeightConditionsIf="42">
     <actionSection rowCount="50" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell valueSet=""/>
@@ -256,7 +249,7 @@
     </actionSection>
     <scopeSection>
       <rootNode>
-        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ra1.rateCode='FireProtectionRate'" filter="#//@ruleset/@filters.0"/>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ra2.rateCode='LocationRate'" filter="#//@ruleset/@filters.1"/>
@@ -367,19 +360,11 @@
         </expressionCell>
       </filterItemList>
     </filterSection>
-    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+    <ruleStatementSection rowCount="49" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
-        <reference external="A0"/>
-        <text external="Création du taux avec code = TIVRate.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Création du taux avec code = TIVRate." expressiontype="BRSTATEMENT">
-            <referencedTermList/>
-          </parserOutput>
-        </text>
-      </ruleStatementItemList>
-      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
         <reference external="1"/>
-        <text external="La valeur du taux sur la valeur total de l'assurance est {rate.rateValue}.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux sur la valeur total de l'assurance est  + rate.rateValue + ." expressiontype="BRSTATEMENT">
+        <text external="La valeur du taux sur la valeur total de l'assurance est {rate.rateValue}. Facteur modifiant la valeur totale de l'assurance.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux sur la valeur total de l'assurance est  + rate.rateValue + . Facteur modifiant la valeur totale de l'assurance." expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rate.rateValue">
                 <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
