@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_GVyJkwAaEfCgoe-D45ThaQ" externalChecksum="7824986:1438690353:839409246">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_4KnDQwDoEfCgoe-D45ThaQ" externalChecksum="7824986:1438690353:839409246">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_XIfHMAAZEfCgoe-D45ThaQ" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+  <ruleset vocabularyUpdateStamp="_3whD4ADKEfCgoe-D45ThaQ" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
     <rule>
       <condition/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="ca.rebuildingToCodePremium=bu.zoningLimit*0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="zoningLimit" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bu.zoningLimit">
+                <parentTerm text="bu" datatype="BuildingProtection" termtype="ENTITY" fulltext="bu" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
     </rule>
     <rule>
       <condition>
@@ -40,8 +69,8 @@
       </condition>
       <condition/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rebuildingToCodePremium = 0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.rebuildingToCodePremium=bu.zoningLimit*0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -52,6 +81,13 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
+              <terms text="zoningLimit" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bu.zoningLimit">
+                <parentTerm text="bu" datatype="BuildingProtection" termtype="ENTITY" fulltext="bu" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
               <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                 <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -112,7 +148,7 @@
         <viewExpressions lhs="ri.province" rhs="'QC'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rebuildingToCodePremium = bu.zoningLimit*0">
+        <opaqueExpression expression="ca.rebuildingToCodePremium=bu.zoningLimit*0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -191,7 +227,7 @@
         <viewExpressions lhs="ri.province" rhs="'QC'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rebuildingToCodePremium = bu.zoningLimit*0">
+        <opaqueExpression expression="ca.rebuildingToCodePremium=bu.zoningLimit*0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -270,7 +306,7 @@
         <viewExpressions lhs="ri.province" rhs="'QC'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rebuildingToCodePremium = bu.zoningLimit*0">
+        <opaqueExpression expression="ca.rebuildingToCodePremium=bu.zoningLimit*0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -349,7 +385,7 @@
         <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rebuildingToCodePremium = bu.zoningLimit*0.003">
+        <opaqueExpression expression="ca.rebuildingToCodePremium=bu.zoningLimit*0.003">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0.003" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -428,7 +464,7 @@
         <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rebuildingToCodePremium = bu.zoningLimit*0.003">
+        <opaqueExpression expression="ca.rebuildingToCodePremium=bu.zoningLimit*0.003">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0.003" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -507,7 +543,7 @@
         <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rebuildingToCodePremium = bu.zoningLimit*0.003">
+        <opaqueExpression expression="ca.rebuildingToCodePremium=bu.zoningLimit*0.003">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0.003" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -536,9 +572,9 @@
         </opaqueExpression>
       </action>
     </rule>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0 #//@ruleset/@rules.2/@actions.0 #//@ruleset/@rules.3/@actions.0 #//@ruleset/@rules.4/@actions.0 #//@ruleset/@rules.5/@actions.0 #//@ruleset/@rules.6/@actions.0 #//@ruleset/@rules.7/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-      <text expression="Prime pour reconstruction selon les normes est {ca.rebuildingToCodePremium}.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Prime pour reconstruction selon les normes est  + ca.rebuildingToCodePremium + ." expressiontype="BRSTATEMENT">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0 #//@ruleset/@rules.1/@actions.0 #//@ruleset/@rules.2/@actions.0 #//@ruleset/@rules.3/@actions.0 #//@ruleset/@rules.4/@actions.0 #//@ruleset/@rules.5/@actions.0 #//@ruleset/@rules.6/@actions.0 #//@ruleset/@rules.7/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+      <text expression="Prime pour reconstruction selon les normes rebuildingToCodePremium est {ca.rebuildingToCodePremium}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Prime pour reconstruction selon les normes rebuildingToCodePremium est  + ca.rebuildingToCodePremium + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
             <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
               <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -574,8 +610,17 @@
     <actionSection rowCount="50" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell/>
-        <expressionCell external="ca.rebuildingToCodePremium">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="ca.rebuildingToCodePremium=bu.zoningLimit*cellValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * cellValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="true">
+            <modifiedTermList>
+              <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
             <referencedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -612,8 +657,8 @@
     <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
         <reference external="A"/>
-        <text external="Prime pour reconstruction selon les normes est {ca.rebuildingToCodePremium}.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Prime pour reconstruction selon les normes est  + ca.rebuildingToCodePremium + ." expressiontype="BRSTATEMENT">
+        <text external="Prime pour reconstruction selon les normes rebuildingToCodePremium est {ca.rebuildingToCodePremium}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Prime pour reconstruction selon les normes rebuildingToCodePremium est  + ca.rebuildingToCodePremium + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -680,6 +725,33 @@
     <ruleSection columnCount="23">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
         <conditionValueSetCellList/>
+        <actionValueSetCellList valueSet="0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="zoningLimit" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bu.zoningLimit">
+                <parentTerm text="bu" datatype="BuildingProtection" termtype="ENTITY" fulltext="bu">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="T">
@@ -710,7 +782,7 @@
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
@@ -721,6 +793,13 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
+              <terms text="zoningLimit" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bu.zoningLimit">
+                <parentTerm text="bu" datatype="BuildingProtection" termtype="ENTITY" fulltext="bu">
+                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
               <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                 <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
@@ -770,7 +849,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="bu.zoningLimit*0">
+        <actionValueSetCellList valueSet="0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -838,7 +917,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="bu.zoningLimit*0">
+        <actionValueSetCellList valueSet="0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -906,7 +985,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="bu.zoningLimit*0">
+        <actionValueSetCellList valueSet="0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -974,7 +1053,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="bu.zoningLimit*0.003">
+        <actionValueSetCellList valueSet="0.003">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0.003" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -1042,7 +1121,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="bu.zoningLimit*0.003">
+        <actionValueSetCellList valueSet="0.003">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0.003" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
@@ -1070,7 +1149,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="7" columnWidth="100" pRule="#//@ruleset/@rules.7">
+      <ruleColumnList ruleId="7" columnWidth="174" pRule="#//@ruleset/@rules.7">
         <conditionValueSetCellList valueSet="F">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( bu.zoning ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
@@ -1110,7 +1189,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="bu.zoningLimit*0.003">
+        <actionValueSetCellList valueSet="0.003">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rebuildingToCodePremium = bu.zoningLimit * 0.003" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rebuildingToCodePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.rebuildingToCodePremium">
