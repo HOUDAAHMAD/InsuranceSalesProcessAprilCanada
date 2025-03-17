@@ -2364,7 +2364,7 @@
       <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
     </testsheetViewList>
   </testsheetAssets>
-  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_HWtEsAMzEfC8e4kvfk2cPA" externalChecksum="7824986:1438690353">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_RNvzkAM5EfCHzNHYOrU8_A" externalChecksum="7824986:1438690353">
     <testsheet ruleActivityUpdateStamp="_03E4wAMTEfC8e4kvfk2cPA" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
       <input/>
       <output>
@@ -2396,7 +2396,7 @@
     <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
       <inputRoot>
         <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="../../InsuranceResidentialProcess.ecore#//Request">
-          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//Request/dwellings" eClass="../../InsuranceResidentialProcess.ecore#//Dwellings">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceResidentialProcess.ecore#//Request/dwellings" eClass="../../InsuranceResidentialProcess.ecore#//Dwellings">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceResidentialProcess.ecore#//Dwellings/evaluationIndicator"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceResidentialProcess.ecore#//Dwellings/insurer1517"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceResidentialProcess.ecore#//Dwellings/insurer2363"/>
@@ -2610,10 +2610,32 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceResidentialProcess.ecore#//PolicyDetail/transactionDate"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceResidentialProcess.ecore#//PolicyDetail/yearsInsured"/>
           </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//Request/insureds" eClass="../../InsuranceResidentialProcess.ecore#//Insureds">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Applicant" eAttribute="../../InsuranceResidentialProcess.ecore#//Insureds/roleOfApplicant"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//Insureds/contactDetail" eClass="../../InsuranceResidentialProcess.ecore#//ContactDetail">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//ContactDetail/email" eClass="../../InsuranceResidentialProcess.ecore#//Email">
+                <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="ahmad.houda@sistema-strategy.com" eAttribute="../../InsuranceResidentialProcess.ecore#//Email/emailAddress"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//ContactDetail/phone" eClass="../../InsuranceResidentialProcess.ecore#//Phone">
+                <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0618705132" eAttribute="../../InsuranceResidentialProcess.ecore#//Phone/phoneNumber"/>
+              </children>
+            </children>
+          </children>
         </children>
       </inputRoot>
       <outputRoot newOrModified="true">
         <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" eClass="../../InsuranceResidentialProcess.ecore#//Request">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//Request/insureds" eClass="../../InsuranceResidentialProcess.ecore#//Insureds">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//Insureds/contactDetail" eClass="../../InsuranceResidentialProcess.ecore#//ContactDetail">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//ContactDetail/phone" eClass="../../InsuranceResidentialProcess.ecore#//Phone">
+                <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="0618705132" eAttribute="../../InsuranceResidentialProcess.ecore#//Phone/phoneNumber"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//ContactDetail/email" eClass="../../InsuranceResidentialProcess.ecore#//Email">
+                <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="ahmad.houda@sistema-strategy.com" eAttribute="../../InsuranceResidentialProcess.ecore#//Email/emailAddress"/>
+              </children>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Applicant" eAttribute="../../InsuranceResidentialProcess.ecore#//Insureds/roleOfApplicant"/>
+          </children>
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//Request/policyDetail" eClass="../../InsuranceResidentialProcess.ecore#//PolicyDetail">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyVersion"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../../InsuranceResidentialProcess.ecore#//PolicyDetail/policyNumber"/>
@@ -2835,28 +2857,28 @@
         </children>
       </outputRoot>
       <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.35"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.1" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.3"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.2" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.35"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.3" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.4" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.5" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.6" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.4"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.7" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.4"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.8" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.5"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.9" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.6"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.10" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.7"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.11" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.25"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.12" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.25"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.13" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.27"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.14" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.26"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.15" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.24"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.16" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.30"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.17" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.9"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.18" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.8"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.19" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.10"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.20" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.20"/>
-        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.21" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.1"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.35"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.1" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.3"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.2" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.35"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.3" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.4" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.5" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.6" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.7" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.8" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.9" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.6"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.10" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.7"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.11" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.25"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.12" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.25"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.13" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.27"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.14" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.26"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.15" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.24"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.16" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.30"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.17" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.9"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.18" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.8"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.19" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.10"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.20" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2/@children.20"/>
+        <messageItemList postedMessage="#//@testsheetAssets.2/@testsheet/@output/@PostedMessage.21" testNode="#//@testsheetAssets.2/@testsheetViewList.0/@outputRoot/@children.0/@children.2"/>
       </outputMessageSection>
       <expectedRoot>
         <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="../../InsuranceResidentialProcess.ecore#//Request">
@@ -3077,6 +3099,17 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="../../InsuranceResidentialProcess.ecore#//PolicyDetail/term"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceResidentialProcess.ecore#//PolicyDetail/transactionDate"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceResidentialProcess.ecore#//PolicyDetail/yearsInsured"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//Request/insureds" eClass="../../InsuranceResidentialProcess.ecore#//Insureds">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Applicant" eAttribute="../../InsuranceResidentialProcess.ecore#//Insureds/roleOfApplicant"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//Insureds/contactDetail" eClass="../../InsuranceResidentialProcess.ecore#//ContactDetail">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//ContactDetail/email" eClass="../../InsuranceResidentialProcess.ecore#//Email">
+                <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="ahmad.houda@sistema-strategy.com" eAttribute="../../InsuranceResidentialProcess.ecore#//Email/emailAddress"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceResidentialProcess.ecore#//ContactDetail/phone" eClass="../../InsuranceResidentialProcess.ecore#//Phone">
+                <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0618705132" eAttribute="../../InsuranceResidentialProcess.ecore#//Phone/phoneNumber"/>
+              </children>
+            </children>
           </children>
         </children>
       </expectedRoot>
