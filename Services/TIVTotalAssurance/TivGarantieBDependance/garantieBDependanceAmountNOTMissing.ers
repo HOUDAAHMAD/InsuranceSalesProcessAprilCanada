@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_rpUxIv5wEe-SVOE6HupIaQ" externalChecksum="7824986:1438690353:839409246">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_LhX7AAQHEfC3Lqx8C8_Ymw" externalChecksum="7824986:1438690353:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_ygU-0P5oEe-SVOE6HupIaQ" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
+  <ruleset vocabularyUpdateStamp="_QEi_wANNEfCHzNHYOrU8_A" vocabulary="../../../InsuranceResidentialProcess.ecore#/">
     <rule/>
     <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
       <condition>
@@ -89,21 +89,6 @@
       </opaqueExpression>
     </filter>
     <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-      <opaqueExpression expression="coB.selected=T">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="coB.selected = T" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="coB.selected">
-              <parentTerm text="coB" datatype="Coverages" termtype="ENTITY" fulltext="coB" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <opaqueExpression expression="coB.applied=T">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="coB.applied = T" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
           <referencedTermList>
@@ -140,10 +125,10 @@
         </parserOutput>
       </text>
     </ruleStatement>
-    <logicalVariable entity="../../../InsuranceResidentialProcess.ecore#//Request" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
-      <extension explicit="true" association="true" entity="../../../InsuranceResidentialProcess.ecore#//Dwellings" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Request/dwellings" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
+    <logicalVariable entity="../../../InsuranceResidentialProcess.ecore#//Request" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
+      <extension explicit="true" association="true" entity="../../../InsuranceResidentialProcess.ecore#//Dwellings" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Request/dwellings" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
         <alias value="dw"/>
-        <extension explicit="true" association="true" entity="../../../InsuranceResidentialProcess.ecore#//Coverages" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/coverages" ruleStatements="#//@ruleset/@ruleStatements.0" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
+        <extension explicit="true" association="true" entity="../../../InsuranceResidentialProcess.ecore#//Coverages" traversedAssocRole="../../../InsuranceResidentialProcess.ecore#//Dwellings/coverages" ruleStatements="#//@ruleset/@ruleStatements.0" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
           <alias value="coB"/>
           <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/amountOfInsurance"/>
           <referencedAttributes attribute="../../../InsuranceResidentialProcess.ecore#//Coverages/applied"/>
@@ -184,20 +169,17 @@
         <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.coverageCode='Section1CoverageB'" filter="#//@ruleset/@filters.0"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.selected=T" filter="#//@ruleset/@filters.1"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.applied=T" filter="#//@ruleset/@filters.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.applied=T" filter="#//@ruleset/@filters.1"/>
           </children>
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.coverageCode='Section1CoverageB'" filter="#//@ruleset/@filters.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.selected=T" filter="#//@ruleset/@filters.1"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.applied=T" filter="#//@ruleset/@filters.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.applied=T" filter="#//@ruleset/@filters.1"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
                 <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.coverageCode='Section1CoverageB'" filter="#//@ruleset/@filters.0"/>
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.selected=T" filter="#//@ruleset/@filters.1"/>
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.applied=T" filter="#//@ruleset/@filters.2"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="coB.applied=T" filter="#//@ruleset/@filters.1"/>
               </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
@@ -214,7 +196,7 @@
         </children>
       </rootNode>
     </scopeSection>
-    <filterSection rowCount="49">
+    <filterSection rowCount="48">
       <filterItemList filter="#//@ruleset/@filters.0">
         <expressionCell external="coB.coverageCode='Section1CoverageB'">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="coB.coverageCode = 'Section1CoverageB'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
@@ -231,21 +213,6 @@
         </expressionCell>
       </filterItemList>
       <filterItemList filter="#//@ruleset/@filters.1">
-        <expressionCell external="coB.selected=T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="coB.selected = T" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="coB.selected">
-                <parentTerm text="coB" datatype="Coverages" termtype="ENTITY" fulltext="coB" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.2">
         <expressionCell external="coB.applied=T">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="coB.applied = T" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
