@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_wnTxsQovEfCcBJ36yQ10cw" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_enfEYQpWEfCcBJ36yQ10cw" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T11:08:54.258+0100" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T11:09:10.369+0100" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -1188,17 +1188,19 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="constructionType" upperBound="-1" eType="#//constructionType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constructionType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
           <name manuallyCreated="true" value="constructionType"/>
+          <mode manuallyCreated="true" value="Base"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="electricalPanel" upperBound="-1" eType="#//electricalPanel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="electricalPanel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
           <name manuallyCreated="true" value="electricalPanel"/>
+          <mode manuallyCreated="true" value="Base"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -1268,14 +1270,6 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="province" eType="#//province">
-      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.1">
-          <name manuallyCreated="true" value="province"/>
-          <mode manuallyCreated="true" value="Base"/>
-        </contents>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="streetName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
@@ -1308,10 +1302,10 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="removed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="province" eType="#//province">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
-          <name manuallyCreated="true" value="removed"/>
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.1">
+          <name manuallyCreated="true" value="province"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
       </eAnnotations>
@@ -2682,40 +2676,6 @@
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
           <name manuallyCreated="true" value="RiskNumber"/>
-          <mode manuallyCreated="true" value="Base"/>
-        </contents>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="constructionType">
-    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
-        <name manuallyCreated="true" value="constructionType"/>
-        <datastorePersistent manuallyCreated="true" value="false"/>
-        <datastoreCaching manuallyCreated="true" value="false"/>
-      </contents>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="item" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
-          <name manuallyCreated="true" value="item"/>
-          <mode manuallyCreated="true" value="Base"/>
-        </contents>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="electricalPanel">
-    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
-        <name manuallyCreated="true" value="electricalPanel"/>
-        <datastorePersistent manuallyCreated="true" value="false"/>
-        <datastoreCaching manuallyCreated="true" value="false"/>
-      </contents>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="item" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
-          <name manuallyCreated="true" value="item"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
       </eAnnotations>
