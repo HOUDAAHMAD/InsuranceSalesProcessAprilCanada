@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_I4IqkA8NEfCr8uhw6_TwkQ" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="InitialisationCoveragePremuim.ers#/ PropertyBasePremiumVacantCondo.ers#/ PropertyBasePremiumNOTVacantCondo.ers#/">
-  <ruleflow majorVersion="1" vocabularyUpdateStamp="_Sf4JQA7_EfCr8uhw6_TwkQ" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_p8qeoA8REfC1Sfr_yOodVw" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="InitialisationCoveragePremuim.ers#/ PropertyBasePremiumVacantCondo.ers#/ PropertyBasePremiumNOTVacantCondo.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_cqp2AA8REfC1Sfr_yOodVw" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/">
     <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="InitialisationCoveragePremuim" order="1" ruleActivityUpdateStamp="_ETshDQ5HEfCNMJe_MzGrTg" nextStep="#//@ruleflow/@flowControlList.1" invokes="InitialisationCoveragePremuim.ers#//@ruleset"/>
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon homeType" order="2" ruleActivityUpdateStamp="_qhYywA8FEfCr8uhw6_TwkQ" invokes="#//@ruleflow/@flowControlList.1">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon homeType" order="2" ruleActivityUpdateStamp="_dx38wA8REfC1Sfr_yOodVw" invokes="#//@ruleflow/@flowControlList.1">
       <condition expression="Request.dwellings.construction.homeType">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.construction.homeType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
           <referencedTermList>
@@ -30,7 +30,7 @@
       </branches>
     </flowControlList>
     <subflowList name="Condo">
-      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon occupancyType" order="4" ruleActivityUpdateStamp="_qhb2EQ8FEfCr8uhw6_TwkQ" invokes="#//@ruleflow/@subflowList.0/@flowControlList.0">
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon occupancyType" order="4" ruleActivityUpdateStamp="_dx38wA8REfC1Sfr_yOodVw" invokes="#//@ruleflow/@subflowList.0/@flowControlList.0">
         <condition expression="Request.dwellings.occupancy.occupancyType">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.occupancy.occupancyType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -45,7 +45,7 @@
           </parserOutput>
         </condition>
         <branches>
-          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="PropertyBasePremiumNOTVacantCondo" order="5" ruleActivityUpdateStamp="_mtrX8Q8CEfCr8uhw6_TwkQ" invokes="PropertyBasePremiumNOTVacantCondo.ers#//@ruleset"/>
+          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="PropertyBasePremiumNOTVacantCondo" order="5" ruleActivityUpdateStamp="_dxp6UA8REfC1Sfr_yOodVw" invokes="PropertyBasePremiumNOTVacantCondo.ers#//@ruleset"/>
           <label expression="'Rental'"/>
           <label expression="'Seasonal'"/>
           <label expression="'Primary'"/>
@@ -55,14 +55,14 @@
           <viewExpressions lhs="Request.dwellings.occupancy.occupancyType" rhs="'Tenant'"/>
         </branches>
         <branches>
-          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="PropertyBasePremiumVacantCondo" order="6" ruleActivityUpdateStamp="_f8tacA8CEfCr8uhw6_TwkQ" invokes="PropertyBasePremiumVacantCondo.ers#//@ruleset"/>
+          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="PropertyBasePremiumVacantCondo" order="6" ruleActivityUpdateStamp="_2f61xw8PEfCaQqHhXf5LRg" invokes="PropertyBasePremiumVacantCondo.ers#//@ruleset"/>
           <label expression="'Vacant'"/>
           <viewExpressions lhs="Request.dwellings.occupancy.occupancyType" rhs="'Vacant'"/>
         </branches>
       </flowControlList>
     </subflowList>
     <subflowList name="Not Condo">
-      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon occupancyType" order="8" ruleActivityUpdateStamp="_qhoqYQ8FEfCr8uhw6_TwkQ" invokes="#//@ruleflow/@subflowList.1/@flowControlList.0">
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon occupancyType" order="8" ruleActivityUpdateStamp="_dx38wA8REfC1Sfr_yOodVw" invokes="#//@ruleflow/@subflowList.1/@flowControlList.0">
         <condition expression="Request.dwellings.occupancy.occupancyType">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Request.dwellings.occupancy.occupancyType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -77,7 +77,7 @@
           </parserOutput>
         </condition>
         <branches>
-          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="PropertyBasePremiumNOTVacantCondo" order="9" ruleActivityUpdateStamp="_mtrX8Q8CEfCr8uhw6_TwkQ" invokes="PropertyBasePremiumNOTVacantCondo.ers#//@ruleset"/>
+          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="PropertyBasePremiumNOTVacantCondo" order="9" ruleActivityUpdateStamp="_dxp6UA8REfC1Sfr_yOodVw" invokes="PropertyBasePremiumNOTVacantCondo.ers#//@ruleset"/>
           <label expression="'Rental'"/>
           <label expression="'Seasonal'"/>
           <label expression="'Primary'"/>
