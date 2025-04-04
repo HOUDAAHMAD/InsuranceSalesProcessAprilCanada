@@ -1,39 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_ENVaUA5HEfCNMJe_MzGrTg" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="VandalismExclusionTrue.ers#/ VandalismExclusionFalse.ers#/">
-  <ruleflow majorVersion="1" vocabularyUpdateStamp="_3whD4ADKEfCgoe-D45ThaQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Branche VandalismExclusion" order="1" ruleActivityUpdateStamp="_VEgZAQDkEfCgoe-D45ThaQ" invokes="#//@ruleflow/@flowControlList.0">
-      <condition expression="CalculationsVariables.vandalismExclusion">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CalculationsVariables.vandalismExclusion" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_HROwQBFUEfCITsE5bC4jmA" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="VandalismeExclusion/VandalismExclusionTrue.ers#/ VandalismeExclusion/VandalismExclusionFalse.ers#/ TheftExclusionTrue/TheftExclusionTrue.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_q_7BYBCQEfCITsE5bC4jmA" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon TheftExclusion" order="1" ruleActivityUpdateStamp="_5ppyMRFREfCITsE5bC4jmA" invokes="#//@ruleflow/@flowControlList.0">
+      <condition expression="CalculationsVariables.theftExclusion">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CalculationsVariables.theftExclusion" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
           <referencedTermList>
-            <terms text="vandalismExclusion" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CalculationsVariables.vandalismExclusion">
+            <terms text="theftExclusion" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CalculationsVariables.theftExclusion">
               <parentTerm text="CalculationsVariables" datatype="CalculationsVariables" termtype="ENTITY" fulltext="CalculationsVariables"/>
             </terms>
           </referencedTermList>
         </parserOutput>
       </condition>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="VandalismExclusionFalse" order="2" ruleActivityUpdateStamp="_V5LJcADfEfCgoe-D45ThaQ" invokes="VandalismExclusionFalse.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon VandalismExclusion, Sachant que TheftExclusion est à False" order="2" ruleActivityUpdateStamp="_5q6WcBFREfCITsE5bC4jmA" invokes="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
+          <condition expression="CalculationsVariables.vandalismExclusion">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CalculationsVariables.vandalismExclusion" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="vandalismExclusion" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CalculationsVariables.vandalismExclusion">
+                  <parentTerm text="CalculationsVariables" datatype="CalculationsVariables" termtype="ENTITY" fulltext="CalculationsVariables"/>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </condition>
+          <branches>
+            <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="VandalismExclusionFalse" order="3" invokes="VandalismeExclusion/VandalismExclusionFalse.ers#//@ruleset"/>
+            <label expression="false"/>
+            <viewExpressions lhs="CalculationsVariables.vandalismExclusion" rhs="false"/>
+          </branches>
+          <branches>
+            <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="VandalismExclusionTrue" order="4" invokes="VandalismeExclusion/VandalismExclusionTrue.ers#//@ruleset"/>
+            <label expression="true"/>
+            <viewExpressions lhs="CalculationsVariables.vandalismExclusion" rhs="true"/>
+          </branches>
+        </nextStep>
         <label expression="false"/>
-        <viewExpressions lhs="CalculationsVariables.vandalismExclusion" rhs="false"/>
+        <viewExpressions lhs="CalculationsVariables.theftExclusion" rhs="false"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="VandalismExclusionTrue" order="3" ruleActivityUpdateStamp="_U3Bv8ADfEfCgoe-D45ThaQ" invokes="VandalismExclusionTrue.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="TheftExclusionTrue" order="5" ruleActivityUpdateStamp="_SzGYUBFREfCITsE5bC4jmA" invokes="TheftExclusionTrue/TheftExclusionTrue.ers#//@ruleset"/>
         <label expression="true"/>
-        <viewExpressions lhs="CalculationsVariables.vandalismExclusion" rhs="true"/>
+        <viewExpressions lhs="CalculationsVariables.theftExclusion" rhs="true"/>
       </branches>
     </flowControlList>
   </ruleflow>
   <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
-    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="138" y="150" width="360" height="180" activityNode="#//@ruleflow/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@flowControlList.0">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="300" y="48" width="883" height="277" activityNode="#//@ruleflow/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@flowControlList.0">
       <annotations name="Color" value="16777088"/>
-      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="67" y="12" width="206" height="45" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.1/@nextStep.0">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="307" y="18" width="529" height="205" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0" valid="true" branchContainer="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
+        <annotations name="Color" value="16777088"/>
+        <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="139" y="8" width="206" height="45" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0/@branches.1/@nextStep.0">
+          <annotations name="Color" value="8454143"/>
+        </flowShapeList>
+        <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="139" y="74" width="205" height="46" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0/@branches.0/@nextStep.0">
+          <annotations name="Color" value="8454143"/>
+        </flowShapeList>
+        <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0/@flowShapeList.1" branch="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0/@branches.0"/>
+        <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0/@flowShapeList.0" branch="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0/@branches.1"/>
+      </flowShapeList>
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="13" y="18" width="211" height="50" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.1/@nextStep.0">
         <annotations name="Color" value="8454143"/>
       </flowShapeList>
-      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="67" y="78" width="205" height="46" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
-        <annotations name="Color" value="8454143"/>
-      </flowShapeList>
-      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.1" branch="#//@ruleflow/@flowControlList.0/@branches.0"/>
-      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0" branch="#//@ruleflow/@flowControlList.0/@branches.1"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0" branch="#//@ruleflow/@flowControlList.0/@branches.0"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.1" branch="#//@ruleflow/@flowControlList.0/@branches.1"/>
     </flowShapeList>
   </ruleflowViewList>
 </com.corticon.rulesemf.assetmodel:RuleflowAsset>
