@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_cqp2AA8REfC1Sfr_yOodVw" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_q_7BYBCQEfCITsE5bC4jmA" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T11:08:54.258+0100" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T11:09:10.369+0100" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -392,6 +392,23 @@
           <value manuallyCreated="true" value="'Family'"/>
         </enumerationElements>
       </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//policyStatus">
+        <dataTypeName manuallyCreated="true" value="policyStatus"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Cancellation'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Endorsment'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Renewal'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'NewBusiness'"/>
+        </enumerationElements>
+      </customDataTypeList>
     </contents>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Insureds">
@@ -740,9 +757,9 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyStatus" eType="#//policyStatus">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.5">
           <name manuallyCreated="true" value="policyStatus"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -2981,5 +2998,11 @@
     <eLiterals name="V4" value="4" literal="'Secondary'"/>
     <eLiterals name="V5" value="5" literal="'Tenant'"/>
     <eLiterals name="V6" value="6" literal="'Family'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="policyStatus">
+    <eLiterals name="V0" literal="'Cancellation'"/>
+    <eLiterals name="V1" value="1" literal="'Endorsment'"/>
+    <eLiterals name="V2" value="2" literal="'Renewal'"/>
+    <eLiterals name="V3" value="3" literal="'NewBusiness'"/>
   </eClassifiers>
 </ecore:EPackage>
