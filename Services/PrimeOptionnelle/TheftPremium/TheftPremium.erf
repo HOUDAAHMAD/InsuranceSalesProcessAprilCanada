@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_HROwQBFUEfCITsE5bC4jmA" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="VandalismeExclusion/VandalismExclusionTrue.ers#/ VandalismeExclusion/VandalismExclusionFalse.ers#/ TheftExclusionTrue/TheftExclusionTrue.ers#/">
-  <ruleflow majorVersion="1" vocabularyUpdateStamp="_q_7BYBCQEfCITsE5bC4jmA" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon TheftExclusion" order="1" ruleActivityUpdateStamp="_5ppyMRFREfCITsE5bC4jmA" invokes="#//@ruleflow/@flowControlList.0">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_5AsloBSPEfCWkaeuC4mOxw" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="VandalismeExclusion/VandalismExclusionTrue.ers#/ VandalismeExclusion/VandalismExclusionFalse.ers#/ TheftExclusionTrue/TheftExclusionTrue.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_V085URR-EfCiNekO5n5upg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon TheftExclusion" order="1" ruleActivityUpdateStamp="_b6xYURSPEfCWkaeuC4mOxw" invokes="#//@ruleflow/@flowControlList.0">
       <condition expression="CalculationsVariables.theftExclusion">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CalculationsVariables.theftExclusion" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
           <referencedTermList>
@@ -12,7 +12,7 @@
         </parserOutput>
       </condition>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon VandalismExclusion, Sachant que TheftExclusion est à False" order="2" ruleActivityUpdateStamp="_5q6WcBFREfCITsE5bC4jmA" invokes="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon VandalismExclusion, Sachant que TheftExclusion est à False" order="2" ruleActivityUpdateStamp="_b6xYURSPEfCWkaeuC4mOxw" invokes="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
           <condition expression="CalculationsVariables.vandalismExclusion">
             <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CalculationsVariables.vandalismExclusion" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
               <referencedTermList>
@@ -37,7 +37,7 @@
         <viewExpressions lhs="CalculationsVariables.theftExclusion" rhs="false"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="TheftExclusionTrue" order="5" ruleActivityUpdateStamp="_SzGYUBFREfCITsE5bC4jmA" invokes="TheftExclusionTrue/TheftExclusionTrue.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="TheftExclusionTrue" order="5" ruleActivityUpdateStamp="_b4QP0RSPEfCWkaeuC4mOxw" invokes="TheftExclusionTrue/TheftExclusionTrue.ers#//@ruleset"/>
         <label expression="true"/>
         <viewExpressions lhs="CalculationsVariables.theftExclusion" rhs="true"/>
       </branches>
