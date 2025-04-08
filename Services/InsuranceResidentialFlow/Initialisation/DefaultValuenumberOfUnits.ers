@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_D7rCnA5HEfCNMJe_MzGrTg" externalChecksum="7824986:1438690353:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_senJoBSFEfCiNekO5n5upg" externalChecksum="7824986:1438690353:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_HKSVsAr8EfC4V9Hn0csZRg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_V085URR-EfCiNekO5n5upg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <condition/>
     </rule>
@@ -12,7 +12,7 @@
             <referencedTermList>
               <terms text="co" datatype="Boolean" termtype="COLLECTION" fulltext="co->isEmpty">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -20,7 +20,7 @@
               <terms text="toString" datatype="String" termtype="METHOD" fulltext="co.numberOfUnits.toString">
                 <parentTerm text="numberOfUnits" datatype="Integer" termtype="ATTRIBUTE" fulltext="co.numberOfUnits">
                   <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
@@ -37,7 +37,7 @@
             <modifiedTermList>
               <terms text="numberOfUnits" datatype="Integer" termtype="ATTRIBUTE" fulltext="co.numberOfUnits">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -45,7 +45,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -54,16 +54,16 @@
         </opaqueExpression>
       </action>
     </rule>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="Initialisation de numberOfUnits à 1.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Initialisation de numberOfUnits à 1." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" ruleStatements="#//@ruleset/@ruleStatements.0">
-      <extension association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/dwellings">
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/construction">
+    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request">
+      <extension association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings">
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Construction" ruleStatements="#//@ruleset/@ruleStatements.0">
           <alias value="co"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction/numberOfUnits"/>
         </extension>
@@ -79,7 +79,7 @@
             <referencedTermList>
               <terms text="numberOfUnits" datatype="Integer" termtype="ATTRIBUTE" fulltext="co.numberOfUnits">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -119,7 +119,7 @@
             <referencedTermList>
               <terms text="co" datatype="Boolean" termtype="COLLECTION" fulltext="co->isEmpty">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -127,7 +127,7 @@
               <terms text="toString" datatype="String" termtype="METHOD" fulltext="co.numberOfUnits.toString">
                 <parentTerm text="numberOfUnits" datatype="Integer" termtype="ATTRIBUTE" fulltext="co.numberOfUnits">
                   <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
@@ -148,7 +148,7 @@
             <referencedTermList>
               <terms text="co" datatype="Boolean" termtype="COLLECTION" fulltext="co->isEmpty">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -156,7 +156,7 @@
               <terms text="toString" datatype="String" termtype="METHOD" fulltext="co.numberOfUnits.toString">
                 <parentTerm text="numberOfUnits" datatype="Integer" termtype="ATTRIBUTE" fulltext="co.numberOfUnits">
                   <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
@@ -170,7 +170,7 @@
             <modifiedTermList>
               <terms text="numberOfUnits" datatype="Integer" termtype="ATTRIBUTE" fulltext="co.numberOfUnits">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co">
-                  <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -178,7 +178,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="co" datatype="Construction" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.dwellings">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>

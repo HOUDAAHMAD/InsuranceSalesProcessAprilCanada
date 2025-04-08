@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_BAnTERRPEfCiNekO5n5upg" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_V085URR-EfCiNekO5n5upg" externalChecksum="7824986:1438690353" customDataTypeDisplayCount="50">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T11:08:54.258+0100" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T11:09:10.369+0100" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -36,11 +36,11 @@
       <comments timestamp="2025-02-14T13:53:09.073+0100" username="ahmad.houda" text="Type d'annulation" objects="#//Cancellation/cancellationType" type="Note"/>
       <comments timestamp="2025-02-14T13:53:19.288+0100" username="ahmad.houda" text="Délai" objects="#//Cancellation/delay" type="Note"/>
       <comments timestamp="2025-02-14T13:53:36.652+0100" username="ahmad.houda" text="Remboursement des frais" objects="#//Cancellation/feesRefund" type="Note"/>
-      <comments timestamp="2025-02-14T13:54:32.038+0100" username="ahmad.houda" text="Un assuré a un ensemble de coordonnées" objects="#//Insureds/contactDetail" type="Note"/>
-      <comments timestamp="2025-02-14T13:54:43.659+0100" username="ahmad.houda" text="Un assuré a un ensemble de détails personnels" objects="#//Insureds/insuredDetail" type="Note"/>
-      <comments timestamp="2025-02-14T13:54:53.136+0100" username="ahmad.houda" text="Un assuré a une adresse postale" objects="#//Insureds/mailingAddress" type="Note"/>
-      <comments timestamp="2025-02-14T13:55:35.566+0100" username="ahmad.houda" text="Un assuré peut avoir plusieurs adresses e-mail" objects="#//ContactDetail/email" type="Note"/>
-      <comments timestamp="2025-02-14T13:55:46.221+0100" username="ahmad.houda" text="Un assuré peut avoir plusieurs numéros de téléphone" objects="#//ContactDetail/phone" type="Note"/>
+      <comments timestamp="2025-02-14T13:54:32.038+0100" username="ahmad.houda" text="Un assuré a un ensemble de coordonnées" objects="#//Insureds/ContactDetail" type="Note"/>
+      <comments timestamp="2025-02-14T13:54:43.659+0100" username="ahmad.houda" text="Un assuré a un ensemble de détails personnels" objects="#//Insureds/InsuredDetail" type="Note"/>
+      <comments timestamp="2025-02-14T13:54:53.136+0100" username="ahmad.houda" text="Un assuré a une adresse postale" objects="#//Insureds/MailingAddress" type="Note"/>
+      <comments timestamp="2025-02-14T13:55:35.566+0100" username="ahmad.houda" text="Un assuré peut avoir plusieurs adresses e-mail" objects="#//ContactDetail/Emails" type="Note"/>
+      <comments timestamp="2025-02-14T13:55:46.221+0100" username="ahmad.houda" text="Un assuré peut avoir plusieurs numéros de téléphone" objects="#//ContactDetail/Phones" type="Note"/>
       <comments timestamp="2025-02-14T14:06:44.405+0100" username="ahmad.houda" text="Taux d'assureur 2363" objects="#//Dwellings/insurer2363" type="Note"/>
       <comments timestamp="2025-02-14T14:06:52.973+0100" username="ahmad.houda" text="Taux d'assureur 1517" objects="#//Dwellings/insurer1517" type="Note"/>
       <comments timestamp="2025-02-14T14:07:08.229+0100" username="ahmad.houda" text="Formulaire racine" objects="#//Dwellings/rootForm" type="Note"/>
@@ -83,7 +83,7 @@
       <comments timestamp="2025-02-14T14:44:37.070+0100" username="ahmad.houda" text="Numéro de rue" objects="#//RiskAddress/streetNumber" type="Note"/>
       <comments timestamp="2025-02-14T14:44:55.502+0100" username="ahmad.houda" text="Numéro d'unité" objects="#//RiskAddress/unitNumber" type="Note"/>
       <comments timestamp="2025-02-14T14:46:22.575+0100" username="ahmad.houda" text="Adresse du risque" objects="#//RiskAddress" type="Note"/>
-      <comments timestamp="2025-02-14T14:47:09.910+0100" username="ahmad.houda" text="Un logement a une adresse associée" objects="#//Dwellings/riskAddress" type="Note"/>
+      <comments timestamp="2025-02-14T14:47:09.910+0100" username="ahmad.houda" text="Un logement a une adresse associée" objects="#//Dwellings/RiskAddress" type="Note"/>
       <comments timestamp="2025-02-14T14:49:00.153+0100" username="ahmad.houda" text="Responsabilité" objects="#//Liability" type="Note"/>
       <comments timestamp="2025-02-14T14:49:36.726+0100" username="ahmad.houda" text="Indicateur d'entreprise à domicile" objects="#//Liability/homeBusinessIndicator" type="Note"/>
       <comments timestamp="2025-02-14T14:50:04.461+0100" username="ahmad.houda" text="Montant des hypothèques" objects="#//Liability/mortgagesAmount" type="Note"/>
@@ -104,9 +104,9 @@
       <comments timestamp="2025-02-14T15:05:56.336+0100" username="ahmad.houda" text="Type de terme" objects="#//Occupancy/termType" type="Note"/>
       <comments timestamp="2025-02-14T15:06:38.112+0100" username="ahmad.houda" text="Propriété louée" objects="#//Occupancy/rentedProperty" type="Note"/>
       <comments timestamp="2025-02-14T15:06:56.350+0100" username="ahmad.houda" text="Nom du membre de la famille" objects="#//Occupancy/familyMemberName" type="Note"/>
-      <comments timestamp="2025-02-14T15:07:38.302+0100" username="ahmad.houda" text="Une habitation a une seule responsabilité" objects="#//Dwellings/liability" type="Note"/>
-      <comments timestamp="2025-02-14T15:08:49.584+0100" username="ahmad.houda" text="Une habitation a une seule adresse de risque" objects="#//Dwellings/riskAddress" type="Note"/>
-      <comments timestamp="2025-02-14T15:08:59.633+0100" username="ahmad.houda" text="Une habitation a une seule construction" objects="#//Dwellings/construction" type="Note"/>
+      <comments timestamp="2025-02-14T15:07:38.302+0100" username="ahmad.houda" text="Une habitation a une seule responsabilité" objects="#//Dwellings/Liability" type="Note"/>
+      <comments timestamp="2025-02-14T15:08:49.584+0100" username="ahmad.houda" text="Une habitation a une seule adresse de risque" objects="#//Dwellings/RiskAddress" type="Note"/>
+      <comments timestamp="2025-02-14T15:08:59.633+0100" username="ahmad.houda" text="Une habitation a une seule construction" objects="#//Dwellings/Construction" type="Note"/>
       <comments timestamp="2025-02-14T15:09:54.469+0100" username="ahmad.houda" text="Une habitation a une seule occupation" objects="#//Dwellings" type="Note"/>
       <comments timestamp="2025-02-14T15:12:27.254+0100" username="ahmad.houda" text="Location" objects="#//Rental" type="Note"/>
       <comments timestamp="2025-02-14T15:13:32.887+0100" username="ahmad.houda" text="Chaque occupation à un location" objects="#//Occupancy" type="Note"/>
@@ -132,7 +132,7 @@
       <comments timestamp="2025-02-14T15:22:21.916+0100" username="ahmad.houda" text="Garages" objects="#//Garages" type="Note"/>
       <comments timestamp="2025-02-14T15:22:38.392+0100" username="ahmad.houda" text="Type de garage" objects="#//Garages/garageType" type="Note"/>
       <comments timestamp="2025-02-14T15:22:57.630+0100" username="ahmad.houda" text="Nombre de véhicules" objects="#//Garages/numberOfVehicles" type="Note"/>
-      <comments timestamp="2025-02-14T15:24:25.034+0100" username="ahmad.houda" text="Une habitation peut avoir plusieurs garages" objects="#//Dwellings/garages" type="Note"/>
+      <comments timestamp="2025-02-14T15:24:25.034+0100" username="ahmad.houda" text="Une habitation peut avoir plusieurs garages" objects="#//Dwellings/Garages" type="Note"/>
       <comments timestamp="2025-02-14T15:42:44.014+0100" username="ahmad.houda" text="Prime d'habitation" objects="#//HeatingUnits" type="Note"/>
       <comments timestamp="2025-02-14T15:43:29.054+0100" username="ahmad.houda" text="Unités de chauffage" objects="#//HeatingUnits" type="Note"/>
       <comments timestamp="2025-02-14T15:43:46.564+0100" username="ahmad.houda" text="Indicateur de certification" objects="#//HeatingUnits/certifiedIndicator" type="Note"/>
@@ -158,7 +158,7 @@
       <comments timestamp="2025-02-14T15:54:19.190+0100" username="ahmad.houda" text="Taux" objects="#//Rates" type="Note"/>
       <comments timestamp="2025-02-14T15:54:50.804+0100" username="ahmad.houda" text="Code de taux" objects="#//Rates/rateCode" type="Note"/>
       <comments timestamp="2025-02-14T15:54:57.688+0100" username="ahmad.houda" text="Valeur du taux" objects="#//Rates/rateValue" type="Note"/>
-      <comments timestamp="2025-02-14T15:55:42.750+0100" username="ahmad.houda" text="Une habitation peut avoir plusieurs taux" objects="#//Dwellings/rates" type="Note"/>
+      <comments timestamp="2025-02-14T15:55:42.750+0100" username="ahmad.houda" text="Une habitation peut avoir plusieurs taux" objects="#//Dwellings/Rates" type="Note"/>
       <comments timestamp="2025-02-14T15:57:04.992+0100" username="ahmad.houda" text="Variables de calcul" objects="#//CalculationsVariables" type="Note"/>
       <comments timestamp="2025-02-14T15:57:40.792+0100" username="ahmad.houda" text="Valeur totale assurée" objects="#//CalculationsVariables/TIV" type="Note"/>
       <comments timestamp="2025-02-14T15:58:02.139+0100" username="ahmad.houda" text="Prime de base de la propriété" objects="#//CalculationsVariables/propertyBasePremium" type="Note"/>
@@ -427,24 +427,24 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contactDetail" eType="#//ContactDetail">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContactDetail" eType="#//ContactDetail">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="contactDetail"/>
+          <name manuallyCreated="true" value="ContactDetail"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="insuredDetail" eType="#//InsuredDetail">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="InsuredDetail" eType="#//InsuredDetail">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="insuredDetail"/>
+          <name manuallyCreated="true" value="InsuredDetail"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mailingAddress" eType="#//MailingAddress">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MailingAddress" eType="#//MailingAddress">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="mailingAddress"/>
+          <name manuallyCreated="true" value="MailingAddress"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -457,17 +457,17 @@
         <datastoreCaching manuallyCreated="true" value="false"/>
       </contents>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="email" upperBound="-1" eType="#//Emails">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Emails" upperBound="-1" eType="#//Emails">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="email"/>
+          <name manuallyCreated="true" value="Emails"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="phone" upperBound="-1" eType="#//Phones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Phones" upperBound="-1" eType="#//Phones">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="phone"/>
+          <name manuallyCreated="true" value="Phones"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -578,10 +578,10 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bankruptcy" eType="#//Bankruptcy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Bankruptcy" eType="#//Bankruptcy">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="bankruptcy"/>
+          <name manuallyCreated="true" value="Bankruptcy"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -781,17 +781,17 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="endorsementReason" upperBound="-1" eType="#//EndorsementReason">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EndorsementReason" upperBound="-1" eType="#//EndorsementReason">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="endorsementReason"/>
+          <name manuallyCreated="true" value="EndorsementReason"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cancellation" eType="#//Cancellation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Cancellation" eType="#//Cancellation">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="cancellation"/>
+          <name manuallyCreated="true" value="Cancellation"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -835,24 +835,24 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="producer" eType="#//Producer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Producer" eType="#//Producer">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="producer"/>
+          <name manuallyCreated="true" value="Producer"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="underwriter" eType="#//Underwriter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Underwriter" eType="#//Underwriter">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="underwriter"/>
+          <name manuallyCreated="true" value="Underwriter"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="industryCode" eType="#//IndustryCode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="IndustryCode" eType="#//IndustryCode">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="industryCode"/>
+          <name manuallyCreated="true" value="IndustryCode"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -1035,80 +1035,80 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="buildingUpgrades" eType="#//BuildingUpgrades">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BuildingUpgrades" eType="#//BuildingUpgrades">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="buildingUpgrades"/>
+          <name manuallyCreated="true" value="BuildingUpgrades"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="construction" eType="#//Construction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Construction" eType="#//Construction">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="construction"/>
+          <name manuallyCreated="true" value="Construction"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="riskAddress" eType="#//RiskAddress">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RiskAddress" eType="#//RiskAddress">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="riskAddress"/>
+          <name manuallyCreated="true" value="RiskAddress"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="liability" eType="#//Liability">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Liability" eType="#//Liability">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="liability"/>
+          <name manuallyCreated="true" value="Liability"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="occupancy" eType="#//Occupancy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Occupancy" eType="#//Occupancy">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="occupancy"/>
+          <name manuallyCreated="true" value="Occupancy"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="garages" upperBound="-1" eType="#//Garages">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Garages" upperBound="-1" eType="#//Garages">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="garages"/>
+          <name manuallyCreated="true" value="Garages"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="heatingUnits" upperBound="-1" eType="#//HeatingUnits">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HeatingUnits" upperBound="-1" eType="#//HeatingUnits">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="heatingUnits"/>
+          <name manuallyCreated="true" value="HeatingUnits"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="plumbingDetail" eType="#//PlumbingDetail">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PlumbingDetail" eType="#//PlumbingDetail">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="plumbingDetail"/>
+          <name manuallyCreated="true" value="PlumbingDetail"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dwellingPremium" eType="#//DwellingPremium">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DwellingPremium" eType="#//DwellingPremium">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="dwellingPremium"/>
+          <name manuallyCreated="true" value="DwellingPremium"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rates" upperBound="-1" eType="#//Rates">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Rates" upperBound="-1" eType="#//Rates">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="rates"/>
+          <name manuallyCreated="true" value="Rates"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="calculationsVariables" eType="#//CalculationsVariables">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CalculationsVariables" eType="#//CalculationsVariables">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="calculationsVariables"/>
+          <name manuallyCreated="true" value="CalculationsVariables"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -1120,17 +1120,17 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="coverages" upperBound="-1" eType="#//Coverages">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Coverages" upperBound="-1" eType="#//Coverages">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="coverages"/>
+          <name manuallyCreated="true" value="Coverages"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="buildingProtection" eType="#//BuildingProtection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BuildingProtection" eType="#//BuildingProtection">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="buildingProtection"/>
+          <name manuallyCreated="true" value="BuildingProtection"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -1532,10 +1532,10 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rental" eType="#//Rental">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Rental" eType="#//Rental">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="rental"/>
+          <name manuallyCreated="true" value="Rental"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -2677,17 +2677,17 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mailingAddress" eType="#//MailingAddress">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MailingAddress" eType="#//MailingAddress">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="mailingAddress"/>
+          <name manuallyCreated="true" value="MailingAddress"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mortgageInformation" eType="#//MortgageInformation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MortgageInformation" eType="#//MortgageInformation">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="mortgageInformation"/>
+          <name manuallyCreated="true" value="MortgageInformation"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -2749,52 +2749,52 @@
         <datastoreCaching manuallyCreated="true" value="false"/>
       </contents>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="insureds" upperBound="-1" eType="#//Insureds">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Insureds" upperBound="-1" eType="#//Insureds">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="insureds"/>
+          <name manuallyCreated="true" value="Insureds"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="previousInsurances" upperBound="-1" eType="#//PreviousInsurances">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PreviousInsurances" upperBound="-1" eType="#//PreviousInsurances">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="previousInsurances"/>
+          <name manuallyCreated="true" value="PreviousInsurances"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="policyDetail" eType="#//PolicyDetail">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PolicyDetail" eType="#//PolicyDetail">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="policyDetail"/>
+          <name manuallyCreated="true" value="PolicyDetail"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dwellings" upperBound="-1" eType="#//Dwellings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Dwellings" upperBound="-1" eType="#//Dwellings">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="dwellings"/>
+          <name manuallyCreated="true" value="Dwellings"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="billingDetail" eType="#//BillingDetail">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BillingDetail" eType="#//BillingDetail">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="billingDetail"/>
+          <name manuallyCreated="true" value="BillingDetail"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="claims" upperBound="-1" eType="#//Claims">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Claims" upperBound="-1" eType="#//Claims">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="claims"/>
+          <name manuallyCreated="true" value="Claims"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalInterest" upperBound="-1" eType="#//AdditionalInterest">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AdditionalInterest" upperBound="-1" eType="#//AdditionalInterest">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
-          <name manuallyCreated="true" value="additionalInterest"/>
+          <name manuallyCreated="true" value="AdditionalInterest"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>

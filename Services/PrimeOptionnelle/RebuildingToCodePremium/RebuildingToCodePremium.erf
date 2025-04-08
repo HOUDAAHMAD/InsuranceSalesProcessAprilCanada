@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_mDoLoBFCEfCITsE5bC4jmA" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="RebuildingToCodePremiumTrue.ers#/ RebuildingToCodePremiumFalse.ers#/">
-  <ruleflow majorVersion="1" vocabularyUpdateStamp="_BAnTERRPEfCiNekO5n5upg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon Zoning" order="1" ruleActivityUpdateStamp="_mDoLoBFCEfCITsE5bC4jmA" invokes="#//@ruleflow/@flowControlList.0">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_idpr8BSOEfCWkaeuC4mOxw" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="RebuildingToCodePremiumTrue.ers#/ RebuildingToCodePremiumFalse.ers#/">
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_idbCcBSOEfCWkaeuC4mOxw" key="7" type="Validation" severity="Error" invalidObjects="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0 #//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.1" textKey="RuleflowModelAPIImpl.Validation.InvalidRulesheetAsset"/>
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_V085URR-EfCiNekO5n5upg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon Zoning" order="1" ruleActivityUpdateStamp="_idpr8BSOEfCWkaeuC4mOxw" invokes="#//@ruleflow/@flowControlList.0">
       <condition expression="BuildingProtection.zoning">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="BuildingProtection.zoning" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
           <referencedTermList>
@@ -12,12 +13,12 @@
         </parserOutput>
       </condition>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="RebuildingToCodePremiumTrue" order="2" ruleActivityUpdateStamp="_NSyvQBFCEfCITsE5bC4jmA" invokes="RebuildingToCodePremiumTrue.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="RebuildingToCodePremiumTrue" order="2" ruleActivityUpdateStamp="_fzytwBSOEfCWkaeuC4mOxw" invokes="RebuildingToCodePremiumTrue.ers#//@ruleset"/>
         <label expression="true"/>
         <viewExpressions lhs="BuildingProtection.zoning" rhs="true"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="RebuildingToCodePremiumFalse" order="3" ruleActivityUpdateStamp="_zwvb4BFCEfCITsE5bC4jmA" invokes="RebuildingToCodePremiumFalse.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="RebuildingToCodePremiumFalse" order="3" ruleActivityUpdateStamp="_idOOIBSOEfCWkaeuC4mOxw" invokes="RebuildingToCodePremiumFalse.ers#//@ruleset"/>
         <label expression="false"/>
         <viewExpressions lhs="BuildingProtection.zoning" rhs="false"/>
       </branches>
@@ -26,10 +27,10 @@
   <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
     <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="587" y="131" width="428" height="194" activityNode="#//@ruleflow/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@flowControlList.0">
       <annotations name="Color" value="16777088"/>
-      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="80" y="13" width="264" height="54" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" validationMessages="#//@validationMessages.0" x="80" y="13" width="264" height="54" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
         <annotations name="Color" value="8454143"/>
       </flowShapeList>
-      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="80" y="91" width="265" height="55" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.1/@nextStep.0">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" validationMessages="#//@validationMessages.0" x="80" y="91" width="265" height="55" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.1/@nextStep.0">
         <annotations name="Color" value="8454143"/>
       </flowShapeList>
       <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0" branch="#//@ruleflow/@flowControlList.0/@branches.0"/>
