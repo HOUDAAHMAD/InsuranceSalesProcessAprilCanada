@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_EbzzgBSPEfCWkaeuC4mOxw" externalChecksum="7824986:1438690353:2146616488" rulesheetAssets="rateFireProtection1-Protected.ers#/ rateFireProtection2-SemiProtected.ers#/ rateFireProtection3-NonProtected.ers#/">
-  <ruleflow majorVersion="1" vocabularyUpdateStamp="_V085URR-EfCiNekO5n5upg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="FireProtection" order="1" ruleActivityUpdateStamp="_Dn7fgRSPEfCWkaeuC4mOxw" invokes="#//@ruleflow/@flowControlList.0">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_974c8RaiEfCDg9KvPMBE-g" externalChecksum="7824986:507989954:2146616488" rulesheetAssets="rateFireProtection1-Protected.ers#/ rateFireProtection2-SemiProtected.ers#/ rateFireProtection3-NonProtected.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_yEsMghaiEfCDg9KvPMBE-g" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="FireProtection" order="1" ruleActivityUpdateStamp="_973O0RaiEfCDg9KvPMBE-g" invokes="#//@ruleflow/@flowControlList.0">
       <condition expression="BuildingProtection.fireProtection">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="BuildingProtection.fireProtection" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
           <referencedTermList>
@@ -12,19 +12,19 @@
         </parserOutput>
       </condition>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection2-SemiProtected" order="2" ruleActivityUpdateStamp="_C9K20BSFEfCiNekO5n5upg" invokes="rateFireProtection2-SemiProtected.ers#//@ruleset"/>
-        <label expression="'2-SemiProtected'"/>
-        <viewExpressions lhs="BuildingProtection.fireProtection" rhs="'2-SemiProtected'"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection2-SemiProtected" order="2" ruleActivityUpdateStamp="_GlPEYBYfEfCDg9KvPMBE-g" invokes="rateFireProtection2-SemiProtected.ers#//@ruleset"/>
+        <label expression="'SemiProtected'"/>
+        <viewExpressions lhs="BuildingProtection.fireProtection" rhs="'SemiProtected'"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection1-Protected" order="3" ruleActivityUpdateStamp="_BjLlEBSFEfCiNekO5n5upg" invokes="rateFireProtection1-Protected.ers#//@ruleset"/>
-        <label expression="'1-Protected'"/>
-        <viewExpressions lhs="BuildingProtection.fireProtection" rhs="'1-Protected'"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection1-Protected" order="3" ruleActivityUpdateStamp="_F5uCMRYfEfCDg9KvPMBE-g" invokes="rateFireProtection1-Protected.ers#//@ruleset"/>
+        <label expression="'Protected'"/>
+        <viewExpressions lhs="BuildingProtection.fireProtection" rhs="'Protected'"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection3-NonProtected" order="4" ruleActivityUpdateStamp="_DzTNkBSFEfCiNekO5n5upg" invokes="rateFireProtection3-NonProtected.ers#//@ruleset"/>
-        <label expression="'3-NonProtected'"/>
-        <viewExpressions lhs="BuildingProtection.fireProtection" rhs="'3-NonProtected'"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="rateFireProtection3-NonProtected" order="4" ruleActivityUpdateStamp="_HWC2RhYfEfCDg9KvPMBE-g" invokes="rateFireProtection3-NonProtected.ers#//@ruleset"/>
+        <label expression="'NonProtected'"/>
+        <viewExpressions lhs="BuildingProtection.fireProtection" rhs="'NonProtected'"/>
       </branches>
     </flowControlList>
   </ruleflow>

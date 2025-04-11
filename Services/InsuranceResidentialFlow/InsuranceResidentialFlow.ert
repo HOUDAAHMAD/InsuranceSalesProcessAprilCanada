@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_CpQ2shYiEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
-  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_PxtToBYiEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
-    <testsheet ruleActivityUpdateStamp="_EZt-8hXmEfCsp6cB0UpD-Q" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_h1wqUBajEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HaDnkBajEfCDg9KvPMBE-g" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
       <input/>
       <output>
         <PostedMessage severity="Info" text="Pour lobSubCode = HomeownersBroad, occupancyType = Primary."/>
@@ -100,7 +100,7 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2025-04-01T00:00:00" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/effectiveDate"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/expirationDate"/>
           </children>
-          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/rootForm"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0.0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/insurer1517"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Rates">
@@ -232,9 +232,9 @@
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//HeatingUnits/certifiedIndicator"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//HeatingUnits/isUsed"/>
             </children>
-            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoning"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3-NonProtected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="NonProtected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoningLimit"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/replacementCostAmount"/>
@@ -2586,8 +2586,8 @@
       <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
     </testsheetViewList>
   </testsheetAssets>
-  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Px450BYiEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
-    <testsheet ruleActivityUpdateStamp="_EZt-8hXmEfCsp6cB0UpD-Q" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_h107wBajEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HaDnkBajEfCDg9KvPMBE-g" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
       <input/>
       <output>
         <PostedMessage severity="Info" text="Pour lobSubCode = HomeownersBroad, occupancyType = Primary."/>
@@ -2691,7 +2691,7 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2025-04-01T00:00:00" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/effectiveDate"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/expirationDate"/>
           </children>
-          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/rootForm"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0.000000" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/insurer1517"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Rates">
@@ -2823,9 +2823,9 @@
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//HeatingUnits/certifiedIndicator"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//HeatingUnits/isUsed"/>
             </children>
-            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoning"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3-NonProtected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="NonProtected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoningLimit"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/replacementCostAmount"/>
@@ -5200,8 +5200,8 @@
       <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
     </testsheetViewList>
   </testsheetAssets>
-  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Px_ngBYiEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
-    <testsheet ruleActivityUpdateStamp="_EZt-8hXmEfCsp6cB0UpD-Q" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_h17pcBajEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HaDnkBajEfCDg9KvPMBE-g" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
       <input/>
       <output>
         <PostedMessage severity="Info" text="Pour lobSubCode = HomeownersBroad, occupancyType = Primary."/>
@@ -5271,7 +5271,7 @@
     </testsheet>
     <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
       <inputRoot>
-        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Request">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" expanded="false" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Request">
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Claims" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Claims"/>
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/BillingDetail" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="23NIRM" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/FinancingInformation"/>
@@ -5331,7 +5331,7 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2025-04-01T00:00:00" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/effectiveDate"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/expirationDate"/>
           </children>
-          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/rootForm"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0.0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/insurer1517"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Rates">
@@ -5465,7 +5465,7 @@
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoning"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3-NonProtected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="NonProtected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoningLimit"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/replacementCostAmount"/>
@@ -6524,7 +6524,7 @@
             </children>
           </children>
         </children>
-        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Request">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" expanded="false" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Request">
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Claims" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Claims"/>
           <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/BillingDetail" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="23NIRM" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/FinancingInformation"/>
@@ -6584,7 +6584,7 @@
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2025-04-01T00:00:00" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/effectiveDate"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/expirationDate"/>
           </children>
-          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings">
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/rootForm"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0.0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/insurer1517"/>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="26" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//Rates">
@@ -6716,9 +6716,9 @@
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//HeatingUnits/certifiedIndicator"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//HeatingUnits/isUsed"/>
             </children>
-            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoning"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3-NonProtected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="NonProtected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoningLimit"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/replacementCostAmount"/>
@@ -10354,8 +10354,8 @@
       <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
     </testsheetViewList>
   </testsheetAssets>
-  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_RvEYMRYiEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
-    <testsheet ruleActivityUpdateStamp="_EZt-8hXmEfCsp6cB0UpD-Q" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_h1_64BajEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HaDnkBajEfCDg9KvPMBE-g" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
       <input/>
       <output>
         <PostedMessage severity="Info" text="Pour lobSubCode = HomeownersNamedPeril, occupancyType = Primary."/>
@@ -10578,9 +10578,9 @@
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//HeatingUnits/certifiedIndicator"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//HeatingUnits/isUsed"/>
             </children>
-            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoning"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1-Protected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Protected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoningLimit"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/replacementCostAmount"/>
@@ -12834,8 +12834,8 @@
       <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
     </testsheetViewList>
   </testsheetAssets>
-  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_PyG8QBYiEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
-    <testsheet ruleActivityUpdateStamp="_EZt-8hXmEfCsp6cB0UpD-Q" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_h2DlQRajEfCDg9KvPMBE-g" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HaDnkBajEfCDg9KvPMBE-g" ruleActivity="InsuranceResidentialFlow.erf#//@ruleflow" locale="">
       <input/>
       <output/>
       <expectedOutput/>
@@ -13018,7 +13018,7 @@
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/BuildingProtection" eClass="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection">
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoning"/>
-              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1-Protected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Protected" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/fireProtection"/>
               <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//BuildingProtection/zoningLimit"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/replacementCostAmount"/>
@@ -14039,7 +14039,7 @@
       <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
     </testsheetViewList>
   </testsheetAssets>
-  <ruletest vocabularyUpdateStamp="_FgHTohVUEfCj6MZhGX6GdQ" testsheets="#//@testsheetAssets.0/@testsheet #//@testsheetAssets.1/@testsheet #//@testsheetAssets.2/@testsheet #//@testsheetAssets.3/@testsheet #//@testsheetAssets.4/@testsheet" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/"/>
+  <ruletest vocabularyUpdateStamp="_yEsMghaiEfCDg9KvPMBE-g" testsheets="#//@testsheetAssets.0/@testsheet #//@testsheetAssets.1/@testsheet #//@testsheetAssets.2/@testsheet #//@testsheetAssets.3/@testsheet #//@testsheetAssets.4/@testsheet" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/"/>
   <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
     <testTabList name="Test2"/>
     <testTabList name="Test1"/>
