@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Q4EewhYiEfCDg9KvPMBE-g" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_LhRiVhaoEfCpf6fwyY9BLg" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_FgHTohVUEfCj6MZhGX6GdQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <rule/>
+  <ruleset vocabularyUpdateStamp="_yEsMghaiEfCDg9KvPMBE-g" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+    <rule>
+      <action/>
+    </rule>
     <rule>
       <condition>
         <opaqueExpression expression="rate.rateCode = 'TIVRate'">
@@ -21,8 +23,8 @@
         <viewExpressions lhs="rate.rateCode" rhs="'TIVRate'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="rate.rateValue = (ra1.rateValue*ra3.rateValue*(ra2.rateValue+ra4.rateValue)).round(8)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateValue = ( ra1.rateValue * ra3.rateValue * ( ra2.rateValue + ra4.rateValue ) ).round ( 8 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rate.rateValue = ra1.rateValue*ra3.rateValue*(ra2.rateValue+ra4.rateValue)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateValue = ra1.rateValue * ra3.rateValue * ( ra2.rateValue + ra4.rateValue )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rate.rateValue">
                 <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
@@ -231,7 +233,7 @@
               </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.0"/>
             </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.1"/>
             </children>
@@ -338,8 +340,10 @@
       </conditionItemList>
     </conditionSection>
     <ruleSection columnCount="20">
-      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0"/>
-      <ruleColumnList ruleId="1" columnWidth="405" pRule="#//@ruleset/@rules.1">
+      <ruleColumnList ruleId="0" columnWidth="325" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="506" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="'TIVRate'">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateCode = 'TIVRate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
@@ -353,8 +357,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="(ra1.rateValue*ra3.rateValue*(ra2.rateValue+ra4.rateValue)).round(8)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateValue = ( ra1.rateValue * ra3.rateValue * ( ra2.rateValue + ra4.rateValue ) ).round ( 8 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="ra1.rateValue*ra3.rateValue*(ra2.rateValue+ra4.rateValue)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rate.rateValue = ra1.rateValue * ra3.rateValue * ( ra2.rateValue + ra4.rateValue )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rate.rateValue">
                 <parentTerm text="rate" datatype="Rates" termtype="ENTITY" fulltext="rate">

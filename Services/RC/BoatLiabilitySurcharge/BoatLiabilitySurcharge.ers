@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_kwrBcxkCEfCRT4GW2vSV8Q" externalChecksum="7824986:507989954:2146616488">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_dEAQsBkCEfCRT4GW2vSV8Q" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+    <rule>
+      <action>
+        <opaqueExpression expression="ca.boatLiabilitySurcharge = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.boatLiabilitySurcharge = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="boatLiabilitySurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.boatLiabilitySurcharge">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="(ra.leisure.contains('Boat'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ra.leisure.contains ( 'Boat' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="contains" datatype="boolean" termtype="METHOD" fulltext="ra.leisure.contains">
+                <parentTerm text="leisure" datatype="String" termtype="ATTRIBUTE" fulltext="ra.leisure">
+                  <parentTerm text="ra" datatype="Rental" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@extension.0">
+                    <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                      <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                        <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                      </parentTerm>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ra.leisure.contains('Boat')" rhs="T"/>
+      </condition>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="ca.boatLiabilitySurcharge = 45">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.boatLiabilitySurcharge = 45" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="boatLiabilitySurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.boatLiabilitySurcharge">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <text expression="Surprime sur la responsabilité liée à la présence de bateaux, BoatLiabilitySurcharge = {ca.boatLiabilitySurcharge}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Surprime sur la responsabilité liée à la présence de bateaux, BoatLiabilitySurcharge =  + ca.boatLiabilitySurcharge + ." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="boatLiabilitySurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.boatLiabilitySurcharge">
+              <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request">
+      <extension association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings">
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables" ruleStatements="#//@ruleset/@ruleStatements.0">
+          <alias value="ca"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/boatLiabilitySurcharge"/>
+        </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Occupancy" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Occupancy">
+          <alias value="oc"/>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rental" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Occupancy/Rental">
+            <alias value="ra"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rental/leisure"/>
+          </extension>
+        </extension>
+      </extension>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="ca.boatLiabilitySurcharge">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.boatLiabilitySurcharge" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="boatLiabilitySurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.boatLiabilitySurcharge">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@extension.0">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@extension.0/@referencedAttributes.0"/>
+              </children>
+            </children>
+          </children>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="A1"/>
+        <text external="Surprime sur la responsabilité liée à la présence de bateaux, BoatLiabilitySurcharge = {ca.boatLiabilitySurcharge}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Surprime sur la responsabilité liée à la présence de bateaux, BoatLiabilitySurcharge =  + ca.boatLiabilitySurcharge + ." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="boatLiabilitySurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.boatLiabilitySurcharge">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="ra.leisure.contains('Boat')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.leisure.contains ( 'Boat' )" datatype="boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="contains" datatype="boolean" termtype="METHOD" fulltext="ra.leisure.contains">
+                <parentTerm text="leisure" datatype="String" termtype="ATTRIBUTE" fulltext="ra.leisure">
+                  <parentTerm text="ra" datatype="Rental" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@extension.0">
+                    <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                      <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                        <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                      </parentTerm>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList valueSet="0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.boatLiabilitySurcharge = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="boatLiabilitySurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.boatLiabilitySurcharge">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ra.leisure.contains ( 'Boat' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="contains" datatype="boolean" termtype="METHOD" fulltext="ra.leisure.contains">
+                <parentTerm text="leisure" datatype="String" termtype="ATTRIBUTE" fulltext="ra.leisure">
+                  <parentTerm text="ra" datatype="Rental" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@extension.0">
+                    <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                      <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                        <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                      </parentTerm>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="45">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.boatLiabilitySurcharge = 45" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="boatLiabilitySurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.boatLiabilitySurcharge">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>
