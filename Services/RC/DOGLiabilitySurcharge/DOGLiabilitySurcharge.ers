@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_i5VIgBkGEfCRT4GW2vSV8Q" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_w958shtaEfC4mLDecvuV7g" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_DMNPcBkGEfCRT4GW2vSV8Q" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_qW2kwBncEfCEfdRYYYggEw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule/>
     <rule>
       <condition>
-        <opaqueExpression expression="(la.numberOfDogsToExclude>la.numberOfDogs)=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( la.numberOfDogsToExclude > la.numberOfDogs ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="(la.numberOfDogsToExclude&lt;la.numberOfDogs)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( la.numberOfDogsToExclude &lt; la.numberOfDogs ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="numberOfDogs" datatype="Integer" termtype="ATTRIBUTE" fulltext="la.numberOfDogs">
                 <parentTerm text="la" datatype="Liability" termtype="ENTITY" fulltext="la" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -25,11 +25,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="la.numberOfDogsToExclude>la.numberOfDogs" rhs="T"/>
+        <viewExpressions lhs="la.numberOfDogsToExclude&lt;la.numberOfDogs" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.dogLiabilitySurcharge=25*(la.numberOfDogsToExclude-la.numberOfDogs)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.dogLiabilitySurcharge = 25 * ( la.numberOfDogsToExclude - la.numberOfDogs )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.dogLiabilitySurcharge=25*(la.numberOfDogs-la.numberOfDogsToExclude)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.dogLiabilitySurcharge = 25 * ( la.numberOfDogs - la.numberOfDogsToExclude )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="dogLiabilitySurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.dogLiabilitySurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -158,8 +158,8 @@
     <conditionSection rowCount="50" columnWidthFactor="0.5">
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="la.numberOfDogsToExclude>la.numberOfDogs">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="la.numberOfDogsToExclude > la.numberOfDogs" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="la.numberOfDogsToExclude&lt;la.numberOfDogs">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="la.numberOfDogsToExclude &lt; la.numberOfDogs" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="numberOfDogs" datatype="Integer" termtype="ATTRIBUTE" fulltext="la.numberOfDogs">
                 <parentTerm text="la" datatype="Liability" termtype="ENTITY" fulltext="la" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -184,7 +184,7 @@
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0"/>
       <ruleColumnList ruleId="1" columnWidth="394" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( la.numberOfDogsToExclude > la.numberOfDogs ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( la.numberOfDogsToExclude &lt; la.numberOfDogs ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="numberOfDogs" datatype="Integer" termtype="ATTRIBUTE" fulltext="la.numberOfDogs">
                 <parentTerm text="la" datatype="Liability" termtype="ENTITY" fulltext="la" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -203,8 +203,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="(la.numberOfDogsToExclude-la.numberOfDogs)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.dogLiabilitySurcharge = 25 * ( la.numberOfDogsToExclude - la.numberOfDogs )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="(la.numberOfDogs-la.numberOfDogsToExclude)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.dogLiabilitySurcharge = 25 * ( la.numberOfDogs - la.numberOfDogsToExclude )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="dogLiabilitySurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.dogLiabilitySurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">

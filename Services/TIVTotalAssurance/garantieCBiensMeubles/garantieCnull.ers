@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_QUtUIRSPEfCWkaeuC4mOxw" externalChecksum="7824986:1438690353:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_uGh4MRtgEfC4mLDecvuV7g" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_V085URR-EfCiNekO5n5upg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_pGz9QBtdEfC4mLDecvuV7g" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action/>
     </rule>
@@ -119,7 +119,7 @@
         </parserOutput>
       </opaqueExpression>
     </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+    <filter precondition="true" disabled="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
       <opaqueExpression expression="coA.amountOfInsurance.toString&lt;>null">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="coA.amountOfInsurance.toString &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
           <referencedTermList>
@@ -151,7 +151,7 @@
         </parserOutput>
       </opaqueExpression>
     </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+    <filter precondition="true" disabled="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
       <opaqueExpression expression="ra.rateValue.toString&lt;>null">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue.toString &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
           <referencedTermList>
@@ -290,7 +290,7 @@
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.1"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.2"/>
             </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
                 <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ra.rateCode='ContentLimitRate'" filter="#//@ruleset/@filters.5"/>
                 <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ra.rateValue.toString&lt;>null" filter="#//@ruleset/@filters.6"/>
@@ -363,7 +363,7 @@
           </parserOutput>
         </expressionCell>
       </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.4">
+      <filterItemList disabled="true" filter="#//@ruleset/@filters.4">
         <expressionCell external="coA.amountOfInsurance.toString&lt;>null">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="coA.amountOfInsurance.toString &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
@@ -395,7 +395,7 @@
           </parserOutput>
         </expressionCell>
       </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.6">
+      <filterItemList disabled="true" filter="#//@ruleset/@filters.6">
         <expressionCell external="ra.rateValue.toString&lt;>null">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue.toString &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
