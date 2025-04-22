@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_tj25wR9iEfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_XDJtIB-HEfCdfvtqEd0huw" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_1-eu8h9dEfCF14WLYsvMiQ" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_7MZJAB-DEfCdfvtqEd0huw" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action>
         <opaqueExpression expression="ca.liabilityPremiumSurcharge = 0">
@@ -43,9 +43,9 @@
         </opaqueExpression>
         <viewExpressions lhs="ca.liabilitySurcharge&lt;=50" rhs="T"/>
       </condition>
-      <condition>
+      <condition disabled="true">
         <opaqueExpression expression="(dw.rootForm in {'C1', 'C2', 'D1', 'D2'})=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -113,9 +113,9 @@
         </opaqueExpression>
         <viewExpressions lhs="ca.liabilitySurcharge&lt;=50" rhs="T"/>
       </condition>
-      <condition>
+      <condition disabled="true">
         <opaqueExpression expression="(dw.rootForm in {'C1', 'C2', 'D1', 'D2'})=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -168,9 +168,9 @@
         </opaqueExpression>
         <viewExpressions lhs="ca.liabilitySurcharge&lt;=50" rhs="F"/>
       </condition>
-      <condition>
+      <condition disabled="true">
         <opaqueExpression expression="(dw.rootForm in {'C1', 'C2', 'D1', 'D2'})=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -223,9 +223,9 @@
         </opaqueExpression>
         <viewExpressions lhs="ca.liabilitySurcharge&lt;=50" rhs="F"/>
       </condition>
-      <condition>
+      <condition disabled="true">
         <opaqueExpression expression="(dw.rootForm in {'C1', 'C2', 'D1', 'D2'})=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -384,10 +384,10 @@
           </parserOutput>
         </expressionCell>
       </conditionItemList>
-      <conditionItemList>
+      <conditionItemList disabled="true">
         <valueSetCell/>
         <expressionCell external="dw.rootForm in {'C1', 'C2', 'D1', 'D2'}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' }" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' }" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -453,7 +453,7 @@
           </parserOutput>
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -512,7 +512,7 @@
           </parserOutput>
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -559,7 +559,7 @@
           </parserOutput>
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -606,7 +606,7 @@
           </parserOutput>
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.rootForm in { 'C1' , 'C2' , 'D1' , 'D2' } ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">

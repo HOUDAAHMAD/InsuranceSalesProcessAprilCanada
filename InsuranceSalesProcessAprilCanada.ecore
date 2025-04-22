@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_1-eu8h9dEfCF14WLYsvMiQ" externalChecksum="7824986:507989954" customDataTypeDisplayCount="50">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_7MZJAB-DEfCdfvtqEd0huw" externalChecksum="7824986:507989954" customDataTypeDisplayCount="49">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T11:08:54.258+0100" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T11:09:10.369+0100" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -437,8 +437,8 @@
           <value manuallyCreated="true" value="'NewBusiness'"/>
         </enumerationElements>
       </customDataTypeList>
-      <customDataTypeList enumerationDisplayCount="50" eDataType="#//TermType">
-        <dataTypeName manuallyCreated="true" value="TermType"/>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//termType">
+        <dataTypeName manuallyCreated="true" value="termType"/>
         <baseDataType manuallyCreated="true" value="String"/>
         <enumeration manuallyCreated="true" value="true"/>
         <enumerationElements>
@@ -448,6 +448,35 @@
         <enumerationElements>
           <label manuallyCreated="true" value="Short"/>
           <value manuallyCreated="true" value="'Short'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//rootForm">
+        <dataTypeName manuallyCreated="true" value="rootForm"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <label manuallyCreated="true" value="A1"/>
+          <value manuallyCreated="true" value="'A1'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <label manuallyCreated="true" value="A3"/>
+          <value manuallyCreated="true" value="'A3'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <label manuallyCreated="true" value="C1"/>
+          <value manuallyCreated="true" value="'C1'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <label manuallyCreated="true" value="C2"/>
+          <value manuallyCreated="true" value="'C2'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <label manuallyCreated="true" value="D1"/>
+          <value manuallyCreated="true" value="'D1'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <label manuallyCreated="true" value="E1"/>
+          <value manuallyCreated="true" value="'E1'"/>
         </enumerationElements>
       </customDataTypeList>
     </contents>
@@ -1052,9 +1081,9 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rootForm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rootForm" eType="#//rootForm">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.7">
           <name manuallyCreated="true" value="rootForm"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -1549,7 +1578,7 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="termType" eType="#//TermType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="termType" eType="#//termType">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.6">
           <name manuallyCreated="true" value="termType"/>
@@ -3008,7 +3037,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="TermType">
+  <eClassifiers xsi:type="ecore:EEnum" name="termType">
     <eLiterals name="Long" literal="'Long'"/>
     <eLiterals name="Short" value="1" literal="'Short'"/>
   </eClassifiers>
@@ -3049,5 +3078,13 @@
     <eLiterals name="Endorsment" value="1" literal="'Endorsment'"/>
     <eLiterals name="Renewal" value="2" literal="'Renewal'"/>
     <eLiterals name="NewBusiness" value="3" literal="'NewBusiness'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="rootForm">
+    <eLiterals name="A1" literal="'A1'"/>
+    <eLiterals name="A3" value="1" literal="'A3'"/>
+    <eLiterals name="C1" value="2" literal="'C1'"/>
+    <eLiterals name="C2" value="3" literal="'C2'"/>
+    <eLiterals name="D1" value="4" literal="'D1'"/>
+    <eLiterals name="E1" value="5" literal="'E1'"/>
   </eClassifiers>
 </ecore:EPackage>

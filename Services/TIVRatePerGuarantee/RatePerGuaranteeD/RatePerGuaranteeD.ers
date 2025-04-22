@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_jH3csBSFEfCiNekO5n5upg" externalChecksum="7824986:1438690353:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_8y6lcx-EEfCdfvtqEd0huw" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_V085URR-EfCiNekO5n5upg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_7MZJAB-DEfCdfvtqEd0huw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <condition/>
       <condition/>
@@ -22,7 +22,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'CondoPrimaryNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -35,7 +35,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -76,7 +76,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'CondoSecondaryFamilyNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -89,7 +89,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -130,7 +130,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'CondoSecondaryNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -143,7 +143,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -184,7 +184,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'CondowRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -197,7 +197,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -238,7 +238,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'CondowRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -251,7 +251,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -292,7 +292,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'CondowShortRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -305,7 +305,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -346,7 +346,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownersBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -359,7 +359,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -400,7 +400,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownersComprehensive'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -413,7 +413,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -454,7 +454,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownersNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -467,7 +467,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -508,7 +508,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -521,7 +521,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -562,7 +562,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -575,7 +575,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -616,7 +616,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -629,7 +629,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -670,7 +670,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -683,7 +683,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -724,7 +724,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -737,7 +737,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -778,7 +778,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswShortRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -791,7 +791,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -832,7 +832,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'RentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -845,7 +845,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -886,7 +886,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'RentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -899,7 +899,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -940,7 +940,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'RentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -953,7 +953,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -994,7 +994,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'RentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1007,7 +1007,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1048,7 +1048,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SeasonalwShortRental'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1061,7 +1061,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1102,7 +1102,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SeasonalwShortRental'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1115,7 +1115,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1156,7 +1156,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SeasonalwShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1169,7 +1169,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1210,7 +1210,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SeasonalwShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1223,7 +1223,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1264,7 +1264,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SecondaryFamilyBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1277,7 +1277,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -1318,7 +1318,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SecondaryFamilyNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1331,7 +1331,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -1372,7 +1372,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SecondarywShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1385,7 +1385,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1426,7 +1426,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SecondarywShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1439,7 +1439,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1480,7 +1480,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SecondarywShortRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1493,7 +1493,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1534,7 +1534,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'SecondarywShortRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1547,7 +1547,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1588,7 +1588,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'ShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1601,7 +1601,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1642,7 +1642,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'ShortRentalBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1655,7 +1655,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1696,7 +1696,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'ShortRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1709,7 +1709,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1750,7 +1750,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'ShortRentalNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1763,7 +1763,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.1">
@@ -1804,7 +1804,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'TenantComprehensive'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1817,7 +1817,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -1858,7 +1858,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'TenantNamedPeril'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1871,7 +1871,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -1912,7 +1912,7 @@
         <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownersBroad'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1925,7 +1925,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 0.2">
@@ -2201,7 +2201,7 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="46" scrollColumnLeft="34">
+    <ruleSection columnCount="46" scrollColumnLeft="31">
       <ruleColumnList ruleId="0" columnWidth="105" pRule="#//@ruleset/@rules.0">
         <conditionValueSetCellList/>
         <conditionValueSetCellList/>
@@ -2218,7 +2218,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2264,7 +2264,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2310,7 +2310,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2356,7 +2356,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2402,7 +2402,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2448,7 +2448,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2494,7 +2494,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2540,7 +2540,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2586,7 +2586,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2632,7 +2632,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2678,7 +2678,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2724,7 +2724,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2770,7 +2770,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2816,7 +2816,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2862,7 +2862,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2908,7 +2908,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -2954,7 +2954,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3000,7 +3000,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3046,7 +3046,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3092,7 +3092,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3138,7 +3138,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3184,7 +3184,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3230,7 +3230,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3276,7 +3276,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3322,7 +3322,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3368,7 +3368,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3414,7 +3414,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3460,7 +3460,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3506,7 +3506,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3552,7 +3552,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3598,7 +3598,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3644,7 +3644,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3690,7 +3690,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3736,7 +3736,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3782,7 +3782,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -3828,7 +3828,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
