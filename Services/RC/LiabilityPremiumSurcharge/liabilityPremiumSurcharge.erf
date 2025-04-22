@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_a_iqMB-HEfCdfvtqEd0huw" externalChecksum="7824986:507989954:2146616488" rulesheetAssets="LiabilityPremiumSurchargeCondo/LiabilityPremiumSurchargeCondo.ers#/">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_C6PWwB-KEfCdfvtqEd0huw" externalChecksum="7824986:507989954:2146616488" rulesheetAssets="LiabilityPremiumSurchargeCondo/LiabilityPremiumSurchargeCondo.ers#/ LiabilityPremiumSurchargeNotCondo/LiabilityPremiumSurchargeNotCondoA1A3E1.ers#/ LiabilityPremiumSurchargeNotCondo/LiabilityPremiumSurchargeNotCondoC1C2D1.ers#/">
   <ruleflow majorVersion="1" vocabularyUpdateStamp="_7MZJAB-DEfCdfvtqEd0huw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon homeType" order="1" ruleActivityUpdateStamp="_a_QWUx-HEfCdfvtqEd0huw" invokes="#//@ruleflow/@flowControlList.0">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon homeType" order="1" ruleActivityUpdateStamp="_C5fI0x-KEfCdfvtqEd0huw" invokes="#//@ruleflow/@flowControlList.0">
       <condition expression="Construction.homeType">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Construction.homeType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
           <referencedTermList>
@@ -17,26 +17,63 @@
         <viewExpressions lhs="Construction.homeType" rhs="homeType#Condo"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" order="3" ruleActivityUpdateStamp="_a_e_0R-HEfCdfvtqEd0huw" invokes="#//@ruleflow/@subflowList.0"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" order="3" ruleActivityUpdateStamp="_C6LFUR-KEfCdfvtqEd0huw" invokes="#//@ruleflow/@subflowList.0"/>
         <label expression="homeType#Tenant"/>
         <label expression="homeType#Mobile"/>
         <label expression="homeType#Dwelling"/>
         <viewExpressions lhs="Construction.homeType" rhs="homeType#Dwelling"/>
       </branches>
     </flowControlList>
-    <subflowList name="Not Condo"/>
+    <subflowList name="Not Condo">
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélectionnement selon rootForm" order="4" ruleActivityUpdateStamp="_C5skMR-KEfCdfvtqEd0huw" invokes="#//@ruleflow/@subflowList.0/@flowControlList.0">
+        <condition expression="Dwellings.rootForm">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Dwellings.rootForm" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="Dwellings.rootForm">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Dwellings"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </condition>
+        <branches>
+          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="LiabilityPremiumSurchargeNotCondoC1C2D1" order="5" ruleActivityUpdateStamp="_yF6d8B-JEfCdfvtqEd0huw" invokes="LiabilityPremiumSurchargeNotCondo/LiabilityPremiumSurchargeNotCondoC1C2D1.ers#//@ruleset"/>
+          <label expression="rootForm#C1"/>
+          <label expression="rootForm#C2"/>
+          <label expression="rootForm#D1"/>
+          <viewExpressions lhs="Dwellings.rootForm" rhs="rootForm#D1"/>
+        </branches>
+        <branches>
+          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="LiabilityPremiumSurchargeNotCondoA1A3E1" order="6" ruleActivityUpdateStamp="_zr7ZgB-JEfCdfvtqEd0huw" invokes="LiabilityPremiumSurchargeNotCondo/LiabilityPremiumSurchargeNotCondoA1A3E1.ers#//@ruleset"/>
+          <label expression="rootForm#A1"/>
+          <label expression="rootForm#A3"/>
+          <label expression="rootForm#E1"/>
+          <viewExpressions lhs="Dwellings.rootForm" rhs="rootForm#E1"/>
+        </branches>
+      </flowControlList>
+    </subflowList>
   </ruleflow>
   <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
-    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="375" y="176" width="946" height="350" activityNode="#//@ruleflow/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@flowControlList.0">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="375" y="176" width="946" height="365" activityNode="#//@ruleflow/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@flowControlList.0">
       <annotations name="Color" value="16777088"/>
       <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="29" y="19" width="256" height="61" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0">
         <annotations name="Color" value="8454143"/>
       </flowShapeList>
-      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="355" y="19" width="541" height="286" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.1/@nextStep.0">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="385" y="4" width="526" height="316" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.1/@nextStep.0">
         <annotations name="Color" value="8421631"/>
       </flowShapeList>
       <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0" branch="#//@ruleflow/@flowControlList.0/@branches.0"/>
       <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.1" branch="#//@ruleflow/@flowControlList.0/@branches.1"/>
+    </flowShapeList>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="40" y="8" width="451" height="226" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@subflowList.0/@flowControlList.0">
+      <annotations name="Color" value="16777088"/>
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="40" y="15" width="346" height="70" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.1/@branchEdgeList.1" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.1/@nextStep.0">
+        <annotations name="Color" value="8454143"/>
+      </flowShapeList>
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="40" y="120" width="346" height="61" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.1/@branchEdgeList.0" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.0/@nextStep.0">
+        <annotations name="Color" value="8454143"/>
+      </flowShapeList>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.1/@flowShapeList.1" branch="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.0"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.1/@flowShapeList.0" branch="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.1"/>
     </flowShapeList>
   </ruleflowViewList>
 </com.corticon.rulesemf.assetmodel:RuleflowAsset>
