@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_i6V4chUREfCnxJ0DXDxdYg" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_QDd-AB9iEfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_qW2kwBncEfCEfdRYYYggEw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_1-eu8h9dEfCF14WLYsvMiQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
@@ -46,7 +46,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'LessThan30'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -59,7 +59,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
@@ -104,7 +104,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'30-90'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -117,7 +117,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 25">
@@ -162,7 +162,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'91-180'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -175,7 +175,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 50">
@@ -220,7 +220,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'181-270'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -233,7 +233,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 75">
@@ -278,7 +278,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'MoreThan270'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -291,7 +291,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 100">
@@ -336,7 +336,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'LessThan30'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Mobile'">
+        <opaqueExpression expression="co.homeType = homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -349,7 +349,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Mobile'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Mobile"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
@@ -394,7 +394,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'30-90'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Mobile'">
+        <opaqueExpression expression="co.homeType = homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -407,7 +407,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Mobile'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Mobile"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 25">
@@ -452,7 +452,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'91-180'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Mobile'">
+        <opaqueExpression expression="co.homeType = homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -465,7 +465,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Mobile'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Mobile"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 50">
@@ -510,7 +510,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'181-270'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Mobile'">
+        <opaqueExpression expression="co.homeType = homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -523,7 +523,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Mobile'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Mobile"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 75">
@@ -568,7 +568,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'MoreThan270'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Mobile'">
+        <opaqueExpression expression="co.homeType = homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -581,7 +581,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Mobile'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Mobile"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 100">
@@ -626,7 +626,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'LessThan30'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Condo'">
+        <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -639,7 +639,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Condo'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
@@ -684,7 +684,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'30-90'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Condo'">
+        <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -697,7 +697,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Condo'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 13">
@@ -742,7 +742,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'91-180'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Condo'">
+        <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -755,7 +755,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Condo'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 25">
@@ -800,7 +800,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'181-270'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Condo'">
+        <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -813,7 +813,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Condo'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 38">
@@ -858,7 +858,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'MoreThan270'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Condo'">
+        <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -871,7 +871,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Condo'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 50">
@@ -916,7 +916,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'LessThan30'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Tenant'">
+        <opaqueExpression expression="co.homeType = homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -929,7 +929,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Tenant'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
@@ -974,7 +974,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'30-90'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Tenant'">
+        <opaqueExpression expression="co.homeType = homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -987,7 +987,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Tenant'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 13">
@@ -1032,7 +1032,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'91-180'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Tenant'">
+        <opaqueExpression expression="co.homeType = homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1045,7 +1045,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Tenant'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 25">
@@ -1090,7 +1090,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'181-270'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Tenant'">
+        <opaqueExpression expression="co.homeType = homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1103,7 +1103,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Tenant'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 38">
@@ -1148,7 +1148,7 @@
         <viewExpressions lhs="ra.rentedNightsNumber" rhs="'MoreThan270'"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Tenant'">
+        <opaqueExpression expression="co.homeType = homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1161,7 +1161,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Tenant'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.rentedNightsNumberPremium = 50">
@@ -1361,7 +1361,7 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="21">
+    <ruleSection columnCount="21" scrollColumnLeft="9">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
         <actionValueSetCellList valueSet="0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -1400,7 +1400,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1450,7 +1450,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1500,7 +1500,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1550,7 +1550,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1600,7 +1600,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1650,7 +1650,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Mobile'">
+        <conditionValueSetCellList valueSet="homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1700,7 +1700,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Mobile'">
+        <conditionValueSetCellList valueSet="homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1750,7 +1750,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Mobile'">
+        <conditionValueSetCellList valueSet="homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1800,7 +1800,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Mobile'">
+        <conditionValueSetCellList valueSet="homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1850,7 +1850,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Mobile'">
+        <conditionValueSetCellList valueSet="homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1900,7 +1900,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Condo'">
+        <conditionValueSetCellList valueSet="homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1950,7 +1950,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Condo'">
+        <conditionValueSetCellList valueSet="homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -2000,7 +2000,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Condo'">
+        <conditionValueSetCellList valueSet="homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -2050,7 +2050,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Condo'">
+        <conditionValueSetCellList valueSet="homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -2100,7 +2100,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Condo'">
+        <conditionValueSetCellList valueSet="homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -2150,7 +2150,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Tenant'">
+        <conditionValueSetCellList valueSet="homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -2200,7 +2200,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Tenant'">
+        <conditionValueSetCellList valueSet="homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -2250,7 +2250,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Tenant'">
+        <conditionValueSetCellList valueSet="homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -2300,7 +2300,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Tenant'">
+        <conditionValueSetCellList valueSet="homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -2350,7 +2350,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Tenant'">
+        <conditionValueSetCellList valueSet="homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_0QGZUhkBEfCRT4GW2vSV8Q" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_hPlrwx9iEfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_qW2kwBncEfCEfdRYYYggEw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_1-eu8h9dEfCF14WLYsvMiQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule/>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Primary'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -18,7 +18,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Primary'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Primary"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.liabilityIncludedInPremium = T">
@@ -45,7 +45,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Secondary'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -58,7 +58,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Secondary'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Secondary"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.liabilityIncludedInPremium = T">
@@ -85,7 +85,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Family'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Family">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Family'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -98,7 +98,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Family'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Family"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.liabilityIncludedInPremium = T">
@@ -125,7 +125,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Rental'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -138,7 +138,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Rental'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Rental"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.liabilityIncludedInPremium = F">
@@ -165,7 +165,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Seasonal'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -178,7 +178,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Seasonal'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Seasonal"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.liabilityIncludedInPremium = F">
@@ -205,7 +205,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Vacant'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -218,7 +218,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Vacant'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Vacant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.liabilityIncludedInPremium = F">
@@ -245,7 +245,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Tenant'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -258,7 +258,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Tenant'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ca.liabilityIncludedInPremium = F">
@@ -381,10 +381,10 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="20" scrollColumnLeft="3">
+    <ruleSection columnCount="20">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0"/>
       <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
-        <conditionValueSetCellList valueSet="'Primary'">
+        <conditionValueSetCellList valueSet="OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -419,7 +419,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
-        <conditionValueSetCellList valueSet="'Secondary'">
+        <conditionValueSetCellList valueSet="OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -454,7 +454,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
-        <conditionValueSetCellList valueSet="'Family'">
+        <conditionValueSetCellList valueSet="OccupancyType#Family">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Family'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -489,7 +489,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
-        <conditionValueSetCellList valueSet="'Rental'">
+        <conditionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -524,7 +524,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
-        <conditionValueSetCellList valueSet="'Seasonal'">
+        <conditionValueSetCellList valueSet="OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -559,7 +559,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
-        <conditionValueSetCellList valueSet="'Vacant'">
+        <conditionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -594,7 +594,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="7" columnWidth="100" pRule="#//@ruleset/@rules.7">
-        <conditionValueSetCellList valueSet="'Tenant'">
+        <conditionValueSetCellList valueSet="OccupancyType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Tenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">

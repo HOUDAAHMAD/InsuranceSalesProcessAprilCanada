@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_AAIc0BYYEfCsp6cB0UpD-Q" externalChecksum="7824986:507989954:2146616488" rulesheetAssets="SewerBackupLimitCondo.ers#/ SewerBackupLimitNotCondo.ers#/">
-  <ruleflow majorVersion="1" vocabularyUpdateStamp="_FgHTohVUEfCj6MZhGX6GdQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Selection selon homeType" order="1" ruleActivityUpdateStamp="_rDoTwBUREfCnxJ0DXDxdYg" invokes="#//@ruleflow/@flowControlList.0">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_XY5QQR9eEfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488" rulesheetAssets="SewerBackupLimitCondo.ers#/ SewerBackupLimitNotCondo.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_1-eu8h9dEfCF14WLYsvMiQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Selection selon homeType" order="1" ruleActivityUpdateStamp="_XY4pMh9eEfCF14WLYsvMiQ" invokes="#//@ruleflow/@flowControlList.0">
       <condition expression="Construction.homeType">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Construction.homeType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
           <referencedTermList>
@@ -13,15 +13,15 @@
       </condition>
       <branches>
         <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="SewerBackupLimitCondo" order="2" ruleActivityUpdateStamp="_pJfiUhUREfCnxJ0DXDxdYg" invokes="SewerBackupLimitCondo.ers#//@ruleset"/>
-        <label expression="'Condo'"/>
-        <viewExpressions lhs="Construction.homeType" rhs="'Condo'"/>
+        <label expression="homeType#Condo"/>
+        <viewExpressions lhs="Construction.homeType" rhs="homeType#Condo"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="SewerBackupLimitNotCondo" order="3" ruleActivityUpdateStamp="_rdmS8hUREfCnxJ0DXDxdYg" invokes="SewerBackupLimitNotCondo.ers#//@ruleset"/>
-        <label expression="'Tenant'"/>
-        <label expression="'Mobile'"/>
-        <label expression="'Dwelling'"/>
-        <viewExpressions lhs="Construction.homeType" rhs="'Dwelling'"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="SewerBackupLimitNotCondo" order="3" ruleActivityUpdateStamp="_BqmakhYYEfCsp6cB0UpD-Q" invokes="SewerBackupLimitNotCondo.ers#//@ruleset"/>
+        <label expression="homeType#Tenant"/>
+        <label expression="homeType#Mobile"/>
+        <label expression="homeType#Dwelling"/>
+        <viewExpressions lhs="Construction.homeType" rhs="homeType#Dwelling"/>
       </branches>
     </flowControlList>
   </ruleflow>

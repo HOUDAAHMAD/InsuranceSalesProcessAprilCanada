@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_OtXH0hteEfC4mLDecvuV7g" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_smNbMx9hEfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_pGz9QBtdEfC4mLDecvuV7g" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_1-eu8h9dEfCF14WLYsvMiQ" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action/>
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Rental'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -20,10 +20,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Rental'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Rental"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -36,11 +36,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -52,7 +52,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Short'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Short"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 12">
@@ -69,7 +69,7 @@
         <viewExpressions lhs="pod.term" rhs="12"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -82,7 +82,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 1000">
@@ -105,7 +105,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Seasonal'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -118,10 +118,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Seasonal'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Seasonal"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -134,11 +134,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -150,7 +150,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Short'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Short"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 12">
@@ -167,7 +167,7 @@
         <viewExpressions lhs="pod.term" rhs="12"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -180,7 +180,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 1000">
@@ -203,7 +203,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Primary'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -216,10 +216,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Primary'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Primary"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Mobile'">
+        <opaqueExpression expression="co.homeType = homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -232,11 +232,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Mobile'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Mobile"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Long'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Long">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -248,7 +248,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Long'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Long"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 12">
@@ -265,7 +265,7 @@
         <viewExpressions lhs="pod.term" rhs="12"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -278,7 +278,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 750">
@@ -301,7 +301,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Primary'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -314,10 +314,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Primary'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Primary"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Mobile'">
+        <opaqueExpression expression="co.homeType = homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -330,11 +330,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Mobile'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Mobile"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Long'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Long">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -346,7 +346,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Long'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Long"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 12">
@@ -363,7 +363,7 @@
         <viewExpressions lhs="pod.term" rhs="12"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -376,7 +376,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 750">
@@ -399,7 +399,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Vacant'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -412,10 +412,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Vacant'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Vacant"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -428,11 +428,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -444,7 +444,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Short'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Short"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 6">
@@ -461,7 +461,7 @@
         <viewExpressions lhs="pod.term" rhs="6"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -474,7 +474,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 750">
@@ -497,7 +497,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Vacant'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -510,10 +510,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Vacant'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Vacant"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -526,11 +526,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -542,7 +542,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Short'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Short"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 6">
@@ -559,7 +559,7 @@
         <viewExpressions lhs="pod.term" rhs="6"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -572,7 +572,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 750">
@@ -595,7 +595,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Vacant'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -608,10 +608,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Vacant'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Vacant"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -624,11 +624,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -640,7 +640,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Short'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Short"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 3">
@@ -657,7 +657,7 @@
         <viewExpressions lhs="pod.term" rhs="3"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -670,7 +670,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 400">
@@ -693,7 +693,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Vacant'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -706,10 +706,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Vacant'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Vacant"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Condo'">
+        <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -722,11 +722,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Condo'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -738,7 +738,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Short'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Short"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 3">
@@ -755,7 +755,7 @@
         <viewExpressions lhs="pod.term" rhs="3"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'QC'">
+        <opaqueExpression expression="ri.province = province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -768,7 +768,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="'QC'"/>
+        <viewExpressions lhs="ri.province" rhs="province#QC"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 350">
@@ -791,7 +791,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Vacant'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -804,10 +804,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Vacant'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Vacant"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Dwelling'">
+        <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -820,11 +820,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Dwelling'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -836,7 +836,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Short'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Short"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 3">
@@ -853,7 +853,7 @@
         <viewExpressions lhs="pod.term" rhs="3"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -866,7 +866,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 400">
@@ -889,7 +889,7 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="oc.occupancyType = 'Vacant'">
+        <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -902,10 +902,10 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.occupancyType" rhs="'Vacant'"/>
+        <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Vacant"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = 'Condo'">
+        <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -918,11 +918,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="'Condo'"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <condition>
-        <opaqueExpression expression="oc.termType = 'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="oc.termType = TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -934,7 +934,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="oc.termType" rhs="'Short'"/>
+        <viewExpressions lhs="oc.termType" rhs="TermType#Short"/>
       </condition>
       <condition>
         <opaqueExpression expression="pod.term = 3">
@@ -951,7 +951,7 @@
         <viewExpressions lhs="pod.term" rhs="3"/>
       </condition>
       <condition>
-        <opaqueExpression expression="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'">
+        <opaqueExpression expression="ri.province = province#ON or ri.province = province#AB or ri.province = province#BC or ri.province = province#SK or ri.province = province#MB or ri.province = province#NL or ri.province = province#NB or ri.province = province#PEI or ri.province = province#NS">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -964,7 +964,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="ri.province" rhs="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}"/>
+        <viewExpressions lhs="ri.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="dw.minimumBasePremium = 350">
@@ -1114,7 +1114,7 @@
       <conditionItemList>
         <valueSetCell/>
         <expressionCell external="oc.termType">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1163,7 +1163,7 @@
         <actionValueSetCellList valueSet=""/>
       </ruleColumnList>
       <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
-        <conditionValueSetCellList valueSet="'Rental'">
+        <conditionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1176,7 +1176,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1189,8 +1189,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1213,7 +1213,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1244,7 +1244,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
-        <conditionValueSetCellList valueSet="'Seasonal'">
+        <conditionValueSetCellList valueSet="OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1257,7 +1257,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1270,8 +1270,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1294,7 +1294,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1325,7 +1325,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
-        <conditionValueSetCellList valueSet="'Primary'">
+        <conditionValueSetCellList valueSet="OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1338,7 +1338,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Mobile'">
+        <conditionValueSetCellList valueSet="homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1351,8 +1351,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Long'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Long">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1375,7 +1375,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1406,7 +1406,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
-        <conditionValueSetCellList valueSet="'Primary'">
+        <conditionValueSetCellList valueSet="OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1419,7 +1419,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Mobile'">
+        <conditionValueSetCellList valueSet="homeType#Mobile">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1432,8 +1432,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Long'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Long">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1456,7 +1456,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1487,7 +1487,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
-        <conditionValueSetCellList valueSet="'Vacant'">
+        <conditionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1500,7 +1500,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1513,8 +1513,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1537,7 +1537,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1568,7 +1568,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
-        <conditionValueSetCellList valueSet="'Vacant'">
+        <conditionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1581,7 +1581,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1594,8 +1594,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1618,7 +1618,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1649,7 +1649,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="7" columnWidth="100" pRule="#//@ruleset/@rules.7">
-        <conditionValueSetCellList valueSet="'Vacant'">
+        <conditionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1662,7 +1662,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1675,8 +1675,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1699,7 +1699,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1730,7 +1730,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="8" columnWidth="100" pRule="#//@ruleset/@rules.8">
-        <conditionValueSetCellList valueSet="'Vacant'">
+        <conditionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1743,7 +1743,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Condo'">
+        <conditionValueSetCellList valueSet="homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1756,8 +1756,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1780,7 +1780,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'QC'">
+        <conditionValueSetCellList valueSet="province#QC">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1811,7 +1811,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="9" columnWidth="100" pRule="#//@ruleset/@rules.9">
-        <conditionValueSetCellList valueSet="'Vacant'">
+        <conditionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1824,7 +1824,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Dwelling'">
+        <conditionValueSetCellList valueSet="homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1837,8 +1837,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1861,7 +1861,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">
@@ -1892,7 +1892,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="10" columnWidth="100" pRule="#//@ruleset/@rules.10">
-        <conditionValueSetCellList valueSet="'Vacant'">
+        <conditionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.occupancyType">
@@ -1905,7 +1905,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Condo'">
+        <conditionValueSetCellList valueSet="homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
@@ -1918,8 +1918,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Short'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="TermType#Short">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="termType" datatype="String" termtype="ATTRIBUTE" fulltext="oc.termType">
                 <parentTerm text="oc" datatype="Occupancy" termtype="ENTITY" fulltext="oc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -1942,7 +1942,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{'ON', 'AB', 'BC', 'SK', 'MB', 'NL', 'NB', 'PEI', 'NS'}">
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ri.province = 'ON' or ri.province = 'AB' or ri.province = 'BC' or ri.province = 'SK' or ri.province = 'MB' or ri.province = 'NL' or ri.province = 'NB' or ri.province = 'PEI' or ri.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="ri.province">

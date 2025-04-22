@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Oj2agRSPEfCWkaeuC4mOxw" externalChecksum="7824986:1438690353:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_c8sakh9fEfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_V085URR-EfCiNekO5n5upg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_1-eu8h9dEfCF14WLYsvMiQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action/>
     </rule>
     <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
       <condition>
-        <opaqueExpression expression="(con.homeType='Condo')=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( con.homeType = 'Condo' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <opaqueExpression expression="con.homeType = homeType#Condo">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="con.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="con.homeType">
                 <parentTerm text="con" datatype="Construction" termtype="ENTITY" fulltext="con" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -20,11 +20,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="con.homeType='Condo'" rhs="T"/>
+        <viewExpressions lhs="con.homeType" rhs="homeType#Condo"/>
       </condition>
       <condition>
-        <opaqueExpression expression="(occ.occupancyType='Vacant')=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( occ.occupancyType = 'Vacant' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <opaqueExpression expression="occ.occupancyType = OccupancyType#Vacant">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="occ.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="occ.occupancyType">
                 <parentTerm text="occ" datatype="Occupancy" termtype="ENTITY" fulltext="occ" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
@@ -36,7 +36,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="occ.occupancyType='Vacant'" rhs="T"/>
+        <viewExpressions lhs="occ.occupancyType" rhs="OccupancyType#Vacant"/>
       </condition>
       <action>
         <opaqueExpression expression="co.amountOfInsurance = 5000">
@@ -260,8 +260,8 @@
     <conditionSection rowCount="50" columnWidthFactor="0.5">
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="con.homeType='Condo'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="con.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <expressionCell external="con.homeType">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="con.homeType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="con.homeType">
                 <parentTerm text="con" datatype="Construction" termtype="ENTITY" fulltext="con" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -276,8 +276,8 @@
       </conditionItemList>
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="occ.occupancyType='Vacant'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="occ.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <expressionCell external="occ.occupancyType">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="occ.occupancyType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="occ.occupancyType">
                 <parentTerm text="occ" datatype="Occupancy" termtype="ENTITY" fulltext="occ" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
@@ -296,8 +296,8 @@
         <actionValueSetCellList valueSet=""/>
       </ruleColumnList>
       <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
-        <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( con.homeType = 'Condo' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="homeType#Condo">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="con.homeType = 'Condo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="con.homeType">
                 <parentTerm text="con" datatype="Construction" termtype="ENTITY" fulltext="con" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -309,8 +309,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( occ.occupancyType = 'Vacant' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="OccupancyType#Vacant">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="occ.occupancyType = 'Vacant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="occupancyType" datatype="String" termtype="ATTRIBUTE" fulltext="occ.occupancyType">
                 <parentTerm text="occ" datatype="Occupancy" termtype="ENTITY" fulltext="occ" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">

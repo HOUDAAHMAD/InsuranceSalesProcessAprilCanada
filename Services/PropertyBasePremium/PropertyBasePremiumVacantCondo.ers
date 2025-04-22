@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_HZuQYRajEfCDg9KvPMBE-g" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_0j0yAx9hEfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_yEsMghaiEfCDg9KvPMBE-g" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_1-eu8h9dEfCF14WLYsvMiQ" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.coveragePremium = 0">
@@ -42,7 +42,7 @@
         <viewExpressions lhs="pd.term" rhs="3"/>
       </condition>
       <condition>
-        <opaqueExpression expression="bp.fireProtection = 'Protected'">
+        <opaqueExpression expression="bp.fireProtection = fireProtection#Protected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'Protected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -55,7 +55,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="bp.fireProtection" rhs="'Protected'"/>
+        <viewExpressions lhs="bp.fireProtection" rhs="fireProtection#Protected"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.coveragePremium = 350">
@@ -96,7 +96,7 @@
         <viewExpressions lhs="pd.term" rhs="6"/>
       </condition>
       <condition>
-        <opaqueExpression expression="bp.fireProtection = 'Protected'">
+        <opaqueExpression expression="bp.fireProtection = fireProtection#Protected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'Protected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -109,7 +109,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="bp.fireProtection" rhs="'Protected'"/>
+        <viewExpressions lhs="bp.fireProtection" rhs="fireProtection#Protected"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.coveragePremium = 450">
@@ -150,7 +150,7 @@
         <viewExpressions lhs="pd.term" rhs="3"/>
       </condition>
       <condition>
-        <opaqueExpression expression="bp.fireProtection = 'SemiProtected'">
+        <opaqueExpression expression="bp.fireProtection = fireProtection#SemiProtected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'SemiProtected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -163,7 +163,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="bp.fireProtection" rhs="'SemiProtected'"/>
+        <viewExpressions lhs="bp.fireProtection" rhs="fireProtection#SemiProtected"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.coveragePremium = 400">
@@ -204,7 +204,7 @@
         <viewExpressions lhs="pd.term" rhs="6"/>
       </condition>
       <condition>
-        <opaqueExpression expression="bp.fireProtection = 'SemiProtected'">
+        <opaqueExpression expression="bp.fireProtection = fireProtection#SemiProtected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'SemiProtected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -217,7 +217,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="bp.fireProtection" rhs="'SemiProtected'"/>
+        <viewExpressions lhs="bp.fireProtection" rhs="fireProtection#SemiProtected"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.coveragePremium = 500">
@@ -258,7 +258,7 @@
         <viewExpressions lhs="pd.term" rhs="3"/>
       </condition>
       <condition>
-        <opaqueExpression expression="bp.fireProtection = 'NonProtected'">
+        <opaqueExpression expression="bp.fireProtection = fireProtection#NonProtected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'NonProtected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -271,7 +271,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="bp.fireProtection" rhs="'NonProtected'"/>
+        <viewExpressions lhs="bp.fireProtection" rhs="fireProtection#NonProtected"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.coveragePremium = 450">
@@ -312,7 +312,7 @@
         <viewExpressions lhs="pd.term" rhs="6"/>
       </condition>
       <condition>
-        <opaqueExpression expression="bp.fireProtection = 'NonProtected'">
+        <opaqueExpression expression="bp.fireProtection = fireProtection#NonProtected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'NonProtected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -325,7 +325,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="bp.fireProtection" rhs="'NonProtected'"/>
+        <viewExpressions lhs="bp.fireProtection" rhs="fireProtection#NonProtected"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.coveragePremium = 550">
@@ -519,7 +519,7 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="20" scrollColumnLeft="2">
+    <ruleSection columnCount="20">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
         <actionValueSetCellList valueSet="0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -554,7 +554,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Protected'">
+        <conditionValueSetCellList valueSet="fireProtection#Protected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'Protected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -600,7 +600,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'Protected'">
+        <conditionValueSetCellList valueSet="fireProtection#Protected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'Protected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -646,7 +646,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'SemiProtected'">
+        <conditionValueSetCellList valueSet="fireProtection#SemiProtected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'SemiProtected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -692,7 +692,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'SemiProtected'">
+        <conditionValueSetCellList valueSet="fireProtection#SemiProtected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'SemiProtected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -738,7 +738,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'NonProtected'">
+        <conditionValueSetCellList valueSet="fireProtection#NonProtected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'NonProtected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">
@@ -784,7 +784,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="'NonProtected'">
+        <conditionValueSetCellList valueSet="fireProtection#NonProtected">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bp.fireProtection = 'NonProtected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="fireProtection" datatype="String" termtype="ATTRIBUTE" fulltext="bp.fireProtection">

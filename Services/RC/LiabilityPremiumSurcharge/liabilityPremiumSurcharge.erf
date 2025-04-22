@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_JtwwwBkuEfCRT4GW2vSV8Q" externalChecksum="7824986:507989954:2146616488" rulesheetAssets="LiabilityPremiumSurchargeCondo/LiabilityPremiumSurchargeCondo.ers#/ LiabilityPremiumSurchargeNotCondo/LiabilityPremiumSurchargeNotCondo.ers#/">
-  <ruleflow majorVersion="1" vocabularyUpdateStamp="_PTQy8BkpEfCRT4GW2vSV8Q" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon homeType" order="1" ruleActivityUpdateStamp="_JtwwwBkuEfCRT4GW2vSV8Q" invokes="#//@ruleflow/@flowControlList.0">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_dGkkwR9eEfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488" rulesheetAssets="LiabilityPremiumSurchargeCondo/LiabilityPremiumSurchargeCondo.ers#/ LiabilityPremiumSurchargeNotCondo/LiabilityPremiumSurchargeNotCondo.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_1-eu8h9dEfCF14WLYsvMiQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon homeType" order="1" ruleActivityUpdateStamp="_dGj9sR9eEfCF14WLYsvMiQ" invokes="#//@ruleflow/@flowControlList.0">
       <condition expression="Construction.homeType">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Construction.homeType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
           <referencedTermList>
@@ -13,15 +13,15 @@
       </condition>
       <branches>
         <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="LiabilityPremiumSurchargeCondo" order="2" ruleActivityUpdateStamp="_lRDDeRkqEfCRT4GW2vSV8Q" invokes="LiabilityPremiumSurchargeCondo/LiabilityPremiumSurchargeCondo.ers#//@ruleset"/>
-        <label expression="'Condo'"/>
-        <viewExpressions lhs="Construction.homeType" rhs="'Condo'"/>
+        <label expression="homeType#Condo"/>
+        <viewExpressions lhs="Construction.homeType" rhs="homeType#Condo"/>
       </branches>
       <branches>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" order="3" ruleActivityUpdateStamp="_Jtr4QRkuEfCRT4GW2vSV8Q" invokes="#//@ruleflow/@subflowList.0"/>
-        <label expression="'Tenant'"/>
-        <label expression="'Mobile'"/>
-        <label expression="'Dwelling'"/>
-        <viewExpressions lhs="Construction.homeType" rhs="'Dwelling'"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" order="3" ruleActivityUpdateStamp="_dGj9sR9eEfCF14WLYsvMiQ" invokes="#//@ruleflow/@subflowList.0"/>
+        <label expression="homeType#Tenant"/>
+        <label expression="homeType#Mobile"/>
+        <label expression="homeType#Dwelling"/>
+        <viewExpressions lhs="Construction.homeType" rhs="homeType#Dwelling"/>
       </branches>
     </flowControlList>
     <subflowList name="Not Condo">
