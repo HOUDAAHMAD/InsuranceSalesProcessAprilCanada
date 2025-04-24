@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_-C6DIx-DEfCdfvtqEd0huw" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_hyEfESEVEfCaj7xZiEwszw" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_7MZJAB-DEfCdfvtqEd0huw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_r_HMwyETEfCaj7xZiEwszw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
-      <condition/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0"/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.1"/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.2"/>
@@ -13,8 +12,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'CondoPrimaryNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoPrimaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondoPrimaryNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoPrimaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -24,7 +23,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'CondoPrimaryNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondoPrimaryNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
@@ -149,8 +148,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'CondoSecondaryFamilyNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondoSecondaryFamilyNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -160,7 +159,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'CondoSecondaryFamilyNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondoSecondaryFamilyNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
@@ -285,8 +284,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'CondoSecondaryNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondoSecondaryNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -296,7 +295,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'CondoSecondaryNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondoSecondaryNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
@@ -421,8 +420,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'CondowRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondowRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -432,7 +431,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'CondowRentalNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondowRentalNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -557,8 +556,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'CondowShortRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondowShortRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -568,7 +567,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'CondowShortRentalNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondowShortRentalNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -693,8 +692,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'HomeownersBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownersBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -704,7 +703,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownersBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownersBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
@@ -829,8 +828,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'HomeownersNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownersNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -840,7 +839,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownersNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownersNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
@@ -965,8 +964,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'HomeownerswRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownerswRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -976,7 +975,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswRentalBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownerswRentalBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -1101,8 +1100,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'HomeownerswRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownerswRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -1112,7 +1111,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswRentalNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownerswRentalNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -1237,8 +1236,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'HomeownerswShortRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownerswShortRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -1248,7 +1247,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswShortRentalBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownerswShortRentalBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -1373,8 +1372,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'HomeownerswShortRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownerswShortRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -1384,7 +1383,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'HomeownerswShortRentalNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownerswShortRentalNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -1509,8 +1508,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'MobileHomeTrailer'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'MobileHomeTrailer'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#MobileHomeTrailer">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'MobileHomeTrailer'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -1520,7 +1519,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'MobileHomeTrailer'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#MobileHomeTrailer"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
@@ -1645,8 +1644,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'RentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#RentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -1656,7 +1655,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'RentalBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#RentalBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -1781,8 +1780,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'RentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#RentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -1792,7 +1791,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'RentalNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#RentalNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -1917,8 +1916,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SeasonalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SeasonalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -1928,7 +1927,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SeasonalBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SeasonalBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
@@ -2053,8 +2052,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SeasonalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SeasonalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -2064,7 +2063,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SeasonalNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SeasonalNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
@@ -2189,8 +2188,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SeasonalwShortRental'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SeasonalwShortRental">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -2200,7 +2199,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SeasonalwShortRental'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SeasonalwShortRental"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
@@ -2325,8 +2324,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SeasonalwShortRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SeasonalwShortRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -2336,7 +2335,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SeasonalwShortRentalBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SeasonalwShortRentalBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
@@ -2461,8 +2460,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SecondaryBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondaryBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -2472,7 +2471,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SecondaryBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondaryBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
@@ -2597,8 +2596,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SecondaryFamilyBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondaryFamilyBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -2608,7 +2607,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SecondaryFamilyBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondaryFamilyBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
@@ -2733,8 +2732,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SecondaryFamilyNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondaryFamilyNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -2744,7 +2743,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SecondaryFamilyNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondaryFamilyNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
@@ -2869,8 +2868,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SecondaryNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondaryNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -2880,7 +2879,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SecondaryNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondaryNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
@@ -3005,8 +3004,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SecondarywShortRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondarywShortRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -3016,7 +3015,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SecondarywShortRentalBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondarywShortRentalBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -3141,8 +3140,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'SecondarywShortRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondarywShortRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -3152,7 +3151,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'SecondarywShortRentalNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondarywShortRentalNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -3277,8 +3276,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'ShortRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#ShortRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -3288,7 +3287,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'ShortRentalBroad'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#ShortRentalBroad"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -3413,8 +3412,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'ShortRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#ShortRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -3424,7 +3423,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'ShortRentalNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#ShortRentalNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
@@ -3549,8 +3548,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'TenantNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'TenantNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#TenantNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'TenantNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -3560,7 +3559,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'TenantNamedPeril'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#TenantNamedPeril"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
@@ -3685,8 +3684,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'UnderMinorRenovationCondo'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#UnderMinorRenovationCondo">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -3696,7 +3695,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'UnderMinorRenovationCondo'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#UnderMinorRenovationCondo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
@@ -3821,8 +3820,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'UnderMinorRenovationVacantDwelling'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationVacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#UnderMinorRenovationVacantDwelling">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationVacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -3832,7 +3831,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'UnderMinorRenovationVacantDwelling'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#UnderMinorRenovationVacantDwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
@@ -3957,8 +3956,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'VacantCondo'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#VacantCondo">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -3968,7 +3967,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'VacantCondo'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#VacantCondo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
@@ -4093,8 +4092,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="dw.lobSubCode = 'VacantDwelling'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="dw.lobSubCode = lobSubCode#VacantDwelling">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -4104,7 +4103,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode" rhs="'VacantDwelling'"/>
+        <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#VacantDwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
@@ -4595,11 +4594,11 @@
         </text>
       </ruleStatementItemList>
     </ruleStatementSection>
-    <conditionSection rowCount="48" columnWidthFactor="0.5">
+    <conditionSection rowCount="46" columnWidthFactor="0.5">
       <conditionItemList>
         <valueSetCell/>
         <expressionCell external="dw.lobSubCode">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -4611,9 +4610,8 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="32" scrollColumnLeft="27">
+    <ruleSection columnCount="32">
       <ruleColumnList ruleId="0" columnWidth="95" pRule="#//@ruleset/@rules.0">
-        <conditionValueSetCellList/>
         <actionValueSetCellList valueSet=""/>
         <actionValueSetCellList/>
         <actionValueSetCellList/>
@@ -4622,8 +4620,8 @@
         <actionValueSetCellList/>
       </ruleColumnList>
       <ruleColumnList ruleId="1" columnWidth="204" pRule="#//@ruleset/@rules.1">
-        <conditionValueSetCellList valueSet="'CondoPrimaryNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoPrimaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#CondoPrimaryNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoPrimaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -4743,8 +4741,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="2" columnWidth="288" pRule="#//@ruleset/@rules.2">
-        <conditionValueSetCellList valueSet="'CondoSecondaryFamilyNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#CondoSecondaryFamilyNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -4864,8 +4862,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="3" columnWidth="236" pRule="#//@ruleset/@rules.3">
-        <conditionValueSetCellList valueSet="'CondoSecondaryNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#CondoSecondaryNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -4985,8 +4983,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="4" columnWidth="216" pRule="#//@ruleset/@rules.4">
-        <conditionValueSetCellList valueSet="'CondowRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#CondowRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -5106,8 +5104,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="5" columnWidth="178" pRule="#//@ruleset/@rules.5">
-        <conditionValueSetCellList valueSet="'CondowShortRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#CondowShortRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -5227,8 +5225,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
-        <conditionValueSetCellList valueSet="'HomeownersBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#HomeownersBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -5348,8 +5346,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="7" columnWidth="248" pRule="#//@ruleset/@rules.7">
-        <conditionValueSetCellList valueSet="'HomeownersNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#HomeownersNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -5469,8 +5467,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="8" columnWidth="263" pRule="#//@ruleset/@rules.8">
-        <conditionValueSetCellList valueSet="'HomeownerswRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#HomeownerswRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -5590,8 +5588,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="9" columnWidth="269" pRule="#//@ruleset/@rules.9">
-        <conditionValueSetCellList valueSet="'HomeownerswRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#HomeownerswRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -5711,8 +5709,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="10" columnWidth="254" pRule="#//@ruleset/@rules.10">
-        <conditionValueSetCellList valueSet="'HomeownerswShortRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#HomeownerswShortRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -5832,8 +5830,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="11" columnWidth="297" pRule="#//@ruleset/@rules.11">
-        <conditionValueSetCellList valueSet="'HomeownerswShortRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#HomeownerswShortRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -5953,8 +5951,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="12" columnWidth="219" pRule="#//@ruleset/@rules.12">
-        <conditionValueSetCellList valueSet="'MobileHomeTrailer'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'MobileHomeTrailer'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#MobileHomeTrailer">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'MobileHomeTrailer'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -6074,8 +6072,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="13" columnWidth="100" pRule="#//@ruleset/@rules.13">
-        <conditionValueSetCellList valueSet="'RentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#RentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -6195,8 +6193,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="14" columnWidth="100" pRule="#//@ruleset/@rules.14">
-        <conditionValueSetCellList valueSet="'RentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#RentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -6316,8 +6314,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="15" columnWidth="100" pRule="#//@ruleset/@rules.15">
-        <conditionValueSetCellList valueSet="'SeasonalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SeasonalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -6437,8 +6435,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="16" columnWidth="191" pRule="#//@ruleset/@rules.16">
-        <conditionValueSetCellList valueSet="'SeasonalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SeasonalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -6558,8 +6556,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="17" columnWidth="100" pRule="#//@ruleset/@rules.17">
-        <conditionValueSetCellList valueSet="'SeasonalwShortRental'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SeasonalwShortRental">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -6679,8 +6677,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="18" columnWidth="100" pRule="#//@ruleset/@rules.18">
-        <conditionValueSetCellList valueSet="'SeasonalwShortRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SeasonalwShortRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -6800,8 +6798,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="19" columnWidth="100" pRule="#//@ruleset/@rules.19">
-        <conditionValueSetCellList valueSet="'SecondaryBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -6921,8 +6919,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="20" columnWidth="209" pRule="#//@ruleset/@rules.20">
-        <conditionValueSetCellList valueSet="'SecondaryFamilyBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -7042,8 +7040,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="21" columnWidth="100" pRule="#//@ruleset/@rules.21">
-        <conditionValueSetCellList valueSet="'SecondaryFamilyNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -7163,8 +7161,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="22" columnWidth="100" pRule="#//@ruleset/@rules.22">
-        <conditionValueSetCellList valueSet="'SecondaryNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -7284,8 +7282,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="23" columnWidth="100" pRule="#//@ruleset/@rules.23">
-        <conditionValueSetCellList valueSet="'SecondarywShortRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -7405,8 +7403,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="24" columnWidth="100" pRule="#//@ruleset/@rules.24">
-        <conditionValueSetCellList valueSet="'SecondarywShortRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -7525,9 +7523,9 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="25" columnWidth="100" pRule="#//@ruleset/@rules.25">
-        <conditionValueSetCellList valueSet="'ShortRentalBroad'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+      <ruleColumnList ruleId="25" columnWidth="143" pRule="#//@ruleset/@rules.25">
+        <conditionValueSetCellList valueSet="lobSubCode#ShortRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -7647,8 +7645,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="26" columnWidth="189" pRule="#//@ruleset/@rules.26">
-        <conditionValueSetCellList valueSet="'ShortRentalNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#ShortRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -7768,8 +7766,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="27" columnWidth="201" pRule="#//@ruleset/@rules.27">
-        <conditionValueSetCellList valueSet="'TenantNamedPeril'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'TenantNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#TenantNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'TenantNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -7889,8 +7887,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="28" columnWidth="280" pRule="#//@ruleset/@rules.28">
-        <conditionValueSetCellList valueSet="'UnderMinorRenovationCondo'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#UnderMinorRenovationCondo">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -8010,8 +8008,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="29" columnWidth="297" pRule="#//@ruleset/@rules.29">
-        <conditionValueSetCellList valueSet="'UnderMinorRenovationVacantDwelling'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationVacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#UnderMinorRenovationVacantDwelling">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationVacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -8131,8 +8129,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="30" columnWidth="157" pRule="#//@ruleset/@rules.30">
-        <conditionValueSetCellList valueSet="'VacantCondo'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#VacantCondo">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -8252,8 +8250,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="31" columnWidth="218" pRule="#//@ruleset/@rules.31">
-        <conditionValueSetCellList valueSet="'VacantDwelling'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#VacantDwelling">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
