@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_gIwRcSRCEfCQ4q4nGb7fGg" externalChecksum="7824986:507989954" customDataTypeDisplayCount="49">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_E3SfkCdcEfCR36K1r_QbFg" externalChecksum="7824986:507989954" customDataTypeDisplayCount="49">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T11:08:54.258+0100" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T11:09:10.369+0100" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -172,7 +172,6 @@
       <comments timestamp="2025-02-14T16:00:50.102+0100" username="ahmad.houda" text="Surcharge de responsabilité pour bateau" objects="#//CalculationsVariables/boatLiabilitySurcharge" type="Note"/>
       <comments timestamp="2025-02-14T16:01:06.996+0100" username="ahmad.houda" text="Surcharge de responsabilité pour piscine" objects="#//CalculationsVariables/swimmingPoolLiabilitySurcharge" type="Note"/>
       <comments timestamp="2025-02-14T16:01:29.611+0100" username="ahmad.houda" text="Surcharge de responsabilité pour spa" objects="#//CalculationsVariables/spaLiabilitySurcharge" type="Note"/>
-      <comments timestamp="2025-02-14T16:01:44.223+0100" username="ahmad.houda" text="Prime pour piscine extérieure" objects="#//CalculationsVariables/outdoorSwimmingPoolPremium" type="Note"/>
       <comments timestamp="2025-02-14T16:02:02.271+0100" username="ahmad.houda" text="Surcharge de responsabilité pour chien" objects="#//CalculationsVariables/dogLiabilitySurcharge" type="Note"/>
       <comments timestamp="2025-02-14T16:02:26.781+0100" username="ahmad.houda" text="Surcharge de responsabilité pour bord de l'eau" objects="#//CalculationsVariables/waterEdgeLiabilitySurcharge" type="Note"/>
       <comments timestamp="2025-02-14T16:02:42.937+0100" username="ahmad.houda" text="Surcharge de responsabilité pour terrain vacant" objects="#//CalculationsVariables/vacantLandLiabilitySurcharge" type="Note"/>
@@ -183,7 +182,6 @@
       <comments timestamp="2025-02-14T16:04:10.322+0100" username="ahmad.houda" text="Ajustement de prime de responsabilité" objects="#//CalculationsVariables/liabilityPremiumAdjustment" type="Note"/>
       <comments timestamp="2025-02-14T16:04:26.831+0100" username="ahmad.houda" text="Prime de responsabilité" objects="#//CalculationsVariables/liabilityPremium" type="Note"/>
       <comments timestamp="2025-02-14T16:04:43.818+0100" username="ahmad.houda" text="Limite de responsabilité" objects="#//CalculationsVariables/liabilityLimit" type="Note"/>
-      <comments timestamp="2025-02-14T16:04:58.429+0100" username="ahmad.houda" text="Prime pour tremblement de terre" objects="#//CalculationsVariables/earthquakePremium" type="Note"/>
       <comments timestamp="2025-02-14T16:05:13.355+0100" username="ahmad.houda" text="Prime pour évaluation des pertes de nettoyage" objects="#//CalculationsVariables/lossAssessmentCleaningPremium" type="Note"/>
       <comments timestamp="2025-02-14T16:05:29.226+0100" username="ahmad.houda" text="Limite pour évaluation des pertes de nettoyage" objects="#//CalculationsVariables/lossAssessmentCleaningLimit" type="Note"/>
       <comments timestamp="2025-02-14T16:05:45.469+0100" username="ahmad.houda" text="Prime pour reconstruction selon les normes" objects="#//CalculationsVariables/rebuildingToCodePremium" type="Note"/>
@@ -198,7 +196,6 @@
       <comments timestamp="2025-02-14T16:09:23.847+0100" username="ahmad.houda" text="Prime de contenu" objects="#//CalculationsVariables/contentPremium" type="Note"/>
       <comments timestamp="2025-02-14T16:09:37.760+0100" username="ahmad.houda" text="Prime pour nombre de nuits louées" objects="#//CalculationsVariables/rentedNightsNumberPremium" type="Note"/>
       <comments timestamp="2025-02-14T16:09:55.067+0100" username="ahmad.houda" text="Limite pour refoulement d'égout" objects="#//CalculationsVariables/sewerBackupLimit" type="Note"/>
-      <comments timestamp="2025-02-14T16:10:11.453+0100" username="ahmad.houda" text="Prime pour refoulement d'égout" objects="#//CalculationsVariables/sewerBackupPremium" type="Note"/>
       <comments timestamp="2025-02-14T16:13:24.638+0100" username="ahmad.houda" text="Prime pour améliorations" objects="#//CalculationsVariables/improvementsPremium" type="Note"/>
       <comments timestamp="2025-02-14T16:13:39.814+0100" username="ahmad.houda" text=" Limite pour améliorations" objects="#//CalculationsVariables/improvementsLimit" type="Note"/>
       <comments timestamp="2025-02-14T16:13:58.635+0100" username="ahmad.houda" text="Prime contingente" objects="#//CalculationsVariables/contingentPremium" type="Note"/>
@@ -1851,7 +1848,7 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="leisure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="leisure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
           <name manuallyCreated="true" value="leisure"/>
@@ -2249,14 +2246,6 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outdoorSwimmingPoolPremium" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
-      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
-          <name manuallyCreated="true" value="outdoorSwimmingPoolPremium"/>
-          <mode manuallyCreated="true" value="Base"/>
-        </contents>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dogLiabilitySurcharge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
@@ -2333,14 +2322,6 @@
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
           <name manuallyCreated="true" value="liabilityLimit"/>
-          <mode manuallyCreated="true" value="Base"/>
-        </contents>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="earthquakePremium" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
-      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
-          <name manuallyCreated="true" value="earthquakePremium"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
       </eAnnotations>
@@ -2453,14 +2434,6 @@
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
           <name manuallyCreated="true" value="sewerBackupLimit"/>
-          <mode manuallyCreated="true" value="Base"/>
-        </contents>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sewerBackupPremium" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
-      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
-          <name manuallyCreated="true" value="sewerBackupPremium"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
       </eAnnotations>

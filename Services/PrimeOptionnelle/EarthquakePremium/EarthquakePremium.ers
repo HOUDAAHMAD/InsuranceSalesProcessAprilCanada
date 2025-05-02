@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_4wnikx9hEfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_AUrsgCdbEfCR36K1r_QbFg" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_1-eu8h9dEfCF14WLYsvMiQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_mV_88SdaEfCR36K1r_QbFg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action>
-        <opaqueExpression expression="ca.earthquakePremium = 0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.earthquakePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="co.coveragePremium = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
+                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -16,7 +16,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -76,11 +76,11 @@
         <viewExpressions lhs="ca.TIV&lt;>null" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.earthquakePremium = ca.TIV*0.0004">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.earthquakePremium = ca.TIV * 0.0004" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="co.coveragePremium = ca.TIV*0.0004">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ca.TIV * 0.0004" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
+                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -88,16 +88,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
+              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
               <terms text="TIV" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.TIV">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -155,11 +155,11 @@
         <viewExpressions lhs="ca.TIV&lt;>null" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
-        <opaqueExpression expression="ca.earthquakePremium = ca.TIV*0.0002">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.earthquakePremium = ca.TIV * 0.0002" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="co.coveragePremium = ca.TIV*0.0002">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ca.TIV * 0.0002" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
+                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -167,16 +167,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
+              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
               <terms text="TIV" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.TIV">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -185,8 +185,8 @@
       </action>
     </rule>
     <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-      <opaqueExpression expression="co.coverageCode='Earthquake'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coverageCode = 'Earthquake'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+      <opaqueExpression expression="co.coverageCode='EQ-SS'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coverageCode = 'EQ-SS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
           <referencedTermList>
             <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="co.coverageCode">
               <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -199,12 +199,12 @@
         </parserOutput>
       </opaqueExpression>
     </filter>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-      <text expression="Inside QC -> Prime pour les tremblements de terre est {ca.earthquakePremium}">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Inside QC -> Prime pour les tremblements de terre est  + ca.earthquakePremium" expressiontype="BRSTATEMENT">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+      <text expression="Inside QC -> Prime pour les tremblements de terre est {co.coverageCode}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Inside QC -> Prime pour les tremblements de terre est  + co.coverageCode" expressiontype="BRSTATEMENT">
           <referencedTermList>
-            <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-              <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+            <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="co.coverageCode">
+              <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -214,12 +214,12 @@
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-      <text expression="Outside QC -> Prime pour les tremblements de terre est {ca.earthquakePremium}">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Outside QC -> Prime pour les tremblements de terre est  + ca.earthquakePremium" expressiontype="BRSTATEMENT">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+      <text expression="Outside QC -> Prime pour les tremblements de terre est {co.coverageCode}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Outside QC -> Prime pour les tremblements de terre est  + co.coverageCode" expressiontype="BRSTATEMENT">
           <referencedTermList>
-            <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-              <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+            <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="co.coverageCode">
+              <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -232,15 +232,15 @@
     <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#//@ruleset/@filters.0">
       <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" filters="#//@ruleset/@filters.0">
         <alias value="dw"/>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1">
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables">
           <alias value="ca"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/earthquakePremium"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/TIV"/>
         </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#//@ruleset/@filters.0">
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1" filters="#//@ruleset/@filters.0">
           <alias value="co"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coveragePremium"/>
         </extension>
         <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//RiskAddress" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/RiskAddress">
           <alias value="ri"/>
@@ -253,11 +253,11 @@
     <actionSection rowCount="50" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell/>
-        <expressionCell external="ca.earthquakePremium">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.earthquakePremium" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="co.coveragePremium">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
-              <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
+                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -272,22 +272,22 @@
       <rootNode>
         <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.coverageCode='Earthquake'" filter="#//@ruleset/@filters.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.coverageCode='EQ-SS'" filter="#//@ruleset/@filters.0"/>
           </children>
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.coverageCode='Earthquake'" filter="#//@ruleset/@filters.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.coverageCode='EQ-SS'" filter="#//@ruleset/@filters.0"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.coverageCode='Earthquake'" filter="#//@ruleset/@filters.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.coverageCode='EQ-SS'" filter="#//@ruleset/@filters.0"/>
               </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.2"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
@@ -298,8 +298,8 @@
     </scopeSection>
     <filterSection rowCount="50">
       <filterItemList filter="#//@ruleset/@filters.0">
-        <expressionCell external="co.coverageCode='Earthquake'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coverageCode = 'Earthquake'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="co.coverageCode='EQ-SS'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coverageCode = 'EQ-SS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="co.coverageCode">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -316,11 +316,11 @@
     <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
         <reference external="A1"/>
-        <text external="Inside QC -> Prime pour les tremblements de terre est {ca.earthquakePremium}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Inside QC -> Prime pour les tremblements de terre est  + ca.earthquakePremium" expressiontype="BRSTATEMENT">
+        <text external="Inside QC -> Prime pour les tremblements de terre est {co.coverageCode}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Inside QC -> Prime pour les tremblements de terre est  + co.coverageCode" expressiontype="BRSTATEMENT">
             <referencedTermList>
-              <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="co.coverageCode">
+                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -332,11 +332,11 @@
       </ruleStatementItemList>
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
         <reference external="A2"/>
-        <text external="Outside QC -> Prime pour les tremblements de terre est {ca.earthquakePremium}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Outside QC -> Prime pour les tremblements de terre est  + ca.earthquakePremium" expressiontype="BRSTATEMENT">
+        <text external="Outside QC -> Prime pour les tremblements de terre est {co.coverageCode}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Outside QC -> Prime pour les tremblements de terre est  + co.coverageCode" expressiontype="BRSTATEMENT">
             <referencedTermList>
-              <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="co.coverageCode">
+                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -400,10 +400,10 @@
     <ruleSection columnCount="20">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.earthquakePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
+                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -411,7 +411,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -461,10 +461,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="ca.TIV*0.0004">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.earthquakePremium = ca.TIV * 0.0004" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ca.TIV * 0.0004" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
+                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -472,16 +472,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
+              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
               <terms text="TIV" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.TIV">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -529,10 +529,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="ca.TIV*0.0002">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.earthquakePremium = ca.TIV * 0.0002" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ca.TIV * 0.0002" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="earthquakePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.earthquakePremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
+                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -540,16 +540,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
+              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
               <terms text="TIV" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.TIV">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
