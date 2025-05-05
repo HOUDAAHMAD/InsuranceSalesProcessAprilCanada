@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_E3SfkCdcEfCR36K1r_QbFg" externalChecksum="7824986:507989954" customDataTypeDisplayCount="49">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_3CJQIymJEfCIWKzNn_UMMQ" externalChecksum="7824986:507989954" customDataTypeDisplayCount="49">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T11:08:54.258+0100" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T11:09:10.369+0100" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -637,6 +637,113 @@
           <value manuallyCreated="true" value="'VacantDwelling'"/>
         </enumerationElements>
       </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="37" eDataType="#//RiskList">
+        <dataTypeName manuallyCreated="true" value="RiskList"/>
+        <baseDataType manuallyCreated="true" value="Integer"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="4"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="5"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="6"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="7"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="8"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="87"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="91"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="145"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="334"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="344"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="355"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="463"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="465"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="175"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="140"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="129"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="173"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="253"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="259"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="264"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="266"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="740"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="3"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="151"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="239"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="271"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="279"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="348"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="349"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="351"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="255"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="270"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="155"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="273"/>
+        </enumerationElements>
+      </customDataTypeList>
     </contents>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Insureds">
@@ -810,6 +917,13 @@
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
           <name manuallyCreated="true" value="Bankruptcy"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CriminalRecord" eType="#//CriminalRecord" eOpposite="#//CriminalRecord/insuredDetail">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="CriminalRecord"/>
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
@@ -3249,5 +3363,97 @@
     <eLiterals name="UnderMinorRenovationVacantDwelling" value="28" literal="'UnderMinorRenovationVacantDwelling'"/>
     <eLiterals name="VacantCondo" value="29" literal="'VacantCondo'"/>
     <eLiterals name="VacantDwelling" value="30" literal="'VacantDwelling'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CriminalRecord">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="CriminalRecord"/>
+        <datastorePersistent manuallyCreated="true" value="false"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indicator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="indicator"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="#//RiskList">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.11">
+          <name manuallyCreated="true" value="code"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore#//Date">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="date"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="highRiskInfractionCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="highRiskInfractionCount"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="riskLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="riskLevel"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="insuredDetail" lowerBound="1" eType="#//InsuredDetail" eOpposite="#//InsuredDetail/CriminalRecord">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="insuredDetail"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RiskList">
+    <eLiterals name="V0" literal="4"/>
+    <eLiterals name="V1" value="1" literal="5"/>
+    <eLiterals name="V2" value="2" literal="6"/>
+    <eLiterals name="V3" value="3" literal="7"/>
+    <eLiterals name="V4" value="4" literal="8"/>
+    <eLiterals name="V5" value="5" literal="87"/>
+    <eLiterals name="V6" value="6" literal="91"/>
+    <eLiterals name="V7" value="7" literal="145"/>
+    <eLiterals name="V8" value="8" literal="334"/>
+    <eLiterals name="V9" value="9" literal="344"/>
+    <eLiterals name="V10" value="10" literal="355"/>
+    <eLiterals name="V11" value="11" literal="463"/>
+    <eLiterals name="V12" value="12" literal="465"/>
+    <eLiterals name="V13" value="13" literal="175"/>
+    <eLiterals name="V14" value="14" literal="140"/>
+    <eLiterals name="V15" value="15" literal="129"/>
+    <eLiterals name="V16" value="16" literal="173"/>
+    <eLiterals name="V17" value="17" literal="253"/>
+    <eLiterals name="V18" value="18" literal="259"/>
+    <eLiterals name="V19" value="19" literal="264"/>
+    <eLiterals name="V20" value="20" literal="266"/>
+    <eLiterals name="V21" value="21" literal="740"/>
+    <eLiterals name="V22" value="22" literal="3"/>
+    <eLiterals name="V23" value="23" literal="151"/>
+    <eLiterals name="V24" value="24" literal="239"/>
+    <eLiterals name="V25" value="25" literal="271"/>
+    <eLiterals name="V26" value="26" literal="279"/>
+    <eLiterals name="V27" value="27" literal="348"/>
+    <eLiterals name="V28" value="28" literal="349"/>
+    <eLiterals name="V29" value="29" literal="351"/>
+    <eLiterals name="V30" value="30" literal="255"/>
+    <eLiterals name="V31" value="31" literal="270"/>
+    <eLiterals name="V32" value="32" literal="155"/>
+    <eLiterals name="V33" value="33" literal="273"/>
   </eClassifiers>
 </ecore:EPackage>
