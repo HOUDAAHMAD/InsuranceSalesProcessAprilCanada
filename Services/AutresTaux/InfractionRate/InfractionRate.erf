@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_vVWuICmKEfCIWKzNn_UMMQ" externalChecksum="7824986:507989954:2146616488" rulesheetAssets="HighRiskInfractionRate/HighRiskInfractionRate.ers#/ LowRiskInfractionRate/LowRiskInfractionRate.ers#/">
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_fTW8QCmtEfCIWKzNn_UMMQ" externalChecksum="7824986:507989954:2146616488" rulesheetAssets="HighRiskInfractionRate/HighRiskInfractionRate.ers#/ LowRiskInfractionRate/LowRiskInfractionRate.ers#/ NotRiskList/NotRiskList.ers#/">
   <ruleflow majorVersion="1" vocabularyUpdateStamp="_3CJQIymJEfCIWKzNn_UMMQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" order="1" ruleActivityUpdateStamp="_vVOyUymKEfCIWKzNn_UMMQ" invokes="#//@ruleflow/@subflowList.0"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" order="1" ruleActivityUpdateStamp="_fTT48CmtEfCIWKzNn_UMMQ" invokes="#//@ruleflow/@subflowList.0"/>
     <subflowList name="InfractionRate">
-      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon HighRiskList et LowRiskList" order="2" ruleActivityUpdateStamp="_vVWuICmKEfCIWKzNn_UMMQ" invokes="#//@ruleflow/@subflowList.0/@flowControlList.0">
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Sélection selon HighRiskList et LowRiskList" order="2" ruleActivityUpdateStamp="_fTT48CmtEfCIWKzNn_UMMQ" invokes="#//@ruleflow/@subflowList.0/@flowControlList.0">
         <condition expression="CriminalRecord.code">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CriminalRecord.code" datatype="Integer" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -14,7 +14,7 @@
           </parserOutput>
         </condition>
         <branches>
-          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="HighRiskInfractionRate" order="3" ruleActivityUpdateStamp="_D4vkkymJEfCIWKzNn_UMMQ" invokes="HighRiskInfractionRate/HighRiskInfractionRate.ers#//@ruleset"/>
+          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="HighRiskInfractionRate" order="3" ruleActivityUpdateStamp="_czpOAimsEfCIWKzNn_UMMQ" invokes="HighRiskInfractionRate/HighRiskInfractionRate.ers#//@ruleset"/>
           <label expression="4"/>
           <label expression="5"/>
           <label expression="6"/>
@@ -31,7 +31,12 @@
           <viewExpressions lhs="CriminalRecord.code" rhs="465"/>
         </branches>
         <branches>
-          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="LowRiskInfractionRate" order="4" ruleActivityUpdateStamp="_iWHF8SmJEfCIWKzNn_UMMQ" invokes="LowRiskInfractionRate/LowRiskInfractionRate.ers#//@ruleset"/>
+          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="NotRiskList" order="4" ruleActivityUpdateStamp="_S9JNgimtEfCIWKzNn_UMMQ" invokes="NotRiskList/NotRiskList.ers#//@ruleset"/>
+          <label expression="null"/>
+          <viewExpressions lhs="CriminalRecord.code" rhs="other"/>
+        </branches>
+        <branches>
+          <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="LowRiskInfractionRate" order="5" ruleActivityUpdateStamp="_iWHF8SmJEfCIWKzNn_UMMQ" invokes="LowRiskInfractionRate/LowRiskInfractionRate.ers#//@ruleset"/>
           <label expression="175"/>
           <label expression="140"/>
           <label expression="129"/>
@@ -59,19 +64,23 @@
     </subflowList>
   </ruleflow>
   <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
-    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="287" y="107" width="614" height="284" activityNode="#//@ruleflow/@flowControlList.0">
-      <annotations name="Color" value="8421631"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="287" y="107" width="614" height="374" activityNode="#//@ruleflow/@flowControlList.0">
+      <annotations name="Color" value="255"/>
     </flowShapeList>
-    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="38" y="13" width="526" height="226" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@subflowList.0/@flowControlList.0">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="38" y="13" width="526" height="316" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@subflowList.0/@flowControlList.0">
       <annotations name="Color" value="16777088"/>
       <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="55" y="15" width="406" height="61" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.1/@branchEdgeList.0" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.0/@nextStep.0">
         <annotations name="Color" value="8454143"/>
       </flowShapeList>
-      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="55" y="105" width="406" height="61" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.1/@branchEdgeList.1" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.1/@nextStep.0">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="55" y="105" width="406" height="61" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.1/@branchEdgeList.2" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.2/@nextStep.0">
+        <annotations name="Color" value="8454143"/>
+      </flowShapeList>
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="55" y="195" width="406" height="51" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.1/@branchEdgeList.1" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.1/@nextStep.0">
         <annotations name="Color" value="8454143"/>
       </flowShapeList>
       <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.1/@flowShapeList.0" branch="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.0"/>
-      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.1/@flowShapeList.1" branch="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.1"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.1/@flowShapeList.2" branch="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.1"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.1/@flowShapeList.1" branch="#//@ruleflow/@subflowList.0/@flowControlList.0/@branches.2"/>
     </flowShapeList>
   </ruleflowViewList>
 </com.corticon.rulesemf.assetmodel:RuleflowAsset>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_JNHEYimNEfCIWKzNn_UMMQ" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_yVDEgymtEfCIWKzNn_UMMQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
   <ruleset vocabularyUpdateStamp="_3CJQIymJEfCIWKzNn_UMMQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule/>
@@ -22,7 +22,7 @@
         </opaqueExpression>
         <viewExpressions lhs="cr.riskLevel" rhs="'High'"/>
       </condition>
-      <action>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="cr.highRiskInfractionCount+=1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cr.highRiskInfractionCount = cr.highRiskInfractionCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -58,10 +58,36 @@
         </opaqueExpression>
       </action>
     </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+      <text expression="Le nombre d'infractions à haut risque est {cr.highRiskInfractionCount} pour le riskLevel {cr.riskLevel}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Le nombre d'infractions à haut risque est  + cr.highRiskInfractionCount +  pour le riskLevel  + cr.riskLevel + ." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="riskLevel" datatype="String" termtype="ATTRIBUTE" fulltext="cr.riskLevel">
+              <parentTerm text="cr" datatype="CriminalRecord" termtype="ENTITY" fulltext="cr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                <parentTerm text="InsuredDetail" datatype="InsuredDetail" termtype="ENTITY" fulltext="Request.Insureds.InsuredDetail" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Insureds" datatype="Insureds" termtype="ENTITY" fulltext="Request.Insureds" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+            <terms text="highRiskInfractionCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="cr.highRiskInfractionCount">
+              <parentTerm text="cr" datatype="CriminalRecord" termtype="ENTITY" fulltext="cr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                <parentTerm text="InsuredDetail" datatype="InsuredDetail" termtype="ENTITY" fulltext="Request.Insureds.InsuredDetail" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Insureds" datatype="Insureds" termtype="ENTITY" fulltext="Request.Insureds" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
     <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request">
       <extension association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Insureds" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Insureds">
         <extension association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//InsuredDetail" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Insureds/InsuredDetail">
-          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CriminalRecord" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//InsuredDetail/CriminalRecord">
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CriminalRecord" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//InsuredDetail/CriminalRecord" ruleStatements="#//@ruleset/@ruleStatements.0">
             <alias value="cr"/>
             <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CriminalRecord/code"/>
             <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CriminalRecord/date"/>
@@ -135,7 +161,35 @@
       </rootNode>
     </scopeSection>
     <filterSection rowCount="50"/>
-    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="A1"/>
+        <text external="Le nombre d'infractions à haut risque est {cr.highRiskInfractionCount} pour le riskLevel {cr.riskLevel}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Le nombre d'infractions à haut risque est  + cr.highRiskInfractionCount +  pour le riskLevel  + cr.riskLevel + ." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="riskLevel" datatype="String" termtype="ATTRIBUTE" fulltext="cr.riskLevel">
+                <parentTerm text="cr" datatype="CriminalRecord" termtype="ENTITY" fulltext="cr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                  <parentTerm text="InsuredDetail" datatype="InsuredDetail" termtype="ENTITY" fulltext="Request.Insureds.InsuredDetail">
+                    <parentTerm text="Insureds" datatype="Insureds" termtype="ENTITY" fulltext="Request.Insureds">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="highRiskInfractionCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="cr.highRiskInfractionCount">
+                <parentTerm text="cr" datatype="CriminalRecord" termtype="ENTITY" fulltext="cr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                  <parentTerm text="InsuredDetail" datatype="InsuredDetail" termtype="ENTITY" fulltext="Request.Insureds.InsuredDetail">
+                    <parentTerm text="Insureds" datatype="Insureds" termtype="ENTITY" fulltext="Request.Insureds">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
     <conditionSection rowCount="50" columnWidthFactor="0.5">
       <conditionItemList>
         <valueSetCell/>
