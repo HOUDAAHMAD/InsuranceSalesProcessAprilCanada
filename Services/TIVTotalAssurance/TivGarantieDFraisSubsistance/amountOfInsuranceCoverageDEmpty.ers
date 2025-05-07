@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_gjiZ8CEWEfCaj7xZiEwszw" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_qVOjwitZEfCO8fbh026Low" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_r_HMwyETEfCaj7xZiEwszw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_It934CsaEfCZQZNoVauLlw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <condition/>
     </rule>
@@ -67,6 +67,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
@@ -161,6 +177,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -254,6 +286,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -347,6 +395,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -439,6 +503,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
@@ -533,6 +613,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -625,6 +721,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
@@ -719,6 +831,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -811,6 +939,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
@@ -905,6 +1049,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -997,6 +1157,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
@@ -1090,6 +1266,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
@@ -1184,6 +1376,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -1277,6 +1485,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -1370,6 +1594,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -1463,6 +1703,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -1556,6 +1812,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -1648,6 +1920,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
@@ -1742,6 +2030,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -1834,6 +2138,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
@@ -1928,6 +2248,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -2020,6 +2356,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
@@ -2114,6 +2466,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -2207,6 +2575,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -2300,6 +2684,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -2392,6 +2792,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
@@ -2486,6 +2902,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -2579,6 +3011,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -2671,6 +3119,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
@@ -2765,6 +3229,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -2858,6 +3338,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -2950,6 +3446,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.1">
@@ -3044,6 +3556,22 @@
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
       </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
+      </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -3136,6 +3664,22 @@
           </parserOutput>
         </opaqueExpression>
         <viewExpressions lhs="covr.amountOfInsurance>=0" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(covr.applied)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="covr.applied" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.amountOfInsurance = covr.amountOfInsurance*0.2">
@@ -3255,21 +3799,6 @@
         </parserOutput>
       </opaqueExpression>
     </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-      <opaqueExpression expression="covr.applied=T">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="covr.applied = T" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
-              <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0 #//@ruleset/@rules.2/@actions.0 #//@ruleset/@rules.3/@actions.0 #//@ruleset/@rules.4/@actions.0 #//@ruleset/@rules.5/@actions.0 #//@ruleset/@rules.6/@actions.0 #//@ruleset/@rules.7/@actions.0 #//@ruleset/@rules.8/@actions.0 #//@ruleset/@rules.9/@actions.0 #//@ruleset/@rules.10/@actions.0 #//@ruleset/@rules.11/@actions.0 #//@ruleset/@rules.12/@actions.0 #//@ruleset/@rules.13/@actions.0 #//@ruleset/@rules.14/@actions.0 #//@ruleset/@rules.15/@actions.0 #//@ruleset/@rules.16/@actions.0 #//@ruleset/@rules.17/@actions.0 #//@ruleset/@rules.18/@actions.0 #//@ruleset/@rules.19/@actions.0 #//@ruleset/@rules.20/@actions.0 #//@ruleset/@rules.21/@actions.0 #//@ruleset/@rules.22/@actions.0 #//@ruleset/@rules.23/@actions.0 #//@ruleset/@rules.24/@actions.0 #//@ruleset/@rules.25/@actions.0 #//@ruleset/@rules.26/@actions.0 #//@ruleset/@rules.27/@actions.0 #//@ruleset/@rules.28/@actions.0 #//@ruleset/@rules.29/@actions.0 #//@ruleset/@rules.30/@actions.0 #//@ruleset/@rules.31/@actions.0 #//@ruleset/@rules.32/@actions.0 #//@ruleset/@rules.33/@actions.0 #//@ruleset/@rules.34/@actions.0 #//@ruleset/@rules.35/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="Le montant de l'assurance D est {co.amountOfInsurance}.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Le montant de l'assurance D est  + co.amountOfInsurance + ." expressiontype="BRSTATEMENT">
@@ -3285,8 +3814,8 @@
         </parserOutput>
       </text>
     </ruleStatement>
-    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2 #//@ruleset/@filters.3">
-      <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2 #//@ruleset/@filters.3">
+    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
+      <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
         <alias value="dw"/>
         <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" ruleStatements="#//@ruleset/@ruleStatements.0" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
           <alias value="co"/>
@@ -3298,7 +3827,7 @@
           <alias value="ri"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//RiskAddress/province"/>
         </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#//@ruleset/@filters.3">
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages">
           <alias value="covr"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/applied"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
@@ -3334,14 +3863,12 @@
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.coverageCode='Section1CoverageD'" filter="#//@ruleset/@filters.0"/>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.amountOfInsurance=0" filter="#//@ruleset/@filters.1"/>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.applied=T" filter="#//@ruleset/@filters.2"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="covr.applied=T" filter="#//@ruleset/@filters.3"/>
           </children>
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.coverageCode='Section1CoverageD'" filter="#//@ruleset/@filters.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.amountOfInsurance=0" filter="#//@ruleset/@filters.1"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.applied=T" filter="#//@ruleset/@filters.2"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="covr.applied=T" filter="#//@ruleset/@filters.3"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
@@ -3357,9 +3884,6 @@
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.0"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="covr.applied=T" filter="#//@ruleset/@filters.3"/>
-              </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.1"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.2"/>
@@ -3369,7 +3893,7 @@
         </children>
       </rootNode>
     </scopeSection>
-    <filterSection rowCount="44">
+    <filterSection rowCount="43">
       <filterItemList filter="#//@ruleset/@filters.0">
         <expressionCell external="co.coverageCode='Section1CoverageD'">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coverageCode = 'Section1CoverageD'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
@@ -3406,21 +3930,6 @@
             <referencedTermList>
               <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="co.applied">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.3">
-        <expressionCell external="covr.applied=T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="covr.applied = T" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
-                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -3512,8 +4021,24 @@
           </parserOutput>
         </expressionCell>
       </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="covr.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="covr.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="36">
+    <ruleSection columnCount="36" scrollColumnLeft="18">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
         <conditionValueSetCellList/>
       </ruleColumnList>
@@ -3559,6 +4084,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -3647,6 +4185,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3717,6 +4268,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -3805,6 +4369,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3875,6 +4452,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -3963,6 +4553,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4033,6 +4636,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -4121,6 +4737,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4191,6 +4820,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -4279,6 +4921,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4349,6 +5004,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -4437,6 +5105,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4507,6 +5188,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -4595,6 +5289,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4665,6 +5372,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -4753,6 +5473,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4823,6 +5556,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -4911,6 +5657,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4981,6 +5740,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -5069,6 +5841,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5139,6 +5924,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -5227,6 +6025,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5297,6 +6108,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -5385,6 +6209,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5455,6 +6292,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -5543,6 +6393,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5613,6 +6476,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -5701,6 +6577,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5771,6 +6660,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -5859,6 +6761,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5929,6 +6844,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -6017,6 +6945,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6087,6 +7028,19 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.amountOfInsurance >= 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="covr.amountOfInsurance">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
                 <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -6175,6 +7129,19 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( covr.applied ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="covr.applied">
+                <parentTerm text="covr" datatype="Coverages" termtype="ENTITY" fulltext="covr" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
         <actionValueSetCellList valueSet="covr.amountOfInsurance*0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.amountOfInsurance = covr.amountOfInsurance * 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6218,6 +7185,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
         <conditionValueSetCellList valueSet="-"/>
         <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="0">
