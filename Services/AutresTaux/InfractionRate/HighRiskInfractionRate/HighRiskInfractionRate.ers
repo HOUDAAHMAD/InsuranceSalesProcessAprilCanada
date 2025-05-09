@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_wyWW0isaEfCZQZNoVauLlw" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_wdNn0izcEfCqfbeywtcsEA" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
   <ruleset vocabularyUpdateStamp="_It934CsaEfCZQZNoVauLlw" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
@@ -48,8 +48,8 @@
         <viewExpressions lhs="cr.code in {4, 5, 6, 7, 8, 87, 91, 145, 334, 344, 355, 463, 465}" rhs="T"/>
       </condition>
       <condition>
-        <opaqueExpression expression="(cr.date.year>=pd.effectiveDate.year-5)=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year >= pd.effectiveDate.year - 5 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="((pd.effectiveDate.year - cr.date.year) &lt;= 5)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( pd.effectiveDate.year - cr.date.year ) &lt;= 5 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -72,7 +72,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="cr.date.year>=pd.effectiveDate.year-5" rhs="T"/>
+        <viewExpressions lhs="(pd.effectiveDate.year - cr.date.year) &lt;= 5" rhs="T"/>
       </condition>
       <condition/>
       <condition/>
@@ -122,8 +122,8 @@
       </condition>
       <condition/>
       <condition>
-        <opaqueExpression expression="(cr.date.year&lt;(pd.effectiveDate.year-5))=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year &lt; ( pd.effectiveDate.year - 5 ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="(5 &lt; (pd.effectiveDate.year - cr.date.year))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( 5 &lt; ( pd.effectiveDate.year - cr.date.year ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -146,11 +146,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="cr.date.year&lt;(pd.effectiveDate.year-5)" rhs="T"/>
+        <viewExpressions lhs="5 &lt; (pd.effectiveDate.year - cr.date.year)" rhs="T"/>
       </condition>
       <condition>
-        <opaqueExpression expression="(cr.date.year>=(pd.effectiveDate.year-10))=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year >= ( pd.effectiveDate.year - 10 ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="((pd.effectiveDate.year - cr.date.year) &lt;= 10)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( pd.effectiveDate.year - cr.date.year ) &lt;= 10 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -173,13 +173,13 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="cr.date.year>=(pd.effectiveDate.year-10)" rhs="T"/>
+        <viewExpressions lhs="(pd.effectiveDate.year - cr.date.year) &lt;= 10" rhs="T"/>
       </condition>
       <condition/>
       <condition/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ra.rateValue = 1.75">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1.75" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ra.rateValue = 1.175">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1.175" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
                 <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
@@ -223,8 +223,8 @@
       <condition/>
       <condition/>
       <condition>
-        <opaqueExpression expression="(cr.date.year>=(pd.effectiveDate.year-15))=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year >= ( pd.effectiveDate.year - 15 ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="(10&lt;(pd.effectiveDate.year - cr.date.year))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( 10 &lt; ( pd.effectiveDate.year - cr.date.year ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -247,11 +247,11 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="cr.date.year>=(pd.effectiveDate.year-15)" rhs="T"/>
+        <viewExpressions lhs="10&lt;(pd.effectiveDate.year - cr.date.year)" rhs="T"/>
       </condition>
       <condition>
-        <opaqueExpression expression="(cr.date.year&lt;(pd.effectiveDate.year-10))=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year &lt; ( pd.effectiveDate.year - 10 ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="((pd.effectiveDate.year - cr.date.year)&lt;=15)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( pd.effectiveDate.year - cr.date.year ) &lt;= 15 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -274,7 +274,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="cr.date.year&lt;(pd.effectiveDate.year-10)" rhs="T"/>
+        <viewExpressions lhs="(pd.effectiveDate.year - cr.date.year)&lt;=15" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 1.1">
@@ -384,15 +384,15 @@
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ra.rateCode='HighRiskInfractionRate'" filter="#//@ruleset/@filters.0"/>
           </children>
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
                 <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.0"/>
                 <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.1"/>
               </children>
             </children>
           </children>
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ra.rateCode='HighRiskInfractionRate'" filter="#//@ruleset/@filters.0"/>
             </children>
@@ -404,7 +404,7 @@
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.1"/>
             </children>
           </children>
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.2">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.2">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.0"/>
           </children>
         </children>
@@ -473,8 +473,8 @@
       </conditionItemList>
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="cr.date.year>=pd.effectiveDate.year-5">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cr.date.year >= pd.effectiveDate.year - 5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="(pd.effectiveDate.year - cr.date.year) &lt;= 5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( pd.effectiveDate.year - cr.date.year ) &lt;= 5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -500,8 +500,8 @@
       </conditionItemList>
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="cr.date.year&lt;(pd.effectiveDate.year-5)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cr.date.year &lt; ( pd.effectiveDate.year - 5 )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="5 &lt; (pd.effectiveDate.year - cr.date.year)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="5 &lt; ( pd.effectiveDate.year - cr.date.year )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -527,8 +527,8 @@
       </conditionItemList>
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="cr.date.year>=(pd.effectiveDate.year-10)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cr.date.year >= ( pd.effectiveDate.year - 10 )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="(pd.effectiveDate.year - cr.date.year) &lt;= 10">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( pd.effectiveDate.year - cr.date.year ) &lt;= 10" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -554,8 +554,8 @@
       </conditionItemList>
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="cr.date.year>=(pd.effectiveDate.year-15)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cr.date.year >= ( pd.effectiveDate.year - 15 )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="10&lt;(pd.effectiveDate.year - cr.date.year)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="10 &lt; ( pd.effectiveDate.year - cr.date.year )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -581,8 +581,8 @@
       </conditionItemList>
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="cr.date.year&lt;(pd.effectiveDate.year-10)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cr.date.year &lt; ( pd.effectiveDate.year - 10 )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="(pd.effectiveDate.year - cr.date.year)&lt;=15">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( pd.effectiveDate.year - cr.date.year ) &lt;= 15" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -649,7 +649,7 @@
           </parserOutput>
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year >= pd.effectiveDate.year - 5 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( pd.effectiveDate.year - cr.date.year ) &lt;= 5 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -715,7 +715,7 @@
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="-"/>
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year &lt; ( pd.effectiveDate.year - 5 ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( 5 &lt; ( pd.effectiveDate.year - cr.date.year ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -739,7 +739,7 @@
           </parserOutput>
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year >= ( pd.effectiveDate.year - 10 ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( pd.effectiveDate.year - cr.date.year ) &lt;= 10 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -764,8 +764,8 @@
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="-"/>
         <conditionValueSetCellList valueSet="-"/>
-        <actionValueSetCellList valueSet="1.75">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1.75" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="1.175">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1.175" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
                 <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
@@ -805,7 +805,7 @@
         <conditionValueSetCellList valueSet="-"/>
         <conditionValueSetCellList valueSet="-"/>
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year >= ( pd.effectiveDate.year - 15 ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( 10 &lt; ( pd.effectiveDate.year - cr.date.year ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
@@ -829,7 +829,7 @@
           </parserOutput>
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( cr.date.year &lt; ( pd.effectiveDate.year - 10 ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( pd.effectiveDate.year - cr.date.year ) &lt;= 15 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="year" datatype="Integer" termtype="METHOD" fulltext="cr.date.year">
                 <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="cr.date">
