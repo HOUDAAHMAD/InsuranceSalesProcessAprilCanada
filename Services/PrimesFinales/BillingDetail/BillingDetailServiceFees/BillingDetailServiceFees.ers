@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_4O7gEzCfEfCb9MJZginYDw" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_-GjhBDvzEfCkFqnEMdDmEQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
   <ruleset vocabularyUpdateStamp="_unN-8DCfEfCb9MJZginYDw" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="bd.serviceFees = (bd.fullTermPremium*0.125).max(180)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.serviceFees = ( bd.fullTermPremium * 0.125 ).max ( 180 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="bd.serviceFees = (bd.fullTermPremium*0.125).min(180)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.serviceFees = ( bd.fullTermPremium * 0.125 ).min ( 180 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="serviceFees" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.serviceFees">
                 <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -95,8 +95,8 @@
     <conditionSection rowCount="50" columnWidthFactor="0.5"/>
     <ruleSection columnCount="20">
       <ruleColumnList ruleId="0" columnWidth="364" pRule="#//@ruleset/@rules.0">
-        <actionValueSetCellList valueSet="(bd.fullTermPremium*0.125).max(180)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.serviceFees = ( bd.fullTermPremium * 0.125 ).max ( 180 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="(bd.fullTermPremium*0.125).min(180)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.serviceFees = ( bd.fullTermPremium * 0.125 ).min ( 180 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="serviceFees" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.serviceFees">
                 <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd">
