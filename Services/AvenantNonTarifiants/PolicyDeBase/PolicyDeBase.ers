@@ -1,29 +1,876 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_lplpET02EfCBM_hs4Ub7AA" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_5p0LEj-EEfCBM_hs4Ub7AA" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
   <ruleset vocabularyUpdateStamp="_6EsggT0kEfCBM_hs4Ub7AA" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <rule/>
+    <rule>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="SMKWTY.coverageCode = 'SMK-WTY'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SMKWTY.coverageCode = 'SMK-WTY'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="SMKWTY.coverageCode">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="SMKWTY.coverageCode" rhs="'SMK-WTY'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(SMKWTY.selected&lt;>null)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( SMKWTY.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SMKWTY.selected">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="SMKWTY.selected&lt;>null" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="SMKWTY.applied = SMKWTY.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SMKWTY.applied = SMKWTY.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SMKWTY.applied">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SMKWTY.selected">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action/>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="WATRLIM.coverageCode = 'WATR-LIM'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="WATRLIM.coverageCode = 'WATR-LIM'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="WATRLIM.coverageCode">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="WATRLIM.coverageCode" rhs="'WATR-LIM'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(WATRLIM.selected&lt;>null)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( WATRLIM.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="WATRLIM.selected">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="WATRLIM.selected&lt;>null" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="WATRLIM.applied = WATRLIM.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="WATRLIM.applied = WATRLIM.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="WATRLIM.applied">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="WATRLIM.selected">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="CONDEXT.coverageCode = 'CONDEXT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CONDEXT.coverageCode = 'CONDEXT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="CONDEXT.coverageCode">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="CONDEXT.coverageCode" rhs="'CONDEXT'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(CONDEXT.selected&lt;>null)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( CONDEXT.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CONDEXT.selected">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="CONDEXT.selected&lt;>null" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="CONDEXT.applied = CONDEXT.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CONDEXT.applied = CONDEXT.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CONDEXT.applied">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CONDEXT.selected">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="D7.coverageCode = 'D7'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D7.coverageCode = 'D7'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="D7.coverageCode">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="D7.coverageCode" rhs="'D7'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(D7.selected&lt;>null)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( D7.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D7.selected">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="D7.selected&lt;>null" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="D7.applied = D7.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D7.applied = D7.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D7.applied">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D7.selected">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="D6.coverageCode = 'D6'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D6.coverageCode = 'D6'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="D6.coverageCode">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="D6.coverageCode" rhs="'D6'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(D6.selected&lt;>null)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( D6.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D6.selected">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="D6.selected&lt;>null" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="D6.applied = D6.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D6.applied = D6.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D6.applied">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D6.selected">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="J1.coverageCode = 'J1'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="J1.coverageCode = 'J1'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="J1.coverageCode">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="J1.coverageCode" rhs="'J1'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(J1.selected&lt;>null)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( J1.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="J1.selected">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="J1.selected&lt;>null" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="J1.applied = J1.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="J1.applied = J1.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="J1.applied">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="J1.selected">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="OTHCND.coverageCode = 'OTH-CND'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="OTHCND.coverageCode = 'OTH-CND'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="OTHCND.coverageCode">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="OTHCND.coverageCode" rhs="'OTH-CND'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(OTHCND.selected&lt;>null)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( OTHCND.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="OTHCND.selected">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="OTHCND.selected&lt;>null" rhs="T"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="OTHCND.applied = OTHCND.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="OTHCND.applied = OTHCND.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="OTHCND.applied">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="OTHCND.selected">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="STDEX.coverageCode = 'STD-EX'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="STDEX.coverageCode = 'STD-EX'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="STDEX.coverageCode">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="STDEX.coverageCode" rhs="'STD-EX'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(STDEX.selected&lt;>null)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( STDEX.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="STDEX.selected">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="STDEX.selected&lt;>null" rhs="T"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="STDEX.applied = STDEX.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="STDEX.applied = STDEX.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="STDEX.applied">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="STDEX.selected">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
     <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request">
       <extension association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings">
         <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages">
-          <alias value="co"/>
+          <alias value="SMKWTY"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/applied"/>
+        </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages">
+          <alias value="WATRLIM"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/applied"/>
+        </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages">
+          <alias value="CONDEXT"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/applied"/>
+        </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages">
+          <alias value="D7"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/applied"/>
+        </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages">
+          <alias value="D6"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/applied"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
+        </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages">
+          <alias value="J1"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/applied"/>
+        </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages">
+          <alias value="OTHCND"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/applied"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
+        </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages">
+          <alias value="STDEX"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/applied"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
         </extension>
       </extension>
     </logicalVariable>
   </ruleset>
   <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true">
-    <actionSection rowCount="50" columnWidthFactor="0.5"/>
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="SMKWTY.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SMKWTY.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SMKWTY.applied">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="WATRLIM.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="WATRLIM.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="WATRLIM.applied">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="CONDEXT.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CONDEXT.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CONDEXT.applied">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="D7.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D7.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D7.applied">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="D6.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D6.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D6.applied">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="J1.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="J1.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="J1.applied">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="OTHCND.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="OTHCND.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="OTHCND.applied">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="STDEX.applied">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="STDEX.applied" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="STDEX.applied">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
     <scopeSection>
       <rootNode>
         <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6/@referencedAttributes.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7/@referencedAttributes.2"/>
             </children>
           </children>
         </children>
@@ -31,9 +878,857 @@
     </scopeSection>
     <filterSection rowCount="50"/>
     <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400"/>
-    <conditionSection rowCount="50" columnWidthFactor="0.5"/>
-    <ruleSection columnCount="20">
-      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0"/>
+    <conditionSection rowCount="50" scrollRowTop="6" columnWidthFactor="0.5">
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="SMKWTY.coverageCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SMKWTY.coverageCode" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="SMKWTY.coverageCode">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="SMKWTY.selected&lt;>null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SMKWTY.selected &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SMKWTY.selected">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="WATRLIM.coverageCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="WATRLIM.coverageCode" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="WATRLIM.coverageCode">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="WATRLIM.selected&lt;>null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="WATRLIM.selected &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="WATRLIM.selected">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="CONDEXT.coverageCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CONDEXT.coverageCode" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="CONDEXT.coverageCode">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="CONDEXT.selected&lt;>null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CONDEXT.selected &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CONDEXT.selected">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="D7.coverageCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D7.coverageCode" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="D7.coverageCode">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="D7.selected&lt;>null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D7.selected &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D7.selected">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="D6.coverageCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D6.coverageCode" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="D6.coverageCode">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="D6.selected&lt;>null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D6.selected &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D6.selected">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="J1.coverageCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="J1.coverageCode" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="J1.coverageCode">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="J1.selected&lt;>null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="J1.selected &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="J1.selected">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="OTHCND.coverageCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="OTHCND.coverageCode" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="OTHCND.coverageCode">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="OTHCND.selected&lt;>null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="OTHCND.selected &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="OTHCND.selected">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="STDEX.coverageCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="STDEX.coverageCode" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="STDEX.coverageCode">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="STDEX.selected&lt;>null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="STDEX.selected &lt;> null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="STDEX.selected">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20" scrollColumnLeft="5">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="152" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="'SMK-WTY'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SMKWTY.coverageCode = 'SMK-WTY'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="SMKWTY.coverageCode">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( SMKWTY.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SMKWTY.selected">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="SMKWTY.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SMKWTY.applied = SMKWTY.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SMKWTY.applied">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="SMKWTY.selected">
+                <parentTerm text="SMKWTY" datatype="Coverages" termtype="ENTITY" fulltext="SMKWTY">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="144" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'WATR-LIM'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="WATRLIM.coverageCode = 'WATR-LIM'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="WATRLIM.coverageCode">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( WATRLIM.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="WATRLIM.selected">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="WATRLIM.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="WATRLIM.applied = WATRLIM.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="WATRLIM.applied">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="WATRLIM.selected">
+                <parentTerm text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="WATRLIM" datatype="Coverages" termtype="ENTITY" fulltext="WATRLIM">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="156" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'CONDEXT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CONDEXT.coverageCode = 'CONDEXT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="CONDEXT.coverageCode">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( CONDEXT.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CONDEXT.selected">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="CONDEXT.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CONDEXT.applied = CONDEXT.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CONDEXT.applied">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="CONDEXT.selected">
+                <parentTerm text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="CONDEXT" datatype="Coverages" termtype="ENTITY" fulltext="CONDEXT">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'D7'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D7.coverageCode = 'D7'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="D7.coverageCode">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( D7.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D7.selected">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="D7.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D7.applied = D7.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D7.applied">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D7.selected">
+                <parentTerm text="D7" datatype="Coverages" termtype="ENTITY" fulltext="D7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'D6'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D6.coverageCode = 'D6'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="D6.coverageCode">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( D6.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D6.selected">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="D6.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="D6.applied = D6.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D6.applied">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="D6.selected">
+                <parentTerm text="D6" datatype="Coverages" termtype="ENTITY" fulltext="D6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'J1'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="J1.coverageCode = 'J1'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="J1.coverageCode">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( J1.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="J1.selected">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="J1.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="J1.applied = J1.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="J1.applied">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="J1.selected">
+                <parentTerm text="J1" datatype="Coverages" termtype="ENTITY" fulltext="J1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="7" columnWidth="140" pRule="#//@ruleset/@rules.7">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'OTH-CND'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="OTHCND.coverageCode = 'OTH-CND'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="OTHCND.coverageCode">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( OTHCND.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="OTHCND.selected">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="OTHCND.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="OTHCND.applied = OTHCND.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="OTHCND.applied">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="OTHCND.selected">
+                <parentTerm text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="OTHCND" datatype="Coverages" termtype="ENTITY" fulltext="OTHCND">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="8" columnWidth="119" pRule="#//@ruleset/@rules.8">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'STD-EX'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="STDEX.coverageCode = 'STD-EX'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="STDEX.coverageCode">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( STDEX.selected &lt;> null ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="STDEX.selected">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="STDEX.selected">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="STDEX.applied = STDEX.selected" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="applied" datatype="Boolean" termtype="ATTRIBUTE" fulltext="STDEX.applied">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="selected" datatype="Boolean" termtype="ATTRIBUTE" fulltext="STDEX.selected">
+                <parentTerm text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="STDEX" datatype="Coverages" termtype="ENTITY" fulltext="STDEX">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
     </ruleSection>
   </rulesheetViewList>
 </com.corticon.rulesemf.assetmodel:RulesheetAsset>
