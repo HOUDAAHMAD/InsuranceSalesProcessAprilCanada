@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_ITqO0RSPEfCWkaeuC4mOxw" externalChecksum="7824986:1438690353:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_QR1bwkCAEfCYMu5k3IP34A" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_V085URR-EfCiNekO5n5upg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <rule/>
+  <ruleset vocabularyUpdateStamp="_6EsggT0kEfCBM_hs4Ub7AA" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
-      <condition>
-        <opaqueExpression expression="(dw.lobSubCode='VacantDwelling')=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-        <viewExpressions lhs="dw.lobSubCode='VacantDwelling'" rhs="T"/>
-      </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action>
         <opaqueExpression expression="ra.rateValue=0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -44,8 +28,48 @@
     </rule>
     <rule>
       <condition>
+        <opaqueExpression expression="(dw.lobSubCode='VacantDwelling')=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="dw.lobSubCode='VacantDwelling'" rhs="T"/>
+      </condition>
+      <condition/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0"/>
+      <action>
+        <opaqueExpression expression="ra.rateValue=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
         <opaqueExpression expression="(dw.lobSubCode='VacantDwelling')=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -74,6 +98,7 @@
         <viewExpressions lhs="co.deductible" rhs="500"/>
       </condition>
       <action/>
+      <action/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
         <opaqueExpression expression="ra.rateValue=1+0.05">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + 0.05" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -100,7 +125,7 @@
     <rule>
       <condition>
         <opaqueExpression expression="(dw.lobSubCode='VacantDwelling')=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -129,6 +154,7 @@
         <viewExpressions lhs="co.deductible" rhs="750"/>
       </condition>
       <action/>
+      <action/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
         <opaqueExpression expression="ra.rateValue=1+0.025">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + 0.025" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -155,7 +181,7 @@
     <rule>
       <condition>
         <opaqueExpression expression="(dw.lobSubCode='VacantDwelling')=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -184,6 +210,7 @@
         <viewExpressions lhs="co.deductible" rhs="1000"/>
       </condition>
       <action/>
+      <action/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
         <opaqueExpression expression="ra.rateValue=1+0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -210,7 +237,7 @@
     <rule>
       <condition>
         <opaqueExpression expression="(dw.lobSubCode='VacantDwelling')=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -239,6 +266,7 @@
         <viewExpressions lhs="co.deductible" rhs="2500"/>
       </condition>
       <action/>
+      <action/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
         <opaqueExpression expression="ra.rateValue=1+-0.05">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + -0.05" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -265,7 +293,7 @@
     <rule>
       <condition>
         <opaqueExpression expression="(dw.lobSubCode='VacantDwelling')=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -294,6 +322,7 @@
         <viewExpressions lhs="co.deductible" rhs="5000"/>
       </condition>
       <action/>
+      <action/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
         <opaqueExpression expression="ra.rateValue=1+-0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + -0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -320,7 +349,7 @@
     <rule>
       <condition>
         <opaqueExpression expression="(dw.lobSubCode='VacantDwelling')=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -349,6 +378,7 @@
         <viewExpressions lhs="co.deductible" rhs="10000"/>
       </condition>
       <action/>
+      <action/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
         <opaqueExpression expression="ra.rateValue=1+-0.15">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + -0.15" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -375,7 +405,7 @@
     <rule>
       <condition>
         <opaqueExpression expression="(dw.lobSubCode='VacantDwelling')=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -403,6 +433,7 @@
         </opaqueExpression>
         <viewExpressions lhs="co.deductible" rhs="25000"/>
       </condition>
+      <action/>
       <action/>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
         <opaqueExpression expression="ra.rateValue=1+-0.15">
@@ -477,7 +508,7 @@
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2/@actions.1 #//@ruleset/@rules.3/@actions.1 #//@ruleset/@rules.4/@actions.1 #//@ruleset/@rules.5/@actions.1 #//@ruleset/@rules.6/@actions.1 #//@ruleset/@rules.7/@actions.1 #//@ruleset/@rules.8/@actions.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2/@actions.2 #//@ruleset/@rules.3/@actions.2 #//@ruleset/@rules.4/@actions.2 #//@ruleset/@rules.5/@actions.2 #//@ruleset/@rules.6/@actions.2 #//@ruleset/@rules.7/@actions.2 #//@ruleset/@rules.8/@actions.2" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
       <text expression="La valeur du taux de {ra.rateCode} est {ra.rateValue}.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux de  + ra.rateCode +  est  + ra.rateValue + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
@@ -516,12 +547,35 @@
       </extension>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true">
-    <actionSection rowCount="50" columnWidthFactor="0.5">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="30" sashWeightConditionsIf="46">
+    <actionSection rowCount="51" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell/>
         <expressionCell external="ra.rateValue=0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="ra.rateValue=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
                 <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -653,7 +707,7 @@
         </text>
       </ruleStatementItemList>
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
-        <reference external="B"/>
+        <reference external="C"/>
         <text external="La valeur du taux de {ra.rateCode} est {ra.rateValue}.">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="La valeur du taux de  + ra.rateCode +  est  + ra.rateValue + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
@@ -680,7 +734,7 @@
       <conditionItemList>
         <valueSetCell/>
         <expressionCell external="dw.lobSubCode='VacantDwelling'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -708,11 +762,13 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="20" scrollColumnLeft="1">
-      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0"/>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
       <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -723,11 +779,12 @@
           </parserOutput>
         </conditionValueSetCellList>
         <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet=""/>
         <actionValueSetCellList valueSet="X"/>
       </ruleColumnList>
       <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -750,6 +807,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <actionValueSetCellList/>
         <actionValueSetCellList/>
         <actionValueSetCellList valueSet="0.05">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + 0.05" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -774,7 +832,7 @@
       </ruleColumnList>
       <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -797,6 +855,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <actionValueSetCellList/>
         <actionValueSetCellList/>
         <actionValueSetCellList valueSet="0.025">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + 0.025" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -821,7 +880,7 @@
       </ruleColumnList>
       <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -844,6 +903,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <actionValueSetCellList/>
         <actionValueSetCellList/>
         <actionValueSetCellList valueSet="0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -868,7 +928,7 @@
       </ruleColumnList>
       <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -891,6 +951,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <actionValueSetCellList/>
         <actionValueSetCellList/>
         <actionValueSetCellList valueSet="-0.05">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + -0.05" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -915,7 +976,7 @@
       </ruleColumnList>
       <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -938,6 +999,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <actionValueSetCellList/>
         <actionValueSetCellList/>
         <actionValueSetCellList valueSet="-0.1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + -0.1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -962,7 +1024,7 @@
       </ruleColumnList>
       <ruleColumnList ruleId="7" columnWidth="100" pRule="#//@ruleset/@rules.7">
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -985,6 +1047,7 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
+        <actionValueSetCellList/>
         <actionValueSetCellList/>
         <actionValueSetCellList valueSet="-0.15">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + -0.15" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -1009,7 +1072,7 @@
       </ruleColumnList>
       <ruleColumnList ruleId="8" columnWidth="100" pRule="#//@ruleset/@rules.8">
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( dw.lobSubCode = 'VacantDwelling' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -1033,6 +1096,7 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList/>
         <actionValueSetCellList valueSet="-0.15">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + -0.15" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
