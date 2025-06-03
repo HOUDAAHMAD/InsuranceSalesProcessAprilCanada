@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_oX4-cB9SEfC01rAGdtaFAA" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_ZFL_YkCOEfC2LJjjNE4bgw" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_pGz9QBtdEfC4mLDecvuV7g" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_xReZsUCNEfC2LJjjNE4bgw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.liabilitySurcharge=ca.liabilitySurchargePerLimit+ca.liabilityBasePremium+ca.boatLiabilitySurcharge+ca.swimmingPoolLiabilitySurcharge+ca.dogLiabilitySurcharge+ca.waterEdgeLiabilitySurcharge+ca.vacantLandLiabilitySurcharge+ca.underRenovationLiabilitySurcharge+ca.liabilitySurchargeForNumberOfUnits">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilitySurcharge = ca.liabilitySurchargePerLimit + ca.liabilityBasePremium + ca.boatLiabilitySurcharge + ca.swimmingPoolLiabilitySurcharge + ca.dogLiabilitySurcharge + ca.waterEdgeLiabilitySurcharge + ca.vacantLandLiabilitySurcharge + ca.underRenovationLiabilitySurcharge + ca.liabilitySurchargeForNumberOfUnits" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.liabilitySurcharge=ca.liabilitySurchargePerLimit+ca.liabilityBasePremium+ca.boatLiabilitySurcharge+ca.swimmingPoolLiabilitySurcharge+ca.dogLiabilitySurcharge+ca.waterEdgeLiabilitySurcharge+ca.vacantLandLiabilitySurcharge+ca.underRenovationLiabilitySurcharge+ca.liabilitySurchargeForNumberOfUnits+ca.additionnalInsuredSurcharge">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilitySurcharge = ca.liabilitySurchargePerLimit + ca.liabilityBasePremium + ca.boatLiabilitySurcharge + ca.swimmingPoolLiabilitySurcharge + ca.dogLiabilitySurcharge + ca.waterEdgeLiabilitySurcharge + ca.vacantLandLiabilitySurcharge + ca.underRenovationLiabilitySurcharge + ca.liabilitySurchargeForNumberOfUnits + ca.additionnalInsuredSurcharge" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="liabilitySurcharge" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilitySurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -45,6 +45,13 @@
                 </parentTerm>
               </terms>
               <terms text="liabilitySurchargeForNumberOfUnits" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.liabilitySurchargeForNumberOfUnits">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="additionnalInsuredSurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.additionnalInsuredSurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -118,6 +125,7 @@
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/vacantLandLiabilitySurcharge"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/underRenovationLiabilitySurcharge"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/liabilitySurchargeForNumberOfUnits"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/additionnalInsuredSurcharge"/>
         </extension>
       </extension>
     </logicalVariable>
@@ -165,6 +173,7 @@
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.7"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.8"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.9"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.10"/>
             </children>
           </children>
         </children>
@@ -192,8 +201,8 @@
     <conditionSection rowCount="50" columnWidthFactor="0.5"/>
     <ruleSection columnCount="20">
       <ruleColumnList ruleId="0" columnWidth="401" pRule="#//@ruleset/@rules.0">
-        <actionValueSetCellList valueSet="ca.liabilityBasePremium+ca.boatLiabilitySurcharge+ca.swimmingPoolLiabilitySurcharge+ca.dogLiabilitySurcharge+ca.waterEdgeLiabilitySurcharge+ca.vacantLandLiabilitySurcharge+ca.underRenovationLiabilitySurcharge+ca.liabilitySurchargeForNumberOfUnits">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilitySurcharge = ca.liabilitySurchargePerLimit + ca.liabilityBasePremium + ca.boatLiabilitySurcharge + ca.swimmingPoolLiabilitySurcharge + ca.dogLiabilitySurcharge + ca.waterEdgeLiabilitySurcharge + ca.vacantLandLiabilitySurcharge + ca.underRenovationLiabilitySurcharge + ca.liabilitySurchargeForNumberOfUnits" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="ca.liabilityBasePremium+ca.boatLiabilitySurcharge+ca.swimmingPoolLiabilitySurcharge+ca.dogLiabilitySurcharge+ca.waterEdgeLiabilitySurcharge+ca.vacantLandLiabilitySurcharge+ca.underRenovationLiabilitySurcharge+ca.liabilitySurchargeForNumberOfUnits+ca.additionnalInsuredSurcharge">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilitySurcharge = ca.liabilitySurchargePerLimit + ca.liabilityBasePremium + ca.boatLiabilitySurcharge + ca.swimmingPoolLiabilitySurcharge + ca.dogLiabilitySurcharge + ca.waterEdgeLiabilitySurcharge + ca.vacantLandLiabilitySurcharge + ca.underRenovationLiabilitySurcharge + ca.liabilitySurchargeForNumberOfUnits + ca.additionnalInsuredSurcharge" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="liabilitySurcharge" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilitySurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
@@ -233,6 +242,13 @@
                 </parentTerm>
               </terms>
               <terms text="liabilitySurchargeForNumberOfUnits" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.liabilitySurchargeForNumberOfUnits">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="additionnalInsuredSurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.additionnalInsuredSurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
