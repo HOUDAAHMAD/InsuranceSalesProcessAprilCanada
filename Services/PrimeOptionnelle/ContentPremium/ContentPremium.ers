@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_8q5F0UCJEfCLvIg_7ZQiGQ" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_StBvkEXVEfCD5P3L4Om60Q" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_nSlWYUCHEfCYMu5k3IP34A" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_xReZsUCNEfC2LJjjNE4bgw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action>
-        <opaqueExpression expression="ca.contentPremium = ca.contingentPremium+eath.coveragePremium+ca.lossAssessmentCleaningPremium+R5.coveragePremium+vanda.coveragePremium+theft.coveragePremium+outd.coveragePremium+ca.lossAssessmentLiabilityPremium+ca.rentedNightsNumberPremium+sewer.coveragePremium+ca.improvementsPremium+ca.lossAssessmentPropertyPremium">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.contentPremium = ca.contingentPremium + eath.coveragePremium + ca.lossAssessmentCleaningPremium + R5.coveragePremium + vanda.coveragePremium + theft.coveragePremium + outd.coveragePremium + ca.lossAssessmentLiabilityPremium + ca.rentedNightsNumberPremium + sewer.coveragePremium + ca.improvementsPremium + ca.lossAssessmentPropertyPremium" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.contentPremium = (ca.contingentPremium+eath.coveragePremium+ca.lossAssessmentCleaningPremium+R5.coveragePremium+vanda.coveragePremium+theft.coveragePremium+outd.coveragePremium+ca.lossAssessmentLiabilityPremium+ca.rentedNightsNumberPremium+sewer.coveragePremium+ca.improvementsPremium+ca.lossAssessmentPropertyPremium).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.contentPremium = ( ca.contingentPremium + eath.coveragePremium + ca.lossAssessmentCleaningPremium + R5.coveragePremium + vanda.coveragePremium + theft.coveragePremium + outd.coveragePremium + ca.lossAssessmentLiabilityPremium + ca.rentedNightsNumberPremium + sewer.coveragePremium + ca.improvementsPremium + ca.lossAssessmentPropertyPremium ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="contentPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.contentPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -261,65 +261,31 @@
     <scopeSection>
       <rootNode>
         <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="eath.coverageCode='EQ-SS'" filter="#//@ruleset/@filters.0"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="outd.coverageCode='SP'" filter="#//@ruleset/@filters.1"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="theft.coverageCode='THEFT'" filter="#//@ruleset/@filters.2"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="vanda.coverageCode='VANDALISM'" filter="#//@ruleset/@filters.3"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sewer.coverageCode='R3'" filter="#//@ruleset/@filters.4"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R5.coverageCode='R5'" filter="#//@ruleset/@filters.5"/>
-          </children>
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="eath.coverageCode='EQ-SS'" filter="#//@ruleset/@filters.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="outd.coverageCode='SP'" filter="#//@ruleset/@filters.1"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="theft.coverageCode='THEFT'" filter="#//@ruleset/@filters.2"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="vanda.coverageCode='VANDALISM'" filter="#//@ruleset/@filters.3"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sewer.coverageCode='R3'" filter="#//@ruleset/@filters.4"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R5.coverageCode='R5'" filter="#//@ruleset/@filters.5"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="theft.coverageCode='THEFT'" filter="#//@ruleset/@filters.2"/>
-              </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.1"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="vanda.coverageCode='VANDALISM'" filter="#//@ruleset/@filters.3"/>
-              </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.1"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="outd.coverageCode='SP'" filter="#//@ruleset/@filters.1"/>
-              </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.1"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="eath.coverageCode='EQ-SS'" filter="#//@ruleset/@filters.0"/>
-              </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.1"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sewer.coverageCode='R3'" filter="#//@ruleset/@filters.4"/>
-              </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.1"/>
             </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R5.coverageCode='R5'" filter="#//@ruleset/@filters.5"/>
-              </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6/@referencedAttributes.0"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6/@referencedAttributes.1"/>
             </children>
@@ -419,12 +385,12 @@
         </expressionCell>
       </filterItemList>
     </filterSection>
-    <ruleStatementSection rowCount="50" scrollRowTop="12" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400"/>
     <conditionSection rowCount="50" scrollRowTop="6" columnWidthFactor="0.5"/>
     <ruleSection columnCount="20">
-      <ruleColumnList ruleId="0" columnWidth="827" pRule="#//@ruleset/@rules.0">
-        <actionValueSetCellList valueSet="ca.contingentPremium+eath.coveragePremium+ca.lossAssessmentCleaningPremium+R5.coveragePremium+vanda.coveragePremium+theft.coveragePremium+outd.coveragePremium+ca.lossAssessmentLiabilityPremium+ca.rentedNightsNumberPremium+sewer.coveragePremium+ca.improvementsPremium+ca.lossAssessmentPropertyPremium">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.contentPremium = ca.contingentPremium + eath.coveragePremium + ca.lossAssessmentCleaningPremium + R5.coveragePremium + vanda.coveragePremium + theft.coveragePremium + outd.coveragePremium + ca.lossAssessmentLiabilityPremium + ca.rentedNightsNumberPremium + sewer.coveragePremium + ca.improvementsPremium + ca.lossAssessmentPropertyPremium" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+      <ruleColumnList ruleId="0" columnWidth="798" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList valueSet="(ca.contingentPremium+eath.coveragePremium+ca.lossAssessmentCleaningPremium+R5.coveragePremium+vanda.coveragePremium+theft.coveragePremium+outd.coveragePremium+ca.lossAssessmentLiabilityPremium+ca.rentedNightsNumberPremium+sewer.coveragePremium+ca.improvementsPremium+ca.lossAssessmentPropertyPremium).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.contentPremium = ( ca.contingentPremium + eath.coveragePremium + ca.lossAssessmentCleaningPremium + R5.coveragePremium + vanda.coveragePremium + theft.coveragePremium + outd.coveragePremium + ca.lossAssessmentLiabilityPremium + ca.rentedNightsNumberPremium + sewer.coveragePremium + ca.improvementsPremium + ca.lossAssessmentPropertyPremium ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="contentPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.contentPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
