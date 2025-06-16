@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_mql0oSBOEfCfSbznGSqZ9w" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Mu2TMkqyEfCSGoQalliWog" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_zTzp0CBMEfCfSbznGSqZ9w" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_xReZsUCNEfC2LJjjNE4bgw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule/>
     <rule>
       <condition>
-        <opaqueExpression expression="(((ct.homeType = 'Tenant') or (ct.homeType = 'Mobile') or (ct.homeType = 'Condo')))=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Mobile' ) or ( ct.homeType = 'Condo' ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="(((ct.homeType = 'Tenant') or (ct.homeType = 'Condo')))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Condo' ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="ct.homeType">
                 <parentTerm text="ct" datatype="Construction" termtype="ENTITY" fulltext="ct" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -18,7 +18,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="((ct.homeType = 'Tenant') or (ct.homeType = 'Mobile') or (ct.homeType = 'Condo'))" rhs="T"/>
+        <viewExpressions lhs="((ct.homeType = 'Tenant') or (ct.homeType = 'Condo'))" rhs="T"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.excluded = T">
@@ -45,8 +45,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="(((ct.homeType = 'Tenant') or (ct.homeType = 'Mobile') or (ct.homeType = 'Condo')))=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Mobile' ) or ( ct.homeType = 'Condo' ) ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="(((ct.homeType = 'Tenant') or (ct.homeType = 'Condo')))=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Condo' ) ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="ct.homeType">
                 <parentTerm text="ct" datatype="Construction" termtype="ENTITY" fulltext="ct" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -58,7 +58,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="((ct.homeType = 'Tenant') or (ct.homeType = 'Mobile') or (ct.homeType = 'Condo'))" rhs="F"/>
+        <viewExpressions lhs="((ct.homeType = 'Tenant') or (ct.homeType = 'Condo'))" rhs="F"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="co.excluded = F">
@@ -134,7 +134,7 @@
       </extension>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="25" sashWeightConditionsIf="50">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="25" sashWeightConditionsIf="55">
     <actionSection rowCount="48" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell/>
@@ -219,11 +219,11 @@
         </text>
       </ruleStatementItemList>
     </ruleStatementSection>
-    <conditionSection rowCount="44" columnWidthFactor="0.5949820788530465">
+    <conditionSection rowCount="44" columnWidthFactor="0.9378238341968912">
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="((ct.homeType = 'Tenant') or (ct.homeType = 'Mobile') or (ct.homeType = 'Condo'))">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Mobile' ) or ( ct.homeType = 'Condo' ) )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="((ct.homeType = 'Tenant') or (ct.homeType = 'Condo'))">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Condo' ) )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="ct.homeType">
                 <parentTerm text="ct" datatype="Construction" termtype="ENTITY" fulltext="ct" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -241,7 +241,7 @@
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0"/>
       <ruleColumnList ruleId="1" columnWidth="155" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Mobile' ) or ( ct.homeType = 'Condo' ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Condo' ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="ct.homeType">
                 <parentTerm text="ct" datatype="Construction" termtype="ENTITY" fulltext="ct" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -276,7 +276,7 @@
       </ruleColumnList>
       <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
         <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Mobile' ) or ( ct.homeType = 'Condo' ) ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( ct.homeType = 'Tenant' ) or ( ct.homeType = 'Condo' ) ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="ct.homeType">
                 <parentTerm text="ct" datatype="Construction" termtype="ENTITY" fulltext="ct" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
