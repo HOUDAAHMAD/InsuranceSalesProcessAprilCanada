@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_xSwJQCEWEfCaj7xZiEwszw" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_OZ4yNWcNEfCJuLcXUzSuUw" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_r_HMwyETEfCaj7xZiEwszw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_eIP0kUxKEfCKif7Z_rqGPQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <condition/>
     </rule>
@@ -1335,6 +1335,114 @@
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue=0.004">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.004" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="re.Dwellings.lobSubCode = lobSubCode#RentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="re.Dwellings.lobSubCode" rhs="lobSubCode#RentalBroad"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="re.Dwellings.RiskAddress.province = province#QC">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="re.Dwellings.RiskAddress.province" rhs="province#QC"/>
+      </condition>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="ra.rateValue=0.0054625">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0054625" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="re.Dwellings.lobSubCode = lobSubCode#RentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="re.Dwellings.lobSubCode" rhs="lobSubCode#RentalBroad"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="re.Dwellings.RiskAddress.province = province#ON or re.Dwellings.RiskAddress.province = province#AB or re.Dwellings.RiskAddress.province = province#BC or re.Dwellings.RiskAddress.province = province#SK or re.Dwellings.RiskAddress.province = province#MB or re.Dwellings.RiskAddress.province = province#NL or re.Dwellings.RiskAddress.province = province#NB or re.Dwellings.RiskAddress.province = province#PEI or re.Dwellings.RiskAddress.province = province#NS">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="re.Dwellings.RiskAddress.province" rhs="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}"/>
+      </condition>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="ra.rateValue=0.0045">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0045" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
                 <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -3044,7 +3152,7 @@
         </parserOutput>
       </opaqueExpression>
     </filter>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0 #//@ruleset/@rules.2/@actions.0 #//@ruleset/@rules.3/@actions.0 #//@ruleset/@rules.4/@actions.0 #//@ruleset/@rules.5/@actions.0 #//@ruleset/@rules.6/@actions.0 #//@ruleset/@rules.7/@actions.0 #//@ruleset/@rules.8/@actions.0 #//@ruleset/@rules.9/@actions.0 #//@ruleset/@rules.10/@actions.0 #//@ruleset/@rules.11/@actions.0 #//@ruleset/@rules.12/@actions.0 #//@ruleset/@rules.13/@actions.0 #//@ruleset/@rules.14/@actions.0 #//@ruleset/@rules.15/@actions.0 #//@ruleset/@rules.16/@actions.0 #//@ruleset/@rules.17/@actions.0 #//@ruleset/@rules.18/@actions.0 #//@ruleset/@rules.19/@actions.0 #//@ruleset/@rules.20/@actions.0 #//@ruleset/@rules.21/@actions.0 #//@ruleset/@rules.22/@actions.0 #//@ruleset/@rules.23/@actions.0 #//@ruleset/@rules.24/@actions.0 #//@ruleset/@rules.25/@actions.0 #//@ruleset/@rules.26/@actions.0 #//@ruleset/@rules.27/@actions.0 #//@ruleset/@rules.28/@actions.0 #//@ruleset/@rules.29/@actions.0 #//@ruleset/@rules.30/@actions.0 #//@ruleset/@rules.31/@actions.0 #//@ruleset/@rules.32/@actions.0 #//@ruleset/@rules.33/@actions.0 #//@ruleset/@rules.34/@actions.0 #//@ruleset/@rules.35/@actions.0 #//@ruleset/@rules.36/@actions.0 #//@ruleset/@rules.37/@actions.0 #//@ruleset/@rules.38/@actions.0 #//@ruleset/@rules.39/@actions.0 #//@ruleset/@rules.40/@actions.0 #//@ruleset/@rules.41/@actions.0 #//@ruleset/@rules.42/@actions.0 #//@ruleset/@rules.43/@actions.0 #//@ruleset/@rules.44/@actions.0 #//@ruleset/@rules.45/@actions.0 #//@ruleset/@rules.46/@actions.0 #//@ruleset/@rules.47/@actions.0 #//@ruleset/@rules.48/@actions.0 #//@ruleset/@rules.49/@actions.0 #//@ruleset/@rules.50/@actions.0 #//@ruleset/@rules.51/@actions.0 #//@ruleset/@rules.52/@actions.0 #//@ruleset/@rules.53/@actions.0 #//@ruleset/@rules.54/@actions.0 #//@ruleset/@rules.55/@actions.0 #//@ruleset/@rules.56/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0 #//@ruleset/@rules.2/@actions.0 #//@ruleset/@rules.3/@actions.0 #//@ruleset/@rules.4/@actions.0 #//@ruleset/@rules.5/@actions.0 #//@ruleset/@rules.6/@actions.0 #//@ruleset/@rules.7/@actions.0 #//@ruleset/@rules.8/@actions.0 #//@ruleset/@rules.9/@actions.0 #//@ruleset/@rules.10/@actions.0 #//@ruleset/@rules.11/@actions.0 #//@ruleset/@rules.12/@actions.0 #//@ruleset/@rules.13/@actions.0 #//@ruleset/@rules.14/@actions.0 #//@ruleset/@rules.15/@actions.0 #//@ruleset/@rules.16/@actions.0 #//@ruleset/@rules.17/@actions.0 #//@ruleset/@rules.18/@actions.0 #//@ruleset/@rules.19/@actions.0 #//@ruleset/@rules.20/@actions.0 #//@ruleset/@rules.21/@actions.0 #//@ruleset/@rules.22/@actions.0 #//@ruleset/@rules.23/@actions.0 #//@ruleset/@rules.24/@actions.0 #//@ruleset/@rules.25/@actions.0 #//@ruleset/@rules.26/@actions.0 #//@ruleset/@rules.27/@actions.0 #//@ruleset/@rules.28/@actions.0 #//@ruleset/@rules.29/@actions.0 #//@ruleset/@rules.30/@actions.0 #//@ruleset/@rules.31/@actions.0 #//@ruleset/@rules.32/@actions.0 #//@ruleset/@rules.33/@actions.0 #//@ruleset/@rules.34/@actions.0 #//@ruleset/@rules.35/@actions.0 #//@ruleset/@rules.36/@actions.0 #//@ruleset/@rules.37/@actions.0 #//@ruleset/@rules.38/@actions.0 #//@ruleset/@rules.39/@actions.0 #//@ruleset/@rules.40/@actions.0 #//@ruleset/@rules.41/@actions.0 #//@ruleset/@rules.42/@actions.0 #//@ruleset/@rules.43/@actions.0 #//@ruleset/@rules.44/@actions.0 #//@ruleset/@rules.45/@actions.0 #//@ruleset/@rules.46/@actions.0 #//@ruleset/@rules.47/@actions.0 #//@ruleset/@rules.48/@actions.0 #//@ruleset/@rules.49/@actions.0 #//@ruleset/@rules.50/@actions.0 #//@ruleset/@rules.51/@actions.0 #//@ruleset/@rules.52/@actions.0 #//@ruleset/@rules.53/@actions.0 #//@ruleset/@rules.54/@actions.0 #//@ruleset/@rules.55/@actions.0 #//@ruleset/@rules.56/@actions.0 #//@ruleset/@rules.57/@actions.0 #//@ruleset/@rules.58/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
       <text expression="FireProtection = 2-SemiProtected , la valeur du taux est {ra.rateValue} pour le rateCode {ra.rateCode} sachant que lobSubCode = {re.Dwellings.lobSubCode} et province = {re.Dwellings.RiskAddress.province}.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="FireProtection = 2-SemiProtected , la valeur du taux est  + ra.rateValue +  pour le rateCode  + ra.rateCode +  sachant que lobSubCode =  + re_Dwellings.lobSubCode +  et province =  + re_Dwellings_RiskAddress.province + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
@@ -3234,7 +3342,7 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="57" scrollColumnLeft="8">
+    <ruleSection columnCount="59" scrollColumnLeft="22">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
         <conditionValueSetCellList/>
       </ruleColumnList>
@@ -4389,6 +4497,98 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="26" columnWidth="100" pRule="#//@ruleset/@rules.26">
+        <conditionValueSetCellList valueSet="lobSubCode#RentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="province#QC">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.0054625">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0054625" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="27" columnWidth="100" pRule="#//@ruleset/@rules.27">
+        <conditionValueSetCellList valueSet="lobSubCode#RentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.0045">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0045" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="28" columnWidth="100" pRule="#//@ruleset/@rules.28">
         <conditionValueSetCellList valueSet="lobSubCode#RentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'RentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -4434,7 +4634,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="27" columnWidth="100" pRule="#//@ruleset/@rules.27">
+      <ruleColumnList ruleId="29" columnWidth="100" pRule="#//@ruleset/@rules.29">
         <conditionValueSetCellList valueSet="lobSubCode#SeasonalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -4480,7 +4680,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="28" columnWidth="100" pRule="#//@ruleset/@rules.28">
+      <ruleColumnList ruleId="30" columnWidth="100" pRule="#//@ruleset/@rules.30">
         <conditionValueSetCellList valueSet="lobSubCode#SeasonalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -4526,101 +4726,9 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="29" columnWidth="100" pRule="#//@ruleset/@rules.29">
-        <conditionValueSetCellList valueSet="lobSubCode#SeasonalNamedPeril">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
-                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="0.004">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.004" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
-      <ruleColumnList ruleId="30" columnWidth="100" pRule="#//@ruleset/@rules.30">
-        <conditionValueSetCellList valueSet="lobSubCode#SeasonalNamedPeril">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="province#QC">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
-                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="0.00475">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.00475" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
       <ruleColumnList ruleId="31" columnWidth="100" pRule="#//@ruleset/@rules.31">
-        <conditionValueSetCellList valueSet="lobSubCode#SeasonalwShortRental">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalwShortRental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SeasonalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
@@ -4665,6 +4773,98 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="32" columnWidth="100" pRule="#//@ruleset/@rules.32">
+        <conditionValueSetCellList valueSet="lobSubCode#SeasonalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="province#QC">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.00475">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.00475" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="33" columnWidth="100" pRule="#//@ruleset/@rules.33">
+        <conditionValueSetCellList valueSet="lobSubCode#SeasonalwShortRental">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalwShortRental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.004">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.004" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="34" columnWidth="100" pRule="#//@ruleset/@rules.34">
         <conditionValueSetCellList valueSet="lobSubCode#SeasonalwShortRental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalwShortRental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -4710,7 +4910,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="33" columnWidth="100" pRule="#//@ruleset/@rules.33">
+      <ruleColumnList ruleId="35" columnWidth="100" pRule="#//@ruleset/@rules.35">
         <conditionValueSetCellList valueSet="lobSubCode#SeasonalwShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalwShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -4756,7 +4956,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="34" columnWidth="100" pRule="#//@ruleset/@rules.34">
+      <ruleColumnList ruleId="36" columnWidth="100" pRule="#//@ruleset/@rules.36">
         <conditionValueSetCellList valueSet="lobSubCode#SeasonalwShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SeasonalwShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -4802,101 +5002,9 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="35" columnWidth="100" pRule="#//@ruleset/@rules.35">
-        <conditionValueSetCellList valueSet="lobSubCode#SecondaryBroad">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
-                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="0.0063">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0063" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
-      <ruleColumnList ruleId="36" columnWidth="100" pRule="#//@ruleset/@rules.36">
-        <conditionValueSetCellList valueSet="lobSubCode#SecondaryBroad">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="province#QC">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
-                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="0.0035">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0035" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
       <ruleColumnList ruleId="37" columnWidth="100" pRule="#//@ruleset/@rules.37">
-        <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyBroad">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryFamilyBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
@@ -4941,6 +5049,98 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="38" columnWidth="100" pRule="#//@ruleset/@rules.38">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="province#QC">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.0035">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0035" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="39" columnWidth="100" pRule="#//@ruleset/@rules.39">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryFamilyBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.0063">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0063" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="40" columnWidth="100" pRule="#//@ruleset/@rules.40">
         <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryFamilyBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -4986,101 +5186,9 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="39" columnWidth="100" pRule="#//@ruleset/@rules.39">
-        <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyNamedPeril">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
-                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="0.006">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.006" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
-      <ruleColumnList ruleId="40" columnWidth="100" pRule="#//@ruleset/@rules.40">
-        <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyNamedPeril">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="province#QC">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
-                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="0.00325">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.00325" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
       <ruleColumnList ruleId="41" columnWidth="100" pRule="#//@ruleset/@rules.41">
-        <conditionValueSetCellList valueSet="lobSubCode#SecondaryNamedPeril">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
@@ -5125,6 +5233,98 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="42" columnWidth="100" pRule="#//@ruleset/@rules.42">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="province#QC">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.00325">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.00325" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="43" columnWidth="100" pRule="#//@ruleset/@rules.43">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondaryNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.006">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.006" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="44" columnWidth="100" pRule="#//@ruleset/@rules.44">
         <conditionValueSetCellList valueSet="lobSubCode#SecondaryNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5170,7 +5370,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="43" columnWidth="100" pRule="#//@ruleset/@rules.43">
+      <ruleColumnList ruleId="45" columnWidth="100" pRule="#//@ruleset/@rules.45">
         <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondarywShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5197,98 +5397,6 @@
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="0.0045">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0045" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
-      <ruleColumnList ruleId="44" columnWidth="100" pRule="#//@ruleset/@rules.44">
-        <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalBroad">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondarywShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="province#QC">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
-                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="0.0054625">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0054625" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
-      <ruleColumnList ruleId="45" columnWidth="100" pRule="#//@ruleset/@rules.45">
-        <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalNamedPeril">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondarywShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
-                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
-                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="0.004">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.004" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
                 <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
@@ -5309,6 +5417,98 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="46" columnWidth="100" pRule="#//@ruleset/@rules.46">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalBroad">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondarywShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="province#QC">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'QC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.0054625">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.0054625" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="47" columnWidth="100" pRule="#//@ruleset/@rules.47">
+        <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalNamedPeril">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondarywShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.lobSubCode">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="{province#ON, province#AB, province#BC, province#SK, province#MB, province#NL, province#NB, province#PEI, province#NS}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.RiskAddress.province = 'ON' or re.Dwellings.RiskAddress.province = 'AB' or re.Dwellings.RiskAddress.province = 'BC' or re.Dwellings.RiskAddress.province = 'SK' or re.Dwellings.RiskAddress.province = 'MB' or re.Dwellings.RiskAddress.province = 'NL' or re.Dwellings.RiskAddress.province = 'NB' or re.Dwellings.RiskAddress.province = 'PEI' or re.Dwellings.RiskAddress.province = 'NS'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="province" datatype="String" termtype="ATTRIBUTE" fulltext="re.Dwellings.RiskAddress.province">
+                <parentTerm text="RiskAddress" datatype="RiskAddress" termtype="ENTITY" fulltext="re.Dwellings.RiskAddress">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="0.004">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 0.004" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
+                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                    <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="re.Dwellings">
+                  <parentTerm text="re" datatype="Request" termtype="ENTITY" fulltext="re"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="48" columnWidth="100" pRule="#//@ruleset/@rules.48">
         <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'SecondarywShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5354,7 +5554,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="47" columnWidth="100" pRule="#//@ruleset/@rules.47">
+      <ruleColumnList ruleId="49" columnWidth="100" pRule="#//@ruleset/@rules.49">
         <conditionValueSetCellList valueSet="lobSubCode#ShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'ShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5400,7 +5600,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="48" columnWidth="100" pRule="#//@ruleset/@rules.48">
+      <ruleColumnList ruleId="50" columnWidth="100" pRule="#//@ruleset/@rules.50">
         <conditionValueSetCellList valueSet="lobSubCode#ShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'ShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5446,7 +5646,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="49" columnWidth="100" pRule="#//@ruleset/@rules.49">
+      <ruleColumnList ruleId="51" columnWidth="100" pRule="#//@ruleset/@rules.51">
         <conditionValueSetCellList valueSet="lobSubCode#ShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'ShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5492,7 +5692,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="50" columnWidth="100" pRule="#//@ruleset/@rules.50">
+      <ruleColumnList ruleId="52" columnWidth="100" pRule="#//@ruleset/@rules.52">
         <conditionValueSetCellList valueSet="lobSubCode#ShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'ShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5538,7 +5738,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="51" columnWidth="100" pRule="#//@ruleset/@rules.51">
+      <ruleColumnList ruleId="53" columnWidth="100" pRule="#//@ruleset/@rules.53">
         <conditionValueSetCellList valueSet="lobSubCode#TenantNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'TenantNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5584,7 +5784,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="52" columnWidth="100" pRule="#//@ruleset/@rules.52">
+      <ruleColumnList ruleId="54" columnWidth="100" pRule="#//@ruleset/@rules.54">
         <conditionValueSetCellList valueSet="lobSubCode#TenantNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'TenantNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5630,7 +5830,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="53" columnWidth="100" pRule="#//@ruleset/@rules.53">
+      <ruleColumnList ruleId="55" columnWidth="100" pRule="#//@ruleset/@rules.55">
         <conditionValueSetCellList valueSet="lobSubCode#VacantCondo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'VacantCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5676,7 +5876,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="54" columnWidth="100" pRule="#//@ruleset/@rules.54">
+      <ruleColumnList ruleId="56" columnWidth="100" pRule="#//@ruleset/@rules.56">
         <conditionValueSetCellList valueSet="lobSubCode#VacantCondo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'VacantCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5722,7 +5922,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="55" columnWidth="100" pRule="#//@ruleset/@rules.55">
+      <ruleColumnList ruleId="57" columnWidth="100" pRule="#//@ruleset/@rules.57">
         <conditionValueSetCellList valueSet="lobSubCode#VacantDwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5768,7 +5968,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="56" columnWidth="100" pRule="#//@ruleset/@rules.56">
+      <ruleColumnList ruleId="58" columnWidth="100" pRule="#//@ruleset/@rules.58">
         <conditionValueSetCellList valueSet="lobSubCode#VacantDwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="re.Dwellings.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
