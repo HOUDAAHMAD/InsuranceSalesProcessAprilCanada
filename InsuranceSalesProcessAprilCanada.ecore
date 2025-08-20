@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_8nNecXIHEfCi75GwHjc9Xw" externalChecksum="7824986:507989954" customDataTypeDisplayCount="49">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_KwFDAH0_EfCYcZZVlX7bzA" externalChecksum="7824986:507989954" customDataTypeDisplayCount="48">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T05:08:54.258-0500" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T05:09:10.369-0500" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -405,27 +405,6 @@
         <enumerationElements>
           <label manuallyCreated="true" value="Family"/>
           <value manuallyCreated="true" value="'Family'"/>
-        </enumerationElements>
-      </customDataTypeList>
-      <customDataTypeList enumerationDisplayCount="50" eDataType="#//policyStatus">
-        <dataTypeName manuallyCreated="true" value="policyStatus"/>
-        <baseDataType manuallyCreated="true" value="String"/>
-        <enumeration manuallyCreated="true" value="true"/>
-        <enumerationElements>
-          <label manuallyCreated="true" value="Cancellation"/>
-          <value manuallyCreated="true" value="'Cancellation'"/>
-        </enumerationElements>
-        <enumerationElements>
-          <label manuallyCreated="true" value="Endorsment"/>
-          <value manuallyCreated="true" value="'Endorsment'"/>
-        </enumerationElements>
-        <enumerationElements>
-          <label manuallyCreated="true" value="Renewal"/>
-          <value manuallyCreated="true" value="'Renewal'"/>
-        </enumerationElements>
-        <enumerationElements>
-          <label manuallyCreated="true" value="NewBusiness"/>
-          <value manuallyCreated="true" value="'NewBusiness'"/>
         </enumerationElements>
       </customDataTypeList>
       <customDataTypeList enumerationDisplayCount="50" eDataType="#//termType">
@@ -1103,9 +1082,9 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyStatus" eType="#//policyStatus">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.5">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
           <name manuallyCreated="true" value="policyStatus"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -1359,7 +1338,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rootForm" eType="#//rootForm">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.7">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.6">
           <name manuallyCreated="true" value="rootForm"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -1460,7 +1439,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lobSubCode" eType="#//lobSubCode">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.10">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.9">
           <name manuallyCreated="true" value="lobSubCode"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -1856,7 +1835,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="termType" eType="#//termType">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.6">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.5">
           <name manuallyCreated="true" value="termType"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -1928,7 +1907,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="occupancyByOwner" eType="#//occupancyByOwner">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.8">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.7">
           <name manuallyCreated="true" value="occupancyByOwner"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -1944,7 +1923,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rentedNightsNumber" eType="#//rentedNightsNumber">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.9">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.8">
           <name manuallyCreated="true" value="rentedNightsNumber"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
@@ -3324,12 +3303,6 @@
     <eLiterals name="Secondary" value="4" literal="'Secondary'"/>
     <eLiterals name="Tenant" value="5" literal="'Tenant'"/>
     <eLiterals name="Family" value="6" literal="'Family'"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="policyStatus">
-    <eLiterals name="Cancellation" literal="'Cancellation'"/>
-    <eLiterals name="Endorsment" value="1" literal="'Endorsment'"/>
-    <eLiterals name="Renewal" value="2" literal="'Renewal'"/>
-    <eLiterals name="NewBusiness" value="3" literal="'NewBusiness'"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="rootForm">
     <eLiterals name="A1" literal="'A1'"/>

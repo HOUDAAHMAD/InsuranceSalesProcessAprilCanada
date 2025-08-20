@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_r2qwgSEVEfCaj7xZiEwszw" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_L0TqtH1AEfCYcZZVlX7bzA" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_r_HMwyETEfCaj7xZiEwszw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_KwFDAH0_EfCYcZZVlX7bzA" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule/>
     <rule>
       <condition>
-        <opaqueExpression expression="pd.policyStatus = policyStatus#NewBusiness">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'NewBusiness'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <opaqueExpression expression="pd.policyStatus = 'Nouvelle Affaire'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Nouvelle Affaire'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="pd.policyStatus">
                 <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
@@ -16,7 +16,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="pd.policyStatus" rhs="policyStatus#NewBusiness"/>
+        <viewExpressions lhs="pd.policyStatus" rhs="'Nouvelle Affaire'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 1">
@@ -43,8 +43,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="pd.policyStatus = policyStatus#Renewal">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Renewal'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <opaqueExpression expression="pd.policyStatus = 'Renouvellement'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Renouvellement'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="pd.policyStatus">
                 <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
@@ -54,7 +54,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="pd.policyStatus" rhs="policyStatus#Renewal"/>
+        <viewExpressions lhs="pd.policyStatus" rhs="'Renouvellement'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 1.025">
@@ -81,8 +81,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="pd.policyStatus = policyStatus#Endorsment">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Endorsment'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <opaqueExpression expression="pd.policyStatus = 'Avenant'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Avenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="pd.policyStatus">
                 <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
@@ -92,7 +92,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="pd.policyStatus" rhs="policyStatus#Endorsment"/>
+        <viewExpressions lhs="pd.policyStatus" rhs="'Avenant'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 1">
@@ -119,8 +119,8 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="pd.policyStatus = policyStatus#Cancellation">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Cancellation'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <opaqueExpression expression="pd.policyStatus = 'Resiliation'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Resiliation'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="pd.policyStatus">
                 <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
@@ -130,7 +130,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="pd.policyStatus" rhs="policyStatus#Cancellation"/>
+        <viewExpressions lhs="pd.policyStatus" rhs="'Resiliation'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="ra.rateValue = 1">
@@ -291,7 +291,7 @@
       <conditionItemList>
         <valueSetCell/>
         <expressionCell external="pd.policyStatus">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="pd.policyStatus">
                 <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
@@ -306,8 +306,8 @@
     <ruleSection columnCount="20">
       <ruleColumnList ruleId="0" columnWidth="236" pRule="#//@ruleset/@rules.0"/>
       <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
-        <conditionValueSetCellList valueSet="policyStatus#NewBusiness">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'NewBusiness'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="'Nouvelle Affaire'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Nouvelle Affaire'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="pd.policyStatus">
                 <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
@@ -339,8 +339,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
-        <conditionValueSetCellList valueSet="policyStatus#Renewal">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Renewal'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="'Renouvellement'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Renouvellement'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="pd.policyStatus">
                 <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
@@ -372,8 +372,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
-        <conditionValueSetCellList valueSet="policyStatus#Endorsment">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Endorsment'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="'Avenant'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Avenant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="pd.policyStatus">
                 <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
@@ -405,8 +405,8 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
-        <conditionValueSetCellList valueSet="policyStatus#Cancellation">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Cancellation'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="'Resiliation'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyStatus = 'Resiliation'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="policyStatus" datatype="String" termtype="ATTRIBUTE" fulltext="pd.policyStatus">
                 <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
