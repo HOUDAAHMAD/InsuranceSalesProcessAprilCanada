@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_lE1oQkCOEfC2LJjjNE4bgw" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_AgUEJIK1EfCoJvKvxpj5LQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_xReZsUCNEfC2LJjjNE4bgw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_5c8vEYK0EfCoJvKvxpj5LQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action>
         <opaqueExpression expression="ca.additionnalInsuredSurcharge = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.additionnalInsuredSurcharge = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="additionnalInsuredSurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.additionnalInsuredSurcharge">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -28,39 +28,43 @@
     </rule>
     <rule>
       <condition>
-        <opaqueExpression expression="is.numberOfAddInsureds &lt;> 0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="is.numberOfAddInsureds &lt;> 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.numberOfAddInsureds &lt;> 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.numberOfAddInsureds &lt;> 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
-              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="is.numberOfAddInsureds">
-                <parentTerm text="is" datatype="Insureds" termtype="ENTITY" fulltext="is" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.numberOfAddInsureds">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="is.numberOfAddInsureds" rhs="&lt;> 0"/>
+        <viewExpressions lhs="ca.numberOfAddInsureds" rhs="&lt;> 0"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.additionnalInsuredSurcharge = is.numberOfAddInsureds * 25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.additionnalInsuredSurcharge = is.numberOfAddInsureds * 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.additionnalInsuredSurcharge = ca.numberOfAddInsureds * 25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.additionnalInsuredSurcharge = ca.numberOfAddInsureds * 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="additionnalInsuredSurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.additionnalInsuredSurcharge">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="is.numberOfAddInsureds">
-                <parentTerm text="is" datatype="Insureds" termtype="ENTITY" fulltext="is" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.numberOfAddInsureds">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -69,13 +73,13 @@
         </opaqueExpression>
       </action>
     </rule>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="additionnal Insured Surcharge = {ca.additionnalInsuredSurcharge}.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="additionnal Insured Surcharge =  + ca.additionnalInsuredSurcharge + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
             <terms text="additionnalInsuredSurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.additionnalInsuredSurcharge">
-              <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+              <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </parentTerm>
@@ -85,14 +89,11 @@
       </text>
     </ruleStatement>
     <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request">
-      <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Insureds" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Insureds">
-        <alias value="is"/>
-        <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Insureds/numberOfAddInsureds"/>
-      </extension>
       <extension association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings">
         <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables" ruleStatements="#//@ruleset/@ruleStatements.0">
           <alias value="ca"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/additionnalInsuredSurcharge"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/numberOfAddInsureds"/>
         </extension>
       </extension>
     </logicalVariable>
@@ -105,7 +106,7 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.additionnalInsuredSurcharge" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="additionnalInsuredSurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.additionnalInsuredSurcharge">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -120,11 +121,9 @@
       <rootNode>
         <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
-          </children>
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
             </children>
           </children>
         </children>
@@ -138,7 +137,7 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="additionnal Insured Surcharge =  + ca.additionnalInsuredSurcharge + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="additionnalInsuredSurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.additionnalInsuredSurcharge">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -152,12 +151,14 @@
     <conditionSection rowCount="50" columnWidthFactor="0.5">
       <conditionItemList>
         <valueSetCell/>
-        <expressionCell external="is.numberOfAddInsureds">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="is.numberOfAddInsureds" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="ca.numberOfAddInsureds">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.numberOfAddInsureds" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
-              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="is.numberOfAddInsureds">
-                <parentTerm text="is" datatype="Insureds" termtype="ENTITY" fulltext="is" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.numberOfAddInsureds">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -190,18 +191,20 @@
       </ruleColumnList>
       <ruleColumnList ruleId="1" columnWidth="281" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="&lt;> 0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="is.numberOfAddInsureds &lt;> 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.numberOfAddInsureds &lt;> 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
-              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="is.numberOfAddInsureds">
-                <parentTerm text="is" datatype="Insureds" termtype="ENTITY" fulltext="is" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.numberOfAddInsureds">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="is.numberOfAddInsureds * 25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.additionnalInsuredSurcharge = is.numberOfAddInsureds * 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="ca.numberOfAddInsureds * 25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.additionnalInsuredSurcharge = ca.numberOfAddInsureds * 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="additionnalInsuredSurcharge" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.additionnalInsuredSurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
@@ -212,9 +215,11 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="is.numberOfAddInsureds">
-                <parentTerm text="is" datatype="Insureds" termtype="ENTITY" fulltext="is">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+              <terms text="numberOfAddInsureds" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.numberOfAddInsureds">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">

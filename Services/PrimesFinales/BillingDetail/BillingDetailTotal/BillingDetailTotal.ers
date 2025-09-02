@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_dUoFQoG-EfCt2qTS2Ovf2g" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_pg2QAYK6EfC1IslBsafDrw" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_7IJN04G9EfCt2qTS2Ovf2g" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_HYHiEIK4EfCDn4lq1ALB8g" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
         <opaqueExpression expression="bd.total = bd.fullTermPremium+bd.taxAmount+bd.serviceFees+bd.evaluationFees">
@@ -63,6 +63,7 @@
         <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/fullTermPremium"/>
         <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/taxAmount"/>
         <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/evaluationFees"/>
+        <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/proratedPremium"/>
       </extension>
     </logicalVariable>
   </ruleset>
@@ -92,6 +93,7 @@
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.3"/>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.5"/>
           </children>
         </children>
       </rootNode>
