@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Tr0s0Cp7EfC_yuLvNVp88g" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_vSiW-oj-EfCuqfGBIR7lQA" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_cHrM4Cp9EfC_yuLvNVp88g" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_qI6KsYj-EfCuqfGBIR7lQA" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action>
-        <opaqueExpression expression="co.coveragePremium=(0*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(0*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -16,16 +16,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -71,11 +71,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'0-50'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(0*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(0*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -83,16 +83,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -138,11 +138,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'51-75'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(23*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 23 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(23*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 23 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -150,16 +150,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -205,11 +205,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'76-100'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(20*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(20*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -217,16 +217,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -272,11 +272,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'0-50'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(20*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(20*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -284,16 +284,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -339,11 +339,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'51-75'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(15*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 15 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(15*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 15 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -351,16 +351,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -406,11 +406,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'76-100'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(13*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 13 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(13*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 13 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -418,16 +418,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -473,11 +473,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'0-50'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(30*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 30 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(30*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 30 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -485,16 +485,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -540,11 +540,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'51-75'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(20*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(20*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -552,16 +552,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -607,11 +607,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'76-100'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(15*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 15 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(15*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 15 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -619,16 +619,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -674,11 +674,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'0-50'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(18*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 18 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(18*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 18 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -686,16 +686,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -741,11 +741,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'51-75'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(13*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 13 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(13*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 13 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -753,16 +753,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -808,11 +808,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'76-100'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(8*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 8 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(8*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 8 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -820,16 +820,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -875,11 +875,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'0-50'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(0*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(0*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -887,16 +887,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -942,11 +942,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'51-75'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(30*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 30 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(30*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 30 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -954,16 +954,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1009,11 +1009,11 @@
         <viewExpressions lhs="ra.occupancyByOwner" rhs="'76-100'"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium=(23*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 23 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.vandalismPremium=(23*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 23 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -1021,16 +1021,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1108,6 +1108,10 @@
           <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
           <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/excluded"/>
         </extension>
+        <extension explicit="true" association="true" entity="../../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables">
+          <alias value="ca"/>
+          <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/vandalismPremium"/>
+        </extension>
       </extension>
     </logicalVariable>
   </ruleset>
@@ -1115,11 +1119,11 @@
     <actionSection rowCount="50" columnWidthFactor="0.5">
       <actionItemList rowHeight="79">
         <valueSetCell/>
-        <expressionCell external="co.coveragePremium=(cellValue*(co.amountOfInsurance/5000)).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( cellValue * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="true">
+        <expressionCell external="ca.vandalismPremium=(cellValue*(co.amountOfInsurance/5000)).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( cellValue * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="true">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -1127,8 +1131,8 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -1166,6 +1170,9 @@
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.1"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.2"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.3"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
             </children>
           </children>
         </children>
@@ -1269,10 +1276,10 @@
     <ruleSection columnCount="20" scrollColumnLeft="3">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1280,16 +1287,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1328,10 +1335,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1339,16 +1346,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1387,10 +1394,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="23">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 23 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 23 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1398,16 +1405,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1446,10 +1453,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="20">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1457,16 +1464,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1505,10 +1512,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="20">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1516,16 +1523,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1564,10 +1571,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="15">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 15 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 15 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1575,16 +1582,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1623,10 +1630,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="13">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 13 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 13 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1634,16 +1641,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1682,10 +1689,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="30">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 30 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 30 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1693,16 +1700,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1741,10 +1748,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="20">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 20 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1752,16 +1759,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1800,10 +1807,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="15">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 15 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 15 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1811,16 +1818,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1859,10 +1866,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="18">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 18 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 18 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1870,16 +1877,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1918,10 +1925,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="13">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 13 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 13 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1929,16 +1936,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -1977,10 +1984,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="8">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 8 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 8 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1988,16 +1995,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -2036,10 +2043,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 0 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2047,16 +2054,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -2095,10 +2102,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="30">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 30 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 30 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2106,16 +2113,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -2154,10 +2161,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="23">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = ( 23 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.vandalismPremium = ( 23 * ( co.amountOfInsurance / 5000 ) ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
-                <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
+              <terms text="vandalismPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.vandalismPremium">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2165,16 +2172,16 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
               <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.amountOfInsurance">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
             </referencedTermList>
