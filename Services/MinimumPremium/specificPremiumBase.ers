@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_siNxYR90EfCF14WLYsvMiQ" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Upe_VIg7EfCslaI15Jfqaw" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_r_HMwyETEfCaj7xZiEwszw" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_NZKMUog7EfCslaI15Jfqaw" vocabulary="../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action/>
     </rule>
@@ -219,8 +219,8 @@
         <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Primary"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = homeType#Mobile">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <opaqueExpression expression="co.homeType = homeType#MobileHome">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'MobileHome'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -232,7 +232,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="homeType#Mobile"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#MobileHome"/>
       </condition>
       <condition>
         <opaqueExpression expression="oc.termType = termType#Long">
@@ -317,8 +317,8 @@
         <viewExpressions lhs="oc.occupancyType" rhs="OccupancyType#Primary"/>
       </condition>
       <condition>
-        <opaqueExpression expression="co.homeType = homeType#Mobile">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <opaqueExpression expression="co.homeType = homeType#MobileHome">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'MobileHome'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -330,7 +330,7 @@
             </referencedTermList>
           </parserOutput>
         </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="homeType#Mobile"/>
+        <viewExpressions lhs="co.homeType" rhs="homeType#MobileHome"/>
       </condition>
       <condition>
         <opaqueExpression expression="oc.termType = termType#Long">
@@ -1338,8 +1338,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="homeType#Mobile">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="homeType#MobileHome">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'MobileHome'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -1419,8 +1419,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="homeType#Mobile">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Mobile'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+        <conditionValueSetCellList valueSet="homeType#MobileHome">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'MobileHome'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
                 <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
