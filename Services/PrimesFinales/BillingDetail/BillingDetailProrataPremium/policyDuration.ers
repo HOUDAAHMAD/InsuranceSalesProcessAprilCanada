@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_4A9TI5SEEfCnv_ZlY67yyA" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_sCoRKbApEfC0rqy4D1dGRQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_TUbAcZMpEfCg3bd1i3wN1A" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_jKz74LApEfC0rqy4D1dGRQ" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action>
         <opaqueExpression expression="ca.delay = 30">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 30" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -30,8 +30,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -39,23 +39,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -85,8 +85,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -103,8 +103,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.effectiveDate.daysBetween ( ca.requestedDate ) > 60" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -126,16 +126,16 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 30" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -148,8 +148,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -157,23 +157,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -203,8 +203,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -221,8 +221,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.effectiveDate.daysBetween ( ca.requestedDate ) &lt;= 60" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -244,16 +244,16 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 15" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -266,8 +266,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -275,23 +275,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -321,8 +321,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -338,8 +338,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 16" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -355,16 +355,16 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -377,8 +377,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -386,23 +386,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -432,8 +432,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -449,8 +449,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 17" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -466,16 +466,16 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -488,8 +488,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -497,23 +497,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -543,8 +543,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -560,8 +560,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -577,16 +577,16 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -599,8 +599,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -608,23 +608,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -654,8 +654,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -671,8 +671,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 15" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -688,16 +688,16 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -710,8 +710,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -719,23 +719,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -765,8 +765,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -782,8 +782,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 14" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -799,16 +799,16 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -821,8 +821,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -830,23 +830,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -876,8 +876,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -893,8 +893,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 19" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -904,21 +904,22 @@
         </opaqueExpression>
         <viewExpressions lhs="ca.cancelReasonId" rhs="19"/>
       </condition>
+      <condition/>
       <action>
         <opaqueExpression expression="ca.delay = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -931,8 +932,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -940,23 +941,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -986,8 +987,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1003,8 +1004,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 4" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1014,21 +1015,22 @@
         </opaqueExpression>
         <viewExpressions lhs="ca.cancelReasonId" rhs="4"/>
       </condition>
+      <condition/>
       <action>
         <opaqueExpression expression="ca.delay = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -1041,8 +1043,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1050,23 +1052,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -1096,8 +1098,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1121,8 +1123,10 @@
       </opaqueExpression>
     </filter>
     <logicalVariable entity="../../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#//@ruleset/@filters.0">
-      <extension association="true" entity="../../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings">
-        <extension explicit="true" association="true" entity="../../../../InsuranceSalesProcessAprilCanada.ecore#//Cancellation" traversedAssocRole="../../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Cancellation">
+      <extension association="true" entity="../../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings"/>
+      <extension explicit="true" association="true" entity="../../../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail" traversedAssocRole="../../../../InsuranceSalesProcessAprilCanada.ecore#//Request/PolicyDetail" filters="#//@ruleset/@filters.0">
+        <alias value="pd"/>
+        <extension explicit="true" association="true" entity="../../../../InsuranceSalesProcessAprilCanada.ecore#//Cancellation" traversedAssocRole="../../../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/cancellation">
           <alias value="ca"/>
           <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//Cancellation/cancellationDate"/>
           <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//Cancellation/cancelReason"/>
@@ -1130,9 +1134,6 @@
           <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//Cancellation/delay"/>
           <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//Cancellation/requestedDate"/>
         </extension>
-      </extension>
-      <extension explicit="true" association="true" entity="../../../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail" traversedAssocRole="../../../../InsuranceSalesProcessAprilCanada.ecore#//Request/PolicyDetail" filters="#//@ruleset/@filters.0">
-        <alias value="pd"/>
         <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/effectiveDate"/>
         <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/policyStatus"/>
         <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail/policyDuration"/>
@@ -1148,8 +1149,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.delay" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1164,8 +1165,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancellationDate = ca.requestedDate.addDays ( ca.delay )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1173,23 +1174,23 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="addDays" datatype="DateTime" termtype="METHOD" fulltext="ca.requestedDate.addDays">
                 <parentTerm text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                    <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                    <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+              <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
@@ -1220,8 +1221,8 @@
                 </parentTerm>
               </terms>
               <terms text="cancellationDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.cancellationDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1237,15 +1238,7 @@
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="pd.policyStatus = 'Resiliation'" filter="#//@ruleset/@filters.0"/>
           </children>
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.2"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.3"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.4"/>
-            </children>
-          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0"/>
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="pd.policyStatus = 'Resiliation'" filter="#//@ruleset/@filters.0"/>
@@ -1254,6 +1247,13 @@
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.1"/>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.2"/>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.3"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.4"/>
+            </children>
           </children>
         </children>
       </rootNode>
@@ -1281,8 +1281,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1297,8 +1297,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.effectiveDate.daysBetween ( ca.requestedDate )" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1322,7 +1322,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1330,7 +1330,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
@@ -1346,8 +1346,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.effectiveDate.daysBetween ( ca.requestedDate ) > 60" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1367,7 +1367,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1375,7 +1375,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
@@ -1391,8 +1391,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.effectiveDate.daysBetween ( ca.requestedDate ) &lt;= 60" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="requestedDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="ca.requestedDate">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1412,7 +1412,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1420,7 +1420,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
@@ -1435,8 +1435,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 16" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1450,7 +1450,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1458,7 +1458,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
@@ -1473,8 +1473,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 17" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1488,7 +1488,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1496,7 +1496,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
@@ -1511,8 +1511,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1526,7 +1526,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1534,7 +1534,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
@@ -1549,8 +1549,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 15" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1564,7 +1564,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1572,7 +1572,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
@@ -1587,8 +1587,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 14" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1602,7 +1602,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1610,7 +1610,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
@@ -1625,8 +1625,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 19" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1640,7 +1640,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1648,7 +1648,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
@@ -1663,8 +1663,8 @@
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.cancelReasonId = 4" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="cancelReasonId" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.cancelReasonId">
-                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd" variable="#//@ruleset/@logicalVariables.0/@extension.1">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
@@ -1678,7 +1678,7 @@
             <modifiedTermList>
               <terms text="delay" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.delay">
                 <parentTerm text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                  <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
@@ -1686,7 +1686,7 @@
             </modifiedTermList>
             <referencedTermList>
               <terms text="ca" datatype="Cancellation" termtype="ENTITY" fulltext="ca">
-                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                <parentTerm text="pd" datatype="PolicyDetail" termtype="ENTITY" fulltext="pd">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>

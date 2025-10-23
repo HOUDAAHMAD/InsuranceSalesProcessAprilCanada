@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_Jov4tYjeEfC9K_ScjRYf8g" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_7i9B5LAdEfC0rqy4D1dGRQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_qDebcYjaEfC5N8hSq8G07w" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_3ZorIZi7EfC_SP90Ub-nog" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule/>
     <rule>
       <condition>
@@ -68,8 +68,8 @@
         <viewExpressions lhs="ca.liabilityPremiumAdjustment" rhs="null"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.liabilityPremium = ca.liabilitySurcharge+ca.liabilityPremiumSurcharge">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilityPremium = ca.liabilitySurcharge + ca.liabilityPremiumSurcharge" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.liabilityPremium = (ca.liabilitySurcharge+ca.liabilityPremiumSurcharge)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilityPremium = ( ca.liabilitySurcharge + ca.liabilityPremiumSurcharge )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="liabilityPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilityPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -151,8 +151,8 @@
         <viewExpressions lhs="ca.liabilityPremiumAdjustment" rhs="0"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.liabilityPremium = ca.liabilitySurcharge+ca.liabilityPremiumSurcharge">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilityPremium = ca.liabilitySurcharge + ca.liabilityPremiumSurcharge" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.liabilityPremium = (ca.liabilitySurcharge+ca.liabilityPremiumSurcharge)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilityPremium = ( ca.liabilitySurcharge + ca.liabilityPremiumSurcharge )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="liabilityPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilityPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -281,6 +281,10 @@
         </extension>
         <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/lobSubCode"/>
       </extension>
+      <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/BillingDetail">
+        <alias value="bd"/>
+        <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/transferFlex"/>
+      </extension>
     </logicalVariable>
   </ruleset>
   <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightConditionsIf="21">
@@ -349,6 +353,9 @@
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.5"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.6"/>
             </children>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.0"/>
           </children>
         </children>
       </rootNode>
@@ -419,7 +426,7 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="20" scrollColumnLeft="2">
+    <ruleSection columnCount="20" scrollColumnLeft="1">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0"/>
       <ruleColumnList ruleId="1" columnWidth="328" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="> 0">
@@ -463,7 +470,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="2" columnWidth="470" pRule="#//@ruleset/@rules.2">
+      <ruleColumnList ruleId="2" columnWidth="408" pRule="#//@ruleset/@rules.2">
         <conditionValueSetCellList valueSet="null">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilityPremiumAdjustment = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
@@ -477,8 +484,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="ca.liabilitySurcharge+ca.liabilityPremiumSurcharge">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilityPremium = ca.liabilitySurcharge + ca.liabilityPremiumSurcharge" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="(ca.liabilitySurcharge+ca.liabilityPremiumSurcharge)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilityPremium = ( ca.liabilitySurcharge + ca.liabilityPremiumSurcharge )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="liabilityPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilityPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
@@ -553,8 +560,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="ca.liabilitySurcharge+ca.liabilityPremiumSurcharge">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilityPremium = ca.liabilitySurcharge + ca.liabilityPremiumSurcharge" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="(ca.liabilitySurcharge+ca.liabilityPremiumSurcharge)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.liabilityPremium = ( ca.liabilitySurcharge + ca.liabilityPremiumSurcharge )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="liabilityPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilityPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">

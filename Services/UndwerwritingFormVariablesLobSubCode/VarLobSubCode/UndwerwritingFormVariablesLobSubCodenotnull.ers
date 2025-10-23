@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_7eHZj66qEfC0rqy4D1dGRQ" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_x2glZK3mEfCu4rRIeqnHlw" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_jKz74LApEfC0rqy4D1dGRQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_3ZorIZi7EfC_SP90Ub-nog" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0"/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1"/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true"/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3"/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4"/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5"/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true"/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true"/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2"/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true"/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true"/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true"/>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondoPrimaryNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoPrimaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -25,23 +26,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondoPrimaryNamedPeril"/>
       </condition>
-      <condition>
-        <opaqueExpression expression="co.homeType = null">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
-                <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-        <viewExpressions lhs="co.homeType" rhs="null"/>
-      </condition>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -63,7 +48,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -85,7 +70,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -107,7 +92,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#D1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'D1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -125,7 +110,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -143,7 +128,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -163,6 +148,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondoSecondaryFamilyNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -177,8 +163,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondoSecondaryFamilyNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -200,7 +185,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -222,7 +207,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -244,7 +229,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#D1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'D1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -262,7 +247,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -280,7 +265,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -300,6 +285,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondoSecondaryNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -314,8 +300,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondoSecondaryNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -337,7 +322,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -359,7 +344,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -381,7 +366,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#D1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'D1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -399,7 +384,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -417,7 +402,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -437,6 +422,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondowRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -451,8 +437,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondowRentalNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -474,7 +459,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -496,7 +481,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -518,7 +503,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#D1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'D1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -536,7 +521,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -554,7 +539,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -574,6 +559,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#CondowShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -588,8 +574,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#CondowShortRentalNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -611,7 +596,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -633,7 +618,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -655,7 +640,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#D1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'D1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -673,7 +658,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -691,7 +676,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -711,6 +696,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownersBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -725,8 +711,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownersBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -748,7 +733,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -770,7 +755,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -792,7 +777,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -810,7 +795,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -828,7 +813,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -848,6 +833,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownersNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -862,8 +848,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownersNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -885,7 +870,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -907,7 +892,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -929,7 +914,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -947,7 +932,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -965,7 +950,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -985,6 +970,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownerswRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -999,8 +985,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownerswRentalBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1022,7 +1007,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1044,7 +1029,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1066,7 +1051,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1084,7 +1069,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1102,7 +1087,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1122,6 +1107,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownerswRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -1136,8 +1122,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownerswRentalNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1159,7 +1144,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1181,7 +1166,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1203,7 +1188,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1221,7 +1206,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1239,7 +1224,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1259,6 +1244,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownerswShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -1273,8 +1259,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownerswShortRentalBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1296,7 +1281,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1318,7 +1303,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1340,7 +1325,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1358,7 +1343,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1376,7 +1361,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1396,6 +1381,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#HomeownerswShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -1410,8 +1396,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#HomeownerswShortRentalNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1433,7 +1418,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1455,7 +1440,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1477,7 +1462,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1495,7 +1480,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1513,7 +1498,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1533,6 +1518,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#MobileHomeTrailer">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'MobileHomeTrailer'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -1547,8 +1533,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#MobileHomeTrailer"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1570,7 +1555,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1592,7 +1577,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#MobileHome">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'MobileHome'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1614,7 +1599,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1632,7 +1617,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1650,7 +1635,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1670,6 +1655,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#RentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -1684,8 +1670,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#RentalBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1707,7 +1692,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1729,7 +1714,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1751,7 +1736,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1769,7 +1754,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1787,7 +1772,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1807,6 +1792,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#RentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -1821,8 +1807,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#RentalNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1844,7 +1829,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1866,7 +1851,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1888,7 +1873,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1906,7 +1891,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1924,7 +1909,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1944,6 +1929,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SeasonalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -1958,8 +1944,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SeasonalBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -1981,7 +1966,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2003,7 +1988,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2025,7 +2010,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2043,7 +2028,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2061,7 +2046,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2081,6 +2066,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SeasonalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -2095,8 +2081,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SeasonalNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2118,7 +2103,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2140,7 +2125,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2162,7 +2147,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2180,7 +2165,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2198,7 +2183,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2218,6 +2203,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SeasonalwShortRental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -2232,8 +2218,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SeasonalwShortRental"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2255,7 +2240,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2277,7 +2262,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2299,7 +2284,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2317,7 +2302,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2335,7 +2320,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2355,6 +2340,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SeasonalwShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -2369,8 +2355,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SeasonalwShortRentalBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2392,7 +2377,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2414,7 +2399,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2436,7 +2421,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2454,7 +2439,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2472,7 +2457,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2492,6 +2477,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondaryBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -2506,8 +2492,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondaryBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2529,7 +2514,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2551,7 +2536,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2573,7 +2558,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2591,7 +2576,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2609,7 +2594,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2629,6 +2614,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondaryFamilyBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -2643,8 +2629,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondaryFamilyBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2666,7 +2651,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2688,7 +2673,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2710,7 +2695,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2728,7 +2713,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2746,7 +2731,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2766,6 +2751,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondaryFamilyNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -2780,8 +2766,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondaryFamilyNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2803,7 +2788,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2825,7 +2810,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2847,7 +2832,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2865,7 +2850,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2883,7 +2868,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2903,6 +2888,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondaryNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -2917,8 +2903,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondaryNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2940,7 +2925,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2962,7 +2947,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -2984,7 +2969,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3002,7 +2987,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3020,7 +3005,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3040,6 +3025,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondarywShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -3054,8 +3040,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondarywShortRentalBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3077,7 +3062,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3099,7 +3084,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3121,7 +3106,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3139,7 +3124,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3157,7 +3142,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3177,6 +3162,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#SecondarywShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -3191,8 +3177,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#SecondarywShortRentalNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3214,7 +3199,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3236,7 +3221,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3258,7 +3243,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3276,7 +3261,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3294,7 +3279,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3314,6 +3299,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#ShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -3328,8 +3314,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#ShortRentalBroad"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3351,7 +3336,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3373,7 +3358,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3395,7 +3380,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A3">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A3'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3413,7 +3398,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3431,7 +3416,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3451,6 +3436,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#ShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -3465,8 +3451,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#ShortRentalNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3488,7 +3473,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3510,7 +3495,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3532,7 +3517,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#A1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3550,7 +3535,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3568,7 +3553,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 1" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3588,6 +3573,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#TenantNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'TenantNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -3602,8 +3588,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#TenantNamedPeril"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3625,7 +3610,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Long">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Long'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3647,7 +3632,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Tenant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Tenant'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3669,7 +3654,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#C1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'C1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3687,7 +3672,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3705,7 +3690,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3725,6 +3710,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#UnderMinorRenovationCondo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -3739,8 +3725,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#UnderMinorRenovationCondo"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3762,7 +3747,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3784,7 +3769,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3806,7 +3791,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#D1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'D1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3824,7 +3809,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3842,7 +3827,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3862,6 +3847,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#UnderMinorRenovationVacantDwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationVacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -3876,8 +3862,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#UnderMinorRenovationVacantDwelling"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3899,7 +3884,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3921,7 +3906,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3943,7 +3928,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#E1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'E1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3961,7 +3946,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3979,7 +3964,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -3999,6 +3984,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#VacantCondo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -4013,8 +3999,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#VacantCondo"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4036,7 +4021,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4058,7 +4043,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Condo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Condo'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4080,7 +4065,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#D1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'D1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4098,7 +4083,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4116,7 +4101,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4136,6 +4121,7 @@
       </action>
     </rule>
     <rule>
+      <condition/>
       <condition>
         <opaqueExpression expression="dw.lobSubCode = lobSubCode#VacantDwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -4150,8 +4136,7 @@
         </opaqueExpression>
         <viewExpressions lhs="dw.lobSubCode" rhs="lobSubCode#VacantDwelling"/>
       </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0" disabled="true">
         <opaqueExpression expression="oc.occupancyType = OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4173,7 +4158,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1" disabled="true">
         <opaqueExpression expression="oc.termType = termType#Short">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType = 'Short'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4195,7 +4180,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2" disabled="true">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
         <opaqueExpression expression="co.homeType = homeType#Dwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = 'Dwelling'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4217,7 +4202,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.3" disabled="true">
         <opaqueExpression expression="dw.rootForm = rootForm#E1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'E1'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4235,7 +4220,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.4" disabled="true">
         <opaqueExpression expression="dw.insurer1517 = 0.8">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517 = 0.8" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4253,7 +4238,7 @@
           </parserOutput>
         </opaqueExpression>
       </action>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.5" disabled="true">
         <opaqueExpression expression="dw.insurer2363 = 0.2">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363 = 0.2" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4272,6 +4257,22 @@
         </opaqueExpression>
       </action>
     </rule>
+    <filter/>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <opaqueExpression expression="co.homeType=null">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <referencedTermList>
+            <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
+              <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0 #//@ruleset/@rules.1/@actions.0 #//@ruleset/@rules.2/@actions.0 #//@ruleset/@rules.3/@actions.0 #//@ruleset/@rules.4/@actions.0 #//@ruleset/@rules.5/@actions.0 #//@ruleset/@rules.6/@actions.0 #//@ruleset/@rules.7/@actions.0 #//@ruleset/@rules.8/@actions.0 #//@ruleset/@rules.9/@actions.0 #//@ruleset/@rules.10/@actions.0 #//@ruleset/@rules.11/@actions.0 #//@ruleset/@rules.12/@actions.0 #//@ruleset/@rules.13/@actions.0 #//@ruleset/@rules.14/@actions.0 #//@ruleset/@rules.15/@actions.0 #//@ruleset/@rules.16/@actions.0 #//@ruleset/@rules.17/@actions.0 #//@ruleset/@rules.18/@actions.0 #//@ruleset/@rules.19/@actions.0 #//@ruleset/@rules.20/@actions.0 #//@ruleset/@rules.21/@actions.0 #//@ruleset/@rules.22/@actions.0 #//@ruleset/@rules.23/@actions.0 #//@ruleset/@rules.24/@actions.0 #//@ruleset/@rules.25/@actions.0 #//@ruleset/@rules.26/@actions.0 #//@ruleset/@rules.27/@actions.0 #//@ruleset/@rules.28/@actions.0 #//@ruleset/@rules.29/@actions.0 #//@ruleset/@rules.30/@actions.0 #//@ruleset/@rules.31/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
       <text expression="Pour lobSubCode = {dw.lobSubCode}, occupancyType = {oc.occupancyType}.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Pour lobSubCode =  + dw.lobSubCode + , occupancyType =  + oc.occupancyType + ." expressiontype="BRSTATEMENT">
@@ -4386,10 +4387,10 @@
         </parserOutput>
       </text>
     </ruleStatement>
-    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request">
-      <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" ruleStatements="#//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.4 #//@ruleset/@ruleStatements.5">
+    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#//@ruleset/@filters.1">
+      <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" ruleStatements="#//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.4 #//@ruleset/@ruleStatements.5" filters="#//@ruleset/@filters.1">
         <alias value="dw"/>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Construction" ruleStatements="#//@ruleset/@ruleStatements.2">
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Construction" ruleStatements="#//@ruleset/@ruleStatements.2" filters="#//@ruleset/@filters.1">
           <alias value="co"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction/homeType"/>
         </extension>
@@ -4405,9 +4406,9 @@
       </extension>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightConditionsActions="48" sashWeightConditionsIf="34">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightConditionsIf="34">
     <actionSection rowCount="48" columnWidthFactor="0.5">
-      <actionItemList>
+      <actionItemList disabled="true">
         <valueSetCell/>
         <expressionCell external="oc.occupancyType">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -4423,7 +4424,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList disabled="true">
         <valueSetCell/>
         <expressionCell external="oc.termType">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.termType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -4439,7 +4440,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList disabled="true">
+      <actionItemList>
         <valueSetCell/>
         <expressionCell external="co.homeType">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -4455,7 +4456,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList disabled="true">
         <valueSetCell/>
         <expressionCell external="dw.rootForm">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
@@ -4469,7 +4470,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList disabled="true">
         <valueSetCell/>
         <expressionCell external="dw.insurer1517">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer1517" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
@@ -4483,7 +4484,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList disabled="true">
         <valueSetCell/>
         <expressionCell external="dw.insurer2363">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.insurer2363" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
@@ -4501,8 +4502,17 @@
     <scopeSection>
       <rootNode>
         <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.homeType=null" filter="#//@ruleset/@filters.1"/>
+          </children>
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.homeType=null" filter="#//@ruleset/@filters.1"/>
+            </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="co.homeType=null" filter="#//@ruleset/@filters.1"/>
+              </children>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -4517,7 +4527,26 @@
         </children>
       </rootNode>
     </scopeSection>
-    <filterSection rowCount="50"/>
+    <filterSection rowCount="50">
+      <filterItemList filter="#//@ruleset/@filters.0">
+        <expressionCell/>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.1">
+        <expressionCell external="co.homeType=null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
+                <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+    </filterSection>
     <ruleStatementSection rowCount="49" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="840" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
         <reference external="A"/>
@@ -4640,7 +4669,11 @@
         </text>
       </ruleStatementItemList>
     </ruleStatementSection>
-    <conditionSection rowCount="46" columnWidthFactor="0.5">
+    <conditionSection rowCount="47" columnWidthFactor="0.5">
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell/>
+      </conditionItemList>
       <conditionItemList>
         <valueSetCell/>
         <expressionCell external="dw.lobSubCode">
@@ -4649,22 +4682,6 @@
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </conditionItemList>
-      <conditionItemList>
-        <valueSetCell/>
-        <expressionCell external="co.homeType">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
-                <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -4682,25 +4699,13 @@
         <actionValueSetCellList/>
       </ruleColumnList>
       <ruleColumnList ruleId="1" columnWidth="204" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#CondoPrimaryNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoPrimaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
               <terms text="lobSubCode" datatype="String" termtype="ATTRIBUTE" fulltext="dw.lobSubCode">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="null">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.homeType = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
-                <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -4816,6 +4821,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="2" columnWidth="288" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#CondoSecondaryFamilyNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -4827,7 +4833,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -4938,6 +4943,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="3" columnWidth="236" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#CondoSecondaryNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondoSecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -4949,7 +4955,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5060,6 +5065,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="4" columnWidth="216" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#CondowRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5071,7 +5077,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5182,6 +5187,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="5" columnWidth="271" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#CondowShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'CondowShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5193,7 +5199,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5304,6 +5309,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#HomeownersBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5315,7 +5321,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5426,6 +5431,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="7" columnWidth="248" pRule="#//@ruleset/@rules.7">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#HomeownersNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownersNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5437,7 +5443,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5548,6 +5553,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="8" columnWidth="263" pRule="#//@ruleset/@rules.8">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#HomeownerswRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5559,7 +5565,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5670,6 +5675,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="9" columnWidth="269" pRule="#//@ruleset/@rules.9">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#HomeownerswRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5681,7 +5687,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5792,6 +5797,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="10" columnWidth="254" pRule="#//@ruleset/@rules.10">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#HomeownerswShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5803,7 +5809,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -5914,6 +5919,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="11" columnWidth="297" pRule="#//@ruleset/@rules.11">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#HomeownerswShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'HomeownerswShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -5925,7 +5931,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6036,6 +6041,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="12" columnWidth="219" pRule="#//@ruleset/@rules.12">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#MobileHomeTrailer">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'MobileHomeTrailer'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -6047,7 +6053,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6158,6 +6163,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="13" columnWidth="100" pRule="#//@ruleset/@rules.13">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#RentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -6169,7 +6175,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6280,6 +6285,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="14" columnWidth="100" pRule="#//@ruleset/@rules.14">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#RentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'RentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -6291,7 +6297,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6402,6 +6407,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="15" columnWidth="100" pRule="#//@ruleset/@rules.15">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SeasonalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -6413,7 +6419,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6524,6 +6529,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="16" columnWidth="191" pRule="#//@ruleset/@rules.16">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SeasonalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -6535,7 +6541,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6646,6 +6651,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="17" columnWidth="100" pRule="#//@ruleset/@rules.17">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SeasonalwShortRental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRental'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -6657,7 +6663,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6768,6 +6773,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="18" columnWidth="100" pRule="#//@ruleset/@rules.18">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SeasonalwShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SeasonalwShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -6779,7 +6785,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Seasonal">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Seasonal'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -6890,6 +6895,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="19" columnWidth="100" pRule="#//@ruleset/@rules.19">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SecondaryBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -6901,7 +6907,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -7012,6 +7017,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="20" columnWidth="209" pRule="#//@ruleset/@rules.20">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -7023,7 +7029,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -7134,6 +7139,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="21" columnWidth="100" pRule="#//@ruleset/@rules.21">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SecondaryFamilyNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryFamilyNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -7145,7 +7151,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -7256,6 +7261,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="22" columnWidth="100" pRule="#//@ruleset/@rules.22">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SecondaryNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondaryNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -7267,7 +7273,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Secondary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Secondary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -7378,6 +7383,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="23" columnWidth="100" pRule="#//@ruleset/@rules.23">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -7389,7 +7395,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -7500,6 +7505,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="24" columnWidth="100" pRule="#//@ruleset/@rules.24">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#SecondarywShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'SecondarywShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -7511,7 +7517,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -7622,6 +7627,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="25" columnWidth="143" pRule="#//@ruleset/@rules.25">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#ShortRentalBroad">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalBroad'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -7633,7 +7639,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -7744,6 +7749,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="26" columnWidth="189" pRule="#//@ruleset/@rules.26">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#ShortRentalNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'ShortRentalNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -7755,7 +7761,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Rental">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Rental'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -7866,6 +7871,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="27" columnWidth="201" pRule="#//@ruleset/@rules.27">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#TenantNamedPeril">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'TenantNamedPeril'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -7877,7 +7883,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Primary">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Primary'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -7988,6 +7993,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="28" columnWidth="280" pRule="#//@ruleset/@rules.28">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#UnderMinorRenovationCondo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -7999,7 +8005,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -8110,6 +8115,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="29" columnWidth="297" pRule="#//@ruleset/@rules.29">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#UnderMinorRenovationVacantDwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'UnderMinorRenovationVacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -8121,7 +8127,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -8232,6 +8237,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="30" columnWidth="157" pRule="#//@ruleset/@rules.30">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#VacantCondo">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantCondo'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -8243,7 +8249,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -8354,6 +8359,7 @@
         </actionValueSetCellList>
       </ruleColumnList>
       <ruleColumnList ruleId="31" columnWidth="218" pRule="#//@ruleset/@rules.31">
+        <conditionValueSetCellList/>
         <conditionValueSetCellList valueSet="lobSubCode#VacantDwelling">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.lobSubCode = 'VacantDwelling'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
             <referencedTermList>
@@ -8365,7 +8371,6 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
         <actionValueSetCellList valueSet="OccupancyType#Vacant">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="oc.occupancyType = 'Vacant'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
