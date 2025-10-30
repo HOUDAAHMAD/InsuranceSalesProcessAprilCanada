@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_JVdZZLAnEfC0rqy4D1dGRQ" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_6R9OubTsEfC1J4crfbyqiQ" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_3ZorIZi7EfC_SP90Ub-nog" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_BWu0ALBCEfCCW7llzoF3Rg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
       <action/>
       <action>
-        <opaqueExpression expression="ca.propertyPremium = (((ca.subTotalPremium*bd.renewalFlex-ca.liabilityPremium))*bd.transferFlex).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.propertyPremium = ( ( ( ca.subTotalPremium * bd.renewalFlex - ca.liabilityPremium ) ) * bd.transferFlex ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.propertyPremium = (((ca.subTotalPremium*bd.renewalFlex-ca.liabilitySurcharge))*bd.transferFlex).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.propertyPremium = ( ( ( ca.subTotalPremium * bd.renewalFlex - ca.liabilitySurcharge ) ) * bd.transferFlex ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="propertyPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.propertyPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -27,14 +27,14 @@
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
-              <terms text="liabilityPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilityPremium">
+              <terms text="subTotalPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.subTotalPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="subTotalPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.subTotalPremium">
+              <terms text="liabilitySurcharge" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilitySurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -114,8 +114,8 @@
         </opaqueExpression>
       </action>
       <action>
-        <opaqueExpression expression="ca.propertyPremium = (((ca.subTotalPremium*bd.renewalFlex-ca.liabilityPremium))*bd.transferFlex).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.propertyPremium = ( ( ( ca.subTotalPremium * bd.renewalFlex - ca.liabilityPremium ) ) * bd.transferFlex ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="ca.propertyPremium = (((ca.subTotalPremium*bd.renewalFlex-ca.liabilitySurcharge))*bd.transferFlex).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.propertyPremium = ( ( ( ca.subTotalPremium * bd.renewalFlex - ca.liabilitySurcharge ) ) * bd.transferFlex ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="propertyPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.propertyPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
@@ -136,14 +136,14 @@
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
               </terms>
-              <terms text="liabilityPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilityPremium">
+              <terms text="subTotalPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.subTotalPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="subTotalPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.subTotalPremium">
+              <terms text="liabilitySurcharge" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilitySurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
@@ -230,8 +230,8 @@
         <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables" ruleStatements="#//@ruleset/@ruleStatements.0">
           <alias value="ca"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/subTotalPremium"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/liabilityPremium"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/propertyPremium"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/liabilitySurcharge"/>
         </extension>
         <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" filters="#//@ruleset/@filters.0">
           <alias value="ra"/>
@@ -391,8 +391,8 @@
     <ruleSection columnCount="20">
       <ruleColumnList ruleId="0" columnWidth="427" pRule="#//@ruleset/@rules.0">
         <actionValueSetCellList/>
-        <actionValueSetCellList valueSet="(((ca.subTotalPremium*bd.renewalFlex-ca.liabilityPremium))*bd.transferFlex).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.propertyPremium = ( ( ( ca.subTotalPremium * bd.renewalFlex - ca.liabilityPremium ) ) * bd.transferFlex ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="(((ca.subTotalPremium*bd.renewalFlex-ca.liabilitySurcharge))*bd.transferFlex).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.propertyPremium = ( ( ( ca.subTotalPremium * bd.renewalFlex - ca.liabilitySurcharge ) ) * bd.transferFlex ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="propertyPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.propertyPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
@@ -413,14 +413,14 @@
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
-              <terms text="liabilityPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilityPremium">
+              <terms text="subTotalPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.subTotalPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="subTotalPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.subTotalPremium">
+              <terms text="liabilitySurcharge" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilitySurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
@@ -463,7 +463,7 @@
           </parserOutput>
         </actionValueSetCellList>
       </ruleColumnList>
-      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+      <ruleColumnList ruleId="1" columnWidth="290" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="0">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.renewalFlex = 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
@@ -491,8 +491,8 @@
             </referencedTermList>
           </parserOutput>
         </actionValueSetCellList>
-        <actionValueSetCellList valueSet="(((ca.subTotalPremium*bd.renewalFlex-ca.liabilityPremium))*bd.transferFlex).round">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.propertyPremium = ( ( ( ca.subTotalPremium * bd.renewalFlex - ca.liabilityPremium ) ) * bd.transferFlex ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="(((ca.subTotalPremium*bd.renewalFlex-ca.liabilitySurcharge))*bd.transferFlex).round">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.propertyPremium = ( ( ( ca.subTotalPremium * bd.renewalFlex - ca.liabilitySurcharge ) ) * bd.transferFlex ).round" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="propertyPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.propertyPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
@@ -513,14 +513,14 @@
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
               </terms>
-              <terms text="liabilityPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilityPremium">
+              <terms text="subTotalPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.subTotalPremium">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="subTotalPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.subTotalPremium">
+              <terms text="liabilitySurcharge" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.liabilitySurcharge">
                 <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
