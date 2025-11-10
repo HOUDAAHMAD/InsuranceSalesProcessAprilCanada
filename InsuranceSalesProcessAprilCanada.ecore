@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
   <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
-    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_HOKjMbWtEfC-rL9gZWaq4g" externalChecksum="7824986:507989954" customDataTypeDisplayCount="48">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_eO8H8b5EEfCDBq9fOW4edA" externalChecksum="7824986:507989954" customDataTypeDisplayCount="48">
       <languageCode>fr_FR</languageCode>
       <comments timestamp="2025-02-14T05:08:54.258-0500" username="ahmad.houda" text="Role du demandeur" objects="#//Insureds/roleOfApplicant" type="Note"/>
       <comments timestamp="2025-02-14T05:09:10.369-0500" username="ahmad.houda" text="Assurés" objects="#//Insureds" type="Note"/>
@@ -94,7 +94,7 @@
       <comments timestamp="2025-02-14T08:51:49.971-0500" username="ahmad.houda" text="Nombre de voiturettes de golf" objects="#//Liability/numberOfGolfCarts" type="Note"/>
       <comments timestamp="2025-02-14T08:52:07.407-0500" username="ahmad.houda" text="Nombre de tracteurs de pelouse" objects="#//Liability/numberOfLawnTractors" type="Note"/>
       <comments timestamp="2025-02-14T08:52:45.637-0500" username="ahmad.houda" text="Indicateur de piscine" objects="#//Liability/swimmingPoolIndicator" type="Note"/>
-      <comments timestamp="2025-02-14T08:53:04.188-0500" username="ahmad.houda" text="Âge de la piscine" objects="#//Liability/swimmingPoolAge" type="Note"/>
+      <comments timestamp="2025-02-14T08:53:04.188-0500" username="ahmad.houda" text="Âge de la piscine" objects="#//Liability/swimmingPoolYear" type="Note"/>
       <comments timestamp="2025-02-14T08:53:20.199-0500" username="ahmad.houda" text=" Bord de l'eau" objects="#//Liability/waterEdge" type="Note"/>
       <comments timestamp="2025-02-14T08:53:54.694-0500" username="ahmad.houda" text="Indicateur de spa" objects="#//Liability/spaIndicator" type="Note"/>
       <comments timestamp="2025-02-14T08:54:02.625-0500" username="ahmad.houda" text="Animaux exotiques" objects="#//Liability/exoticAnimals" type="Note"/>
@@ -1807,10 +1807,10 @@
         </contents>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="swimmingPoolAge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="swimmingPoolYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
-          <name manuallyCreated="true" value="swimmingPoolAge"/>
+          <name manuallyCreated="true" value="swimmingPoolYear"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
       </eAnnotations>
@@ -2658,6 +2658,78 @@
       <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
         <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
           <name manuallyCreated="true" value="doInflationRate"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stabilityFlex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="stabilityFlex"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="congestionFlex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="congestionFlex"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="heatFlex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="heatFlex"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="auxiliaryHeatFlex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="auxiliaryHeatFlex"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="claimFlex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="claimFlex"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="substandardFlex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="substandardFlex"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="underwriterFlex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="underwriterFlex"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rehabFlex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="rehabFlex"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalFlex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="totalFlex"/>
           <mode manuallyCreated="true" value="Base"/>
         </contents>
       </eAnnotations>

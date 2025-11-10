@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_dTMIEEEWEfCD8Y4MVwvpLQ" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_vrwow7jhEfCgL5pQ7V6jNg" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_xReZsUCNEfC2LJjjNE4bgw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <rule/>
+  <ruleset vocabularyUpdateStamp="_7sSfkbjaEfCgL5pQ7V6jNg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
-      <condition>
-        <opaqueExpression expression="(ra.rateCode='TotalFlex')=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ra.rateCode = 'TotalFlex' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="ra.rateCode">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-        <viewExpressions lhs="ra.rateCode='TotalFlex'" rhs="T"/>
-      </condition>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ra.rateValue = 1+(AH.rateValue+CF.rateValue+CL.rateValue+HF.rateValue+RF.rateValue+SD.rateValue+SF.rateValue+UF.rateValue)/100">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + ( AH.rateValue + CF.rateValue + CL.rateValue + HF.rateValue + RF.rateValue + SD.rateValue + SF.rateValue + UF.rateValue ) / 100" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+      <action>
+        <opaqueExpression expression="cv.totalFlex = 1+(cv.auxiliaryHeatFlex+cv.claimFlex+cv.congestionFlex+cv.heatFlex+cv.rehabFlex+cv.substandardFlex+cv.stabilityFlex+cv.underwriterFlex)/100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cv.totalFlex = 1 + ( cv.auxiliaryHeatFlex + cv.claimFlex + cv.congestionFlex + cv.heatFlex + cv.rehabFlex + cv.substandardFlex + cv.stabilityFlex + cv.underwriterFlex ) / 100" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
+              <terms text="totalFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.totalFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -33,65 +16,65 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="HF.rateValue">
-                <parentTerm text="HF" datatype="Rates" termtype="ENTITY" fulltext="HF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <terms text="rehabFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.rehabFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="SF.rateValue">
-                <parentTerm text="SF" datatype="Rates" termtype="ENTITY" fulltext="SF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
+              <terms text="underwriterFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.underwriterFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="RF.rateValue">
-                <parentTerm text="RF" datatype="Rates" termtype="ENTITY" fulltext="RF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
+              <terms text="substandardFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.substandardFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="AH.rateValue">
-                <parentTerm text="AH" datatype="Rates" termtype="ENTITY" fulltext="AH" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="CL.rateValue">
-                <parentTerm text="CL" datatype="Rates" termtype="ENTITY" fulltext="CL" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="CF.rateValue">
-                <parentTerm text="CF" datatype="Rates" termtype="ENTITY" fulltext="CF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="UF.rateValue">
-                <parentTerm text="UF" datatype="Rates" termtype="ENTITY" fulltext="UF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="SD.rateValue">
-                <parentTerm text="SD" datatype="Rates" termtype="ENTITY" fulltext="SD" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
+              <terms text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="congestionFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.congestionFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="heatFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.heatFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="stabilityFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.stabilityFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="claimFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.claimFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="auxiliaryHeatFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.auxiliaryHeatFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
@@ -99,132 +82,12 @@
         </opaqueExpression>
       </action>
     </rule>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
-      <opaqueExpression expression="SF.rateCode='StabilityFlex'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SF.rateCode = 'StabilityFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+    <ruleStatement post="Info">
+      <text expression="Taux total appliqué par le souscripteur est {cv.totalFlex}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Taux total appliqué par le souscripteur est  + cv.totalFlex + ." expressiontype="BRSTATEMENT">
           <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="SF.rateCode">
-              <parentTerm text="SF" datatype="Rates" termtype="ENTITY" fulltext="SF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-      <opaqueExpression expression="CF.rateCode='CongestionFlex'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CF.rateCode = 'CongestionFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="CF.rateCode">
-              <parentTerm text="CF" datatype="Rates" termtype="ENTITY" fulltext="CF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-      <opaqueExpression expression="HF.rateCode='HeatFlex'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="HF.rateCode = 'HeatFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="HF.rateCode">
-              <parentTerm text="HF" datatype="Rates" termtype="ENTITY" fulltext="HF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-      <opaqueExpression expression="AH.rateCode='AuxiliaryHeatFlex'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="AH.rateCode = 'AuxiliaryHeatFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="AH.rateCode">
-              <parentTerm text="AH" datatype="Rates" termtype="ENTITY" fulltext="AH" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-      <opaqueExpression expression="CL.rateCode='ClaimFlex'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CL.rateCode = 'ClaimFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="CL.rateCode">
-              <parentTerm text="CL" datatype="Rates" termtype="ENTITY" fulltext="CL" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
-      <opaqueExpression expression="SD.rateCode='SubstandardFlex'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SD.rateCode = 'SubstandardFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="SD.rateCode">
-              <parentTerm text="SD" datatype="Rates" termtype="ENTITY" fulltext="SD" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-      <opaqueExpression expression="UF.rateCode='UnderwriterFlex'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="UF.rateCode = 'UnderwriterFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="UF.rateCode">
-              <parentTerm text="UF" datatype="Rates" termtype="ENTITY" fulltext="UF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter precondition="true" logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
-      <opaqueExpression expression="RF.rateCode='RehabFlex'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RF.rateCode = 'RehabFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="RF.rateCode">
-              <parentTerm text="RF" datatype="Rates" termtype="ENTITY" fulltext="RF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
-      <text expression="Taux total appliqué par le souscripteur est {ra.rateValue}.">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Taux total appliqué par le souscripteur est  + ra.rateValue + ." expressiontype="BRSTATEMENT">
-          <referencedTermList>
-            <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-              <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
+            <terms text="totalFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.totalFlex">
+              <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -234,58 +97,33 @@
         </parserOutput>
       </text>
     </ruleStatement>
-    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2 #//@ruleset/@filters.3 #//@ruleset/@filters.4 #//@ruleset/@filters.5 #//@ruleset/@filters.6 #//@ruleset/@filters.7">
-      <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2 #//@ruleset/@filters.3 #//@ruleset/@filters.4 #//@ruleset/@filters.5 #//@ruleset/@filters.6 #//@ruleset/@filters.7">
+    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request">
+      <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings">
         <alias value="dw"/>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" filters="#//@ruleset/@filters.3">
-          <alias value="AH"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateCode"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" filters="#//@ruleset/@filters.2">
-          <alias value="HF"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateCode"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" filters="#//@ruleset/@filters.4">
-          <alias value="CL"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateCode"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" filters="#//@ruleset/@filters.5">
-          <alias value="SD"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateCode"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" filters="#//@ruleset/@filters.1">
-          <alias value="CF"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateCode"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" filters="#//@ruleset/@filters.6">
-          <alias value="UF"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateCode"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" filters="#//@ruleset/@filters.0">
-          <alias value="SF"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateCode"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" filters="#//@ruleset/@filters.7">
-          <alias value="RF"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateCode"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Rates" ruleStatements="#//@ruleset/@ruleStatements.0">
-          <alias value="ra"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateValue"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rates/rateCode"/>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables">
+          <alias value="cv"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/auxiliaryHeatFlex"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/claimFlex"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/congestionFlex"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/heatFlex"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/rehabFlex"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/stabilityFlex"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/substandardFlex"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/underwriterFlex"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/totalFlex"/>
         </extension>
       </extension>
     </logicalVariable>
   </ruleset>
   <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="25" sashWeightConditionsIf="31">
     <actionSection rowCount="48" columnWidthFactor="0.5">
-      <actionItemList rowHeight="80">
+      <actionItemList rowHeight="195">
         <valueSetCell/>
-        <expressionCell external="ra.rateValue">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="cv.totalFlex">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cv.totalFlex" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
+              <terms text="totalFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.totalFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -299,213 +137,31 @@
     <scopeSection>
       <rootNode>
         <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="SF.rateCode='StabilityFlex'" filter="#//@ruleset/@filters.0"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="CF.rateCode='CongestionFlex'" filter="#//@ruleset/@filters.1"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="HF.rateCode='HeatFlex'" filter="#//@ruleset/@filters.2"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="AH.rateCode='AuxiliaryHeatFlex'" filter="#//@ruleset/@filters.3"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="CL.rateCode='ClaimFlex'" filter="#//@ruleset/@filters.4"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="SD.rateCode='SubstandardFlex'" filter="#//@ruleset/@filters.5"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="UF.rateCode='UnderwriterFlex'" filter="#//@ruleset/@filters.6"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="RF.rateCode='RehabFlex'" filter="#//@ruleset/@filters.7"/>
-          </children>
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="SF.rateCode='StabilityFlex'" filter="#//@ruleset/@filters.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="CF.rateCode='CongestionFlex'" filter="#//@ruleset/@filters.1"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="HF.rateCode='HeatFlex'" filter="#//@ruleset/@filters.2"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="AH.rateCode='AuxiliaryHeatFlex'" filter="#//@ruleset/@filters.3"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="CL.rateCode='ClaimFlex'" filter="#//@ruleset/@filters.4"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="SD.rateCode='SubstandardFlex'" filter="#//@ruleset/@filters.5"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="UF.rateCode='UnderwriterFlex'" filter="#//@ruleset/@filters.6"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="RF.rateCode='RehabFlex'" filter="#//@ruleset/@filters.7"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="AH.rateCode='AuxiliaryHeatFlex'" filter="#//@ruleset/@filters.3"/>
-              </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="HF.rateCode='HeatFlex'" filter="#//@ruleset/@filters.2"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="CL.rateCode='ClaimFlex'" filter="#//@ruleset/@filters.4"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="SD.rateCode='SubstandardFlex'" filter="#//@ruleset/@filters.5"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="CF.rateCode='CongestionFlex'" filter="#//@ruleset/@filters.1"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="UF.rateCode='UnderwriterFlex'" filter="#//@ruleset/@filters.6"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="SF.rateCode='StabilityFlex'" filter="#//@ruleset/@filters.0"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="RF.rateCode='RehabFlex'" filter="#//@ruleset/@filters.7"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8/@referencedAttributes.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.3"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.4"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.5"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.6"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.7"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.8"/>
             </children>
           </children>
         </children>
       </rootNode>
     </scopeSection>
-    <filterSection rowCount="50">
-      <filterItemList filter="#//@ruleset/@filters.0">
-        <expressionCell external="SF.rateCode='StabilityFlex'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SF.rateCode = 'StabilityFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="SF.rateCode">
-                <parentTerm text="SF" datatype="Rates" termtype="ENTITY" fulltext="SF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.6">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.1">
-        <expressionCell external="CF.rateCode='CongestionFlex'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CF.rateCode = 'CongestionFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="CF.rateCode">
-                <parentTerm text="CF" datatype="Rates" termtype="ENTITY" fulltext="CF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.2">
-        <expressionCell external="HF.rateCode='HeatFlex'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="HF.rateCode = 'HeatFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="HF.rateCode">
-                <parentTerm text="HF" datatype="Rates" termtype="ENTITY" fulltext="HF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.3">
-        <expressionCell external="AH.rateCode='AuxiliaryHeatFlex'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="AH.rateCode = 'AuxiliaryHeatFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="AH.rateCode">
-                <parentTerm text="AH" datatype="Rates" termtype="ENTITY" fulltext="AH" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.4">
-        <expressionCell external="CL.rateCode='ClaimFlex'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="CL.rateCode = 'ClaimFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="CL.rateCode">
-                <parentTerm text="CL" datatype="Rates" termtype="ENTITY" fulltext="CL" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.5">
-        <expressionCell external="SD.rateCode='SubstandardFlex'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SD.rateCode = 'SubstandardFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="SD.rateCode">
-                <parentTerm text="SD" datatype="Rates" termtype="ENTITY" fulltext="SD" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.6">
-        <expressionCell external="UF.rateCode='UnderwriterFlex'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="UF.rateCode = 'UnderwriterFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="UF.rateCode">
-                <parentTerm text="UF" datatype="Rates" termtype="ENTITY" fulltext="UF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.7">
-        <expressionCell external="RF.rateCode='RehabFlex'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RF.rateCode = 'RehabFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="RF.rateCode">
-                <parentTerm text="RF" datatype="Rates" termtype="ENTITY" fulltext="RF" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.7">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </filterItemList>
-    </filterSection>
+    <filterSection rowCount="50"/>
     <ruleStatementSection rowCount="49" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
-        <reference external="A1"/>
-        <text external="Taux total appliqué par le souscripteur est {ra.rateValue}.">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Taux total appliqué par le souscripteur est  + ra.rateValue + ." expressiontype="BRSTATEMENT">
+        <reference/>
+        <text external="Taux total appliqué par le souscripteur est {cv.totalFlex}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Taux total appliqué par le souscripteur est  + cv.totalFlex + ." expressiontype="BRSTATEMENT">
             <referencedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
+              <terms text="totalFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.totalFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -516,45 +172,14 @@
         </text>
       </ruleStatementItemList>
     </ruleStatementSection>
-    <conditionSection rowCount="49" columnWidthFactor="0.5">
-      <conditionItemList>
-        <valueSetCell/>
-        <expressionCell external="ra.rateCode='TotalFlex'">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateCode = 'TotalFlex'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="ra.rateCode">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </conditionItemList>
-    </conditionSection>
+    <conditionSection rowCount="49" columnWidthFactor="0.5"/>
     <ruleSection columnCount="20">
-      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0"/>
-      <ruleColumnList ruleId="1" columnWidth="297" pRule="#//@ruleset/@rules.1">
-        <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ra.rateCode = 'TotalFlex' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rateCode" datatype="String" termtype="ATTRIBUTE" fulltext="ra.rateCode">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.8">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="1+(AH.rateValue+CF.rateValue+CL.rateValue+HF.rateValue+RF.rateValue+SD.rateValue+SF.rateValue+UF.rateValue)/100">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ra.rateValue = 1 + ( AH.rateValue + CF.rateValue + CL.rateValue + HF.rateValue + RF.rateValue + SD.rateValue + SF.rateValue + UF.rateValue ) / 100" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+      <ruleColumnList ruleId="0" columnWidth="480" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList valueSet="1+(cv.auxiliaryHeatFlex+cv.claimFlex+cv.congestionFlex+cv.heatFlex+cv.rehabFlex+cv.substandardFlex+cv.stabilityFlex+cv.underwriterFlex)/100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cv.totalFlex = 1 + ( cv.auxiliaryHeatFlex + cv.claimFlex + cv.congestionFlex + cv.heatFlex + cv.rehabFlex + cv.substandardFlex + cv.stabilityFlex + cv.underwriterFlex ) / 100" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ra.rateValue">
-                <parentTerm text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+              <terms text="totalFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.totalFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -562,65 +187,65 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="HF.rateValue">
-                <parentTerm text="HF" datatype="Rates" termtype="ENTITY" fulltext="HF">
+              <terms text="rehabFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.rehabFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="SF.rateValue">
-                <parentTerm text="SF" datatype="Rates" termtype="ENTITY" fulltext="SF">
+              <terms text="underwriterFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.underwriterFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="RF.rateValue">
-                <parentTerm text="RF" datatype="Rates" termtype="ENTITY" fulltext="RF">
+              <terms text="substandardFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.substandardFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="AH.rateValue">
-                <parentTerm text="AH" datatype="Rates" termtype="ENTITY" fulltext="AH">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="CL.rateValue">
-                <parentTerm text="CL" datatype="Rates" termtype="ENTITY" fulltext="CL">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="CF.rateValue">
-                <parentTerm text="CF" datatype="Rates" termtype="ENTITY" fulltext="CF">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="UF.rateValue">
-                <parentTerm text="UF" datatype="Rates" termtype="ENTITY" fulltext="UF">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="SD.rateValue">
-                <parentTerm text="SD" datatype="Rates" termtype="ENTITY" fulltext="SD">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                  </parentTerm>
-                </parentTerm>
-              </terms>
-              <terms text="ra" datatype="Rates" termtype="ENTITY" fulltext="ra">
+              <terms text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
                 <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
+              </terms>
+              <terms text="congestionFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.congestionFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="heatFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.heatFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="stabilityFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.stabilityFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="claimFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.claimFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="auxiliaryHeatFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.auxiliaryHeatFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>

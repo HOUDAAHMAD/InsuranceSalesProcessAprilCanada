@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_GE73Q4HZEfCrMbdrT8n6Ng" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_ZaFhBLjiEfCgL5pQ7V6jNg" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_7IJN04G9EfCt2qTS2Ovf2g" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_7sSfkbjaEfCgL5pQ7V6jNg" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action>
         <opaqueExpression expression="co.coveragePremium = 0">
@@ -44,8 +44,8 @@
         <viewExpressions lhs="co.amountOfInsurance" rhs="&lt;> null"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="co.coveragePremium = co.amountOfInsurance*0.004*raf.rateValue">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = co.amountOfInsurance * 0.004 * raf.rateValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="co.coveragePremium = co.amountOfInsurance*0.004*cv.totalFlex">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = co.amountOfInsurance * 0.004 * cv.totalFlex" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
@@ -56,8 +56,8 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="raf.rateValue">
-                <parentTerm text="raf" datatype="Rates" termtype="ENTITY" fulltext="raf" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="totalFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.totalFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -141,6 +141,10 @@
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/excluded"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/selected"/>
         </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables">
+          <alias value="cv"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/totalFlex"/>
+        </extension>
       </extension>
     </logicalVariable>
   </ruleset>
@@ -192,6 +196,9 @@
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.4"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.5"/>
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.6"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
             </children>
           </children>
         </children>
@@ -302,8 +309,8 @@
             </referencedTermList>
           </parserOutput>
         </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="co.amountOfInsurance*0.004*raf.rateValue">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = co.amountOfInsurance * 0.004 * raf.rateValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="co.amountOfInsurance*0.004*cv.totalFlex">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="co.coveragePremium = co.amountOfInsurance * 0.004 * cv.totalFlex" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="co.coveragePremium">
                 <parentTerm text="co" datatype="Coverages" termtype="ENTITY" fulltext="co">
@@ -314,8 +321,8 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="rateValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="raf.rateValue">
-                <parentTerm text="raf" datatype="Rates" termtype="ENTITY" fulltext="raf">
+              <terms text="totalFlex" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.totalFlex">
+                <parentTerm text="cv" datatype="CalculationsVariables" termtype="ENTITY" fulltext="cv">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
