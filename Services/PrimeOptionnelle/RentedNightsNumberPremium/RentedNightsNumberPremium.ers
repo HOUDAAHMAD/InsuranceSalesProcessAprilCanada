@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_YvAqRIg7EfCslaI15Jfqaw" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_n1wWkr5XEfCRhLtF5Vispw" externalChecksum="7824986:507989954:2146616488">
   <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_NZKMUog7EfCslaI15Jfqaw" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_eO8H8b5EEfCDBq9fOW4edA" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -16,7 +16,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -62,11 +62,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -74,7 +74,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -120,11 +120,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -132,7 +132,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -178,11 +178,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 50">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 50">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 50" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -190,7 +190,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -236,11 +236,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 75">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 75" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 75">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 75" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -248,7 +248,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -294,11 +294,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Dwelling"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 100">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 100" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 100" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -306,7 +306,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -352,11 +352,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#MobileHome"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -364,7 +364,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -410,11 +410,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#MobileHome"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -422,7 +422,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -468,11 +468,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#MobileHome"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 50">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 50">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 50" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -480,7 +480,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -526,11 +526,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#MobileHome"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 75">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 75" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 75">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 75" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -538,7 +538,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -584,11 +584,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#MobileHome"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 100">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 100" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 100" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -596,7 +596,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -642,11 +642,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -654,7 +654,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -700,11 +700,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 13">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 13" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 13">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 13" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -712,7 +712,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -758,11 +758,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -770,7 +770,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -816,11 +816,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 38">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 38" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 38">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 38" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -828,7 +828,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -874,11 +874,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Condo"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 50">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 50">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 50" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -886,7 +886,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -932,11 +932,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -944,7 +944,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -990,11 +990,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 13">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 13" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 13">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 13" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -1002,7 +1002,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -1048,11 +1048,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -1060,7 +1060,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -1106,11 +1106,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 38">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 38" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 38">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 38" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -1118,7 +1118,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -1164,11 +1164,11 @@
         <viewExpressions lhs="co.homeType" rhs="homeType#Tenant"/>
       </condition>
       <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="ca.rentedNightsNumberPremium = 50">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="rent.coveragePremium = 50">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 50" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -1176,7 +1176,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                 </parentTerm>
@@ -1203,6 +1203,21 @@
         </parserOutput>
       </opaqueExpression>
     </filter>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+      <opaqueExpression expression="rent.coverageCode='RENT-CND'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coverageCode = 'RENT-CND'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="rent.coverageCode">
+              <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
     <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0 #//@ruleset/@rules.1/@actions.0 #//@ruleset/@rules.2/@actions.0 #//@ruleset/@rules.3/@actions.0 #//@ruleset/@rules.4/@actions.0 #//@ruleset/@rules.5/@actions.0 #//@ruleset/@rules.6/@actions.0 #//@ruleset/@rules.7/@actions.0 #//@ruleset/@rules.8/@actions.0 #//@ruleset/@rules.9/@actions.0 #//@ruleset/@rules.10/@actions.0 #//@ruleset/@rules.11/@actions.0 #//@ruleset/@rules.12/@actions.0 #//@ruleset/@rules.13/@actions.0 #//@ruleset/@rules.14/@actions.0 #//@ruleset/@rules.15/@actions.0 #//@ruleset/@rules.16/@actions.0 #//@ruleset/@rules.17/@actions.0 #//@ruleset/@rules.18/@actions.0 #//@ruleset/@rules.19/@actions.0 #//@ruleset/@rules.20/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="Prime pour nombre de nuits louées rentedNightsNumberPremium est {ca.rentedNightsNumberPremium}">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Prime pour nombre de nuits louées rentedNightsNumberPremium est  + ca.rentedNightsNumberPremium" expressiontype="BRSTATEMENT">
@@ -1218,8 +1233,8 @@
         </parserOutput>
       </text>
     </ruleStatement>
-    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#//@ruleset/@filters.0">
-      <extension association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" filters="#//@ruleset/@filters.0">
+    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
+      <extension association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
         <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables" ruleStatements="#//@ruleset/@ruleStatements.0">
           <alias value="ca"/>
           <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/rentedNightsNumberPremium"/>
@@ -1235,6 +1250,11 @@
             <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Rental/rentedNightsNumber"/>
           </extension>
         </extension>
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#//@ruleset/@filters.1">
+          <alias value="rent"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coveragePremium"/>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+        </extension>
       </extension>
     </logicalVariable>
   </ruleset>
@@ -1242,11 +1262,11 @@
     <actionSection rowCount="50" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell/>
-        <expressionCell external="ca.rentedNightsNumberPremium">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+        <expressionCell external="rent.coveragePremium">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
@@ -1262,10 +1282,12 @@
         <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ra.rentedNightsNumber&lt;>null" filter="#//@ruleset/@filters.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="rent.coverageCode='RENT-CND'" filter="#//@ruleset/@filters.1"/>
           </children>
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ra.rentedNightsNumber&lt;>null" filter="#//@ruleset/@filters.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="rent.coverageCode='RENT-CND'" filter="#//@ruleset/@filters.1"/>
             </children>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
               <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
@@ -1284,6 +1306,13 @@
                 <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@extension.0/@referencedAttributes.0"/>
               </children>
             </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="rent.coverageCode='RENT-CND'" filter="#//@ruleset/@filters.1"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.1"/>
+            </children>
           </children>
         </children>
       </rootNode>
@@ -1299,6 +1328,21 @@
                     <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                       <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                     </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.1">
+        <expressionCell external="rent.coverageCode='RENT-CND'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coverageCode = 'RENT-CND'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="rent.coverageCode">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                  <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
@@ -1361,13 +1405,13 @@
         </expressionCell>
       </conditionItemList>
     </conditionSection>
-    <ruleSection columnCount="21" scrollColumnLeft="5">
+    <ruleSection columnCount="21" scrollColumnLeft="15">
       <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1375,7 +1419,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1414,10 +1458,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1425,7 +1469,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1464,10 +1508,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1475,7 +1519,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1514,10 +1558,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="50">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 50" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1525,7 +1569,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1564,10 +1608,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="75">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 75" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 75" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1575,7 +1619,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1614,10 +1658,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="100">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 100" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 100" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1625,7 +1669,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1664,10 +1708,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1675,7 +1719,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1714,10 +1758,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1725,7 +1769,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1764,10 +1808,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="50">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 50" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1775,7 +1819,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1814,10 +1858,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="75">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 75" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 75" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1825,7 +1869,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1864,10 +1908,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="100">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 100" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 100" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1875,7 +1919,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1914,10 +1958,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1925,7 +1969,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -1964,10 +2008,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="13">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 13" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 13" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -1975,7 +2019,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -2014,10 +2058,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2025,7 +2069,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -2064,10 +2108,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="38">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 38" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 38" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2075,7 +2119,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -2114,10 +2158,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="50">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 50" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2125,7 +2169,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -2164,10 +2208,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="0">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2175,7 +2219,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -2214,10 +2258,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="13">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 13" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 13" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2225,7 +2269,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -2264,10 +2308,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="25">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 25" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 25" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2275,7 +2319,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -2314,10 +2358,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="38">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 38" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 38" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2325,7 +2369,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>
@@ -2364,10 +2408,10 @@
           </parserOutput>
         </conditionValueSetCellList>
         <actionValueSetCellList valueSet="50">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ca.rentedNightsNumberPremium = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="rent.coveragePremium = 50" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
-              <terms text="rentedNightsNumberPremium" datatype="Integer" termtype="ATTRIBUTE" fulltext="ca.rentedNightsNumberPremium">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="coveragePremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="rent.coveragePremium">
+                <parentTerm text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                   <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
@@ -2375,7 +2419,7 @@
               </terms>
             </modifiedTermList>
             <referencedTermList>
-              <terms text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca">
+              <terms text="rent" datatype="Coverages" termtype="ENTITY" fulltext="rent">
                 <parentTerm text="Dwellings" datatype="Dwellings" termtype="ENTITY" fulltext="Request.Dwellings">
                   <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                 </parentTerm>

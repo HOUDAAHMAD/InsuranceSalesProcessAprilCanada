@@ -1,600 +1,1199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_cHps07WoEfCK9-qmr2SgdA" externalChecksum="7824986:507989954:2146616488">
-  <languageCode>fr_FR</languageCode>
-  <ruleset vocabularyUpdateStamp="_uXQNoLWkEfCWkvDdhWZcRQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
-    <rule/>
-    <rule>
-      <condition>
-        <opaqueExpression expression="dw.rootForm = rootForm#C1 or dw.rootForm = rootForm#D1">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'C1' or dw.rootForm = 'D1'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-        <viewExpressions lhs="dw.rootForm" rhs="{rootForm#C1, rootForm#D1}"/>
-      </condition>
-      <condition/>
-      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
-        <opaqueExpression expression="R3.amountOfInsurance = (cv.amountOfInsurance/2).min(25000)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( cv.amountOfInsurance / 2 ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore">
+  <com.corticon.rulesemf.assetmodel:RulesheetAsset majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_8bPz4r5XEfCRhLtF5Vispw" externalChecksum="7824986:507989954:2146616488">
+    <languageCode>fr_FR</languageCode>
+    <ruleset vocabularyUpdateStamp="_eO8H8b5EEfCDBq9fOW4edA" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+      <rule/>
+      <rule>
+        <condition>
+          <opaqueExpression expression="dw.rootForm = rootForm#C1 or dw.rootForm = rootForm#D1">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'C1' or dw.rootForm = 'D1'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.amountOfInsurance">
-                <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="dw.rootForm" rhs="{rootForm#C1, rootForm#D1}"/>
+        </condition>
+        <condition/>
+        <action documentingRuleStatements="#/1/@ruleset/@ruleStatements.0 #/0/@ruleset/@ruleStatements.0">
+          <opaqueExpression expression="R3.amountOfInsurance = (cv.amountOfInsurance/2).min(25000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( cv.amountOfInsurance / 2 ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-      </action>
-    </rule>
-    <rule>
-      <condition>
-        <opaqueExpression expression="dw.rootForm = rootForm#A1 or dw.rootForm = rootForm#A3">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-        <viewExpressions lhs="dw.rootForm" rhs="{rootForm#A1, rootForm#A3}"/>
-      </condition>
-      <condition>
-        <opaqueExpression expression="(sa.amountOfInsurance&lt;=500000)=false">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
-                <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-        <viewExpressions lhs="sa.amountOfInsurance&lt;=500000" rhs="F"/>
-      </condition>
-      <action>
-        <opaqueExpression expression="R3.amountOfInsurance = (R3.amountOfInsurance).min(50000)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 50000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.amountOfInsurance">
+                  <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+        </action>
+      </rule>
+      <rule>
+        <condition>
+          <opaqueExpression expression="dw.rootForm = rootForm#A1 or dw.rootForm = rootForm#A3">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-      </action>
-    </rule>
-    <rule>
-      <condition>
-        <opaqueExpression expression="dw.rootForm = rootForm#A1 or dw.rootForm = rootForm#A3">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-        <viewExpressions lhs="dw.rootForm" rhs="{rootForm#A1, rootForm#A3}"/>
-      </condition>
-      <condition>
-        <opaqueExpression expression="(sa.amountOfInsurance&lt;=500000)=true">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
-                <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="dw.rootForm" rhs="{rootForm#A1, rootForm#A3}"/>
+        </condition>
+        <condition>
+          <opaqueExpression expression="(sa.amountOfInsurance&lt;=500000)=false">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-        <viewExpressions lhs="sa.amountOfInsurance&lt;=500000" rhs="T"/>
-      </condition>
-      <action>
-        <opaqueExpression expression="R3.amountOfInsurance = (R3.amountOfInsurance).min(25000)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="sa.amountOfInsurance&lt;=500000" rhs="F"/>
+        </condition>
+        <action>
+          <opaqueExpression expression="R3.amountOfInsurance = (R3.amountOfInsurance).min(50000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 50000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-      </action>
-    </rule>
-    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-      <opaqueExpression expression="cv.coverageCode='Section1CoverageC'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cv.coverageCode = 'Section1CoverageC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="cv.coverageCode">
-              <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-      <opaqueExpression expression="sa.coverageCode='Section1CoverageA'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sa.coverageCode = 'Section1CoverageA'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="sa.coverageCode">
-              <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-      <opaqueExpression expression="R3.coverageCode='R3'">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.coverageCode = 'R3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-          <referencedTermList>
-            <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="R3.coverageCode">
-              <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </opaqueExpression>
-    </filter>
-    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-      <text expression="Limite pour refoulement d'égout, SewerBackupLimit est {ca.sewerBackupLimit}. homeType est {co.homeType}">
-        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Limite pour refoulement d'égout, SewerBackupLimit est  + ca.sewerBackupLimit + . homeType est  + co.homeType" expressiontype="BRSTATEMENT">
-          <referencedTermList>
-            <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
-              <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-            <terms text="sewerBackupLimit" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.sewerBackupLimit">
-              <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </parentTerm>
-            </terms>
-          </referencedTermList>
-        </parserOutput>
-      </text>
-    </ruleStatement>
-    <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
-      <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
-        <alias value="dw"/>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables" ruleStatements="#//@ruleset/@ruleStatements.0">
-          <alias value="ca"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/rentedNightsNumberPremium"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/sewerBackupLimit"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Construction">
-          <alias value="co"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction/homeType"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#//@ruleset/@filters.0">
-          <alias value="cv"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Occupancy" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Occupancy">
-          <alias value="oc"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Occupancy/occupancyType"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#//@ruleset/@filters.1">
-          <alias value="sa"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
-        </extension>
-        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#//@ruleset/@filters.2">
-          <alias value="R3"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
-          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
-        </extension>
-        <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/rootForm"/>
-      </extension>
-    </logicalVariable>
-  </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightConditionsIf="20">
-    <actionSection rowCount="49" columnWidthFactor="0.5">
-      <actionItemList>
-        <valueSetCell/>
-        <expressionCell external="R3.amountOfInsurance">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </actionItemList>
-    </actionSection>
-    <scopeSection>
-      <rootNode>
-        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="cv.coverageCode='Section1CoverageC'" filter="#//@ruleset/@filters.0"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sa.coverageCode='Section1CoverageA'" filter="#//@ruleset/@filters.1"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R3.coverageCode='R3'" filter="#//@ruleset/@filters.2"/>
-          </children>
-          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="cv.coverageCode='Section1CoverageC'" filter="#//@ruleset/@filters.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sa.coverageCode='Section1CoverageA'" filter="#//@ruleset/@filters.1"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R3.coverageCode='R3'" filter="#//@ruleset/@filters.2"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="cv.coverageCode='Section1CoverageC'" filter="#//@ruleset/@filters.0"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.1"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.0"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sa.coverageCode='Section1CoverageA'" filter="#//@ruleset/@filters.1"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.1"/>
-            </children>
-            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
-                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R3.coverageCode='R3'" filter="#//@ruleset/@filters.2"/>
-              </children>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.0"/>
-              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.1"/>
-            </children>
-          </children>
-        </children>
-      </rootNode>
-    </scopeSection>
-    <filterSection rowCount="49">
-      <filterItemList filter="#//@ruleset/@filters.0">
-        <expressionCell external="cv.coverageCode='Section1CoverageC'">
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+        </action>
+      </rule>
+      <rule>
+        <condition>
+          <opaqueExpression expression="dw.rootForm = rootForm#A1 or dw.rootForm = rootForm#A3">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="dw.rootForm" rhs="{rootForm#A1, rootForm#A3}"/>
+        </condition>
+        <condition>
+          <opaqueExpression expression="(sa.amountOfInsurance&lt;=500000)=true">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="sa.amountOfInsurance&lt;=500000" rhs="T"/>
+        </condition>
+        <action>
+          <opaqueExpression expression="R3.amountOfInsurance = (R3.amountOfInsurance).min(25000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+        </action>
+      </rule>
+      <filter logicalVariables="#/0/@ruleset/@logicalVariables.0 #/0/@ruleset/@logicalVariables.0/@extension.0 #/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2 #/1/@ruleset/@logicalVariables.0 #/1/@ruleset/@logicalVariables.0/@extension.0 #/1/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+        <opaqueExpression expression="cv.coverageCode='Section1CoverageC'">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cv.coverageCode = 'Section1CoverageC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="cv.coverageCode">
-                <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.2">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
           </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.1">
-        <expressionCell external="sa.coverageCode='Section1CoverageA'">
+        </opaqueExpression>
+      </filter>
+      <filter logicalVariables="#/0/@ruleset/@logicalVariables.0 #/0/@ruleset/@logicalVariables.0/@extension.0 #/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4 #/1/@ruleset/@logicalVariables.0 #/1/@ruleset/@logicalVariables.0/@extension.0 #/1/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+        <opaqueExpression expression="sa.coverageCode='Section1CoverageA'">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sa.coverageCode = 'Section1CoverageA'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="sa.coverageCode">
-                <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
           </parserOutput>
-        </expressionCell>
-      </filterItemList>
-      <filterItemList filter="#//@ruleset/@filters.2">
-        <expressionCell external="R3.coverageCode='R3'">
+        </opaqueExpression>
+      </filter>
+      <filter logicalVariables="#/0/@ruleset/@logicalVariables.0 #/0/@ruleset/@logicalVariables.0/@extension.0 #/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5 #/1/@ruleset/@logicalVariables.0 #/1/@ruleset/@logicalVariables.0/@extension.0 #/1/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+        <opaqueExpression expression="R3.coverageCode='R3'">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.coverageCode = 'R3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
               <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="R3.coverageCode">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.5">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
           </parserOutput>
-        </expressionCell>
-      </filterItemList>
-    </filterSection>
-    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
-      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
-        <reference external="A1"/>
-        <text external="Limite pour refoulement d'égout, SewerBackupLimit est {ca.sewerBackupLimit}. homeType est {co.homeType}">
+        </opaqueExpression>
+      </filter>
+      <ruleStatement post="Info" ruleModelElements="#/0/@ruleset/@rules.1/@actions.0" logicalVariable="#/1/@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+        <text expression="Limite pour refoulement d'égout, SewerBackupLimit est {ca.sewerBackupLimit}. homeType est {co.homeType}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Limite pour refoulement d'égout, SewerBackupLimit est  + ca.sewerBackupLimit + . homeType est  + co.homeType" expressiontype="BRSTATEMENT">
             <referencedTermList>
               <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
-                <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
               <terms text="sewerBackupLimit" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.sewerBackupLimit">
-                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
                   </parentTerm>
                 </parentTerm>
               </terms>
             </referencedTermList>
           </parserOutput>
         </text>
-      </ruleStatementItemList>
-    </ruleStatementSection>
-    <conditionSection rowCount="50" columnWidthFactor="0.5">
-      <conditionItemList>
-        <valueSetCell/>
-        <expressionCell external="dw.rootForm">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
-            <referencedTermList>
-              <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </conditionItemList>
-      <conditionItemList>
-        <valueSetCell/>
-        <expressionCell external="sa.amountOfInsurance&lt;=500000">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sa.amountOfInsurance &lt;= 500000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
-                <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+      </ruleStatement>
+      <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#/0/@ruleset/@filters.0 #/0/@ruleset/@filters.1 #/0/@ruleset/@filters.2 #/1/@ruleset/@filters.0 #/1/@ruleset/@filters.1 #/1/@ruleset/@filters.2">
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" filters="#/0/@ruleset/@filters.0 #/0/@ruleset/@filters.1 #/0/@ruleset/@filters.2 #/1/@ruleset/@filters.0 #/1/@ruleset/@filters.1 #/1/@ruleset/@filters.2">
+          <alias value="dw"/>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables">
+            <alias value="ca"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/sewerBackupLimit"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Construction">
+            <alias value="co"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction/homeType"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#/0/@ruleset/@filters.0 #/1/@ruleset/@filters.0">
+            <alias value="cv"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Occupancy" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Occupancy">
+            <alias value="oc"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Occupancy/occupancyType"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#/0/@ruleset/@filters.1 #/1/@ruleset/@filters.1">
+            <alias value="sa"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#/0/@ruleset/@filters.2 #/1/@ruleset/@filters.2">
+            <alias value="R3"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          </extension>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/rootForm"/>
+        </extension>
+      </logicalVariable>
+    </ruleset>
+    <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightConditionsIf="20">
+      <actionSection rowCount="49" columnWidthFactor="0.5">
+        <actionItemList>
+          <valueSetCell/>
+          <expressionCell external="R3.amountOfInsurance">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
-      </conditionItemList>
-    </conditionSection>
-    <ruleSection columnCount="20">
-      <ruleColumnList ruleId="0" columnWidth="119" pRule="#//@ruleset/@rules.0"/>
-      <ruleColumnList ruleId="1" columnWidth="358" pRule="#//@ruleset/@rules.1">
-        <conditionValueSetCellList valueSet="{rootForm#C1, rootForm#D1}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'C1' or dw.rootForm = 'D1'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="-"/>
-        <actionValueSetCellList valueSet="(cv.amountOfInsurance/2).min(25000)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( cv.amountOfInsurance / 2 ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </actionItemList>
+      </actionSection>
+      <scopeSection>
+        <rootNode>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="cv.coverageCode='Section1CoverageC'" filter="#/0/@ruleset/@filters.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sa.coverageCode='Section1CoverageA'" filter="#/0/@ruleset/@filters.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R3.coverageCode='R3'" filter="#/0/@ruleset/@filters.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="cv.coverageCode='Section1CoverageC'" filter="#/0/@ruleset/@filters.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sa.coverageCode='Section1CoverageA'" filter="#/0/@ruleset/@filters.1"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R3.coverageCode='R3'" filter="#/0/@ruleset/@filters.2"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.0"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="cv.coverageCode='Section1CoverageC'" filter="#/0/@ruleset/@filters.0"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.1"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.0"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sa.coverageCode='Section1CoverageA'" filter="#/0/@ruleset/@filters.1"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.1"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R3.coverageCode='R3'" filter="#/0/@ruleset/@filters.2"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.1"/>
+              </children>
+            </children>
+          </children>
+        </rootNode>
+      </scopeSection>
+      <filterSection rowCount="49">
+        <filterItemList filter="#/0/@ruleset/@filters.0">
+          <expressionCell external="cv.coverageCode='Section1CoverageC'">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cv.coverageCode = 'Section1CoverageC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="cv.coverageCode">
+                  <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </filterItemList>
+        <filterItemList filter="#/0/@ruleset/@filters.1">
+          <expressionCell external="sa.coverageCode='Section1CoverageA'">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sa.coverageCode = 'Section1CoverageA'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="sa.coverageCode">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </filterItemList>
+        <filterItemList filter="#/0/@ruleset/@filters.2">
+          <expressionCell external="R3.coverageCode='R3'">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.coverageCode = 'R3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="R3.coverageCode">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </filterItemList>
+      </filterSection>
+      <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+        <ruleStatementItemList ruleStatement="#/0/@ruleset/@ruleStatements.0">
+          <reference external="A1"/>
+          <text external="Limite pour refoulement d'égout, SewerBackupLimit est {ca.sewerBackupLimit}. homeType est {co.homeType}">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Limite pour refoulement d'égout, SewerBackupLimit est  + ca.sewerBackupLimit + . homeType est  + co.homeType" expressiontype="BRSTATEMENT">
+              <referencedTermList>
+                <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
+                  <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+                <terms text="sewerBackupLimit" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.sewerBackupLimit">
+                  <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </text>
+        </ruleStatementItemList>
+      </ruleStatementSection>
+      <conditionSection rowCount="50" columnWidthFactor="0.5">
+        <conditionItemList>
+          <valueSetCell/>
+          <expressionCell external="dw.rootForm">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </conditionItemList>
+        <conditionItemList>
+          <valueSetCell/>
+          <expressionCell external="sa.amountOfInsurance&lt;=500000">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sa.amountOfInsurance &lt;= 500000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </conditionItemList>
+      </conditionSection>
+      <ruleSection columnCount="20">
+        <ruleColumnList ruleId="0" columnWidth="119" pRule="#/0/@ruleset/@rules.0"/>
+        <ruleColumnList ruleId="1" columnWidth="358" pRule="#/0/@ruleset/@rules.1">
+          <conditionValueSetCellList valueSet="{rootForm#C1, rootForm#D1}">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'C1' or dw.rootForm = 'D1'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <conditionValueSetCellList valueSet="-"/>
+          <actionValueSetCellList valueSet="(cv.amountOfInsurance/2).min(25000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( cv.amountOfInsurance / 2 ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.amountOfInsurance">
-                <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv">
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.amountOfInsurance">
+                  <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </actionValueSetCellList>
+        </ruleColumnList>
+        <ruleColumnList ruleId="2" columnWidth="284" pRule="#/0/@ruleset/@rules.2">
+          <conditionValueSetCellList valueSet="{rootForm#A1, rootForm#A3}">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <conditionValueSetCellList valueSet="F">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <actionValueSetCellList valueSet="(R3.amountOfInsurance).min(50000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 50000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
-      <ruleColumnList ruleId="2" columnWidth="284" pRule="#//@ruleset/@rules.2">
-        <conditionValueSetCellList valueSet="{rootForm#A1, rootForm#A3}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="F">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
-                <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="(R3.amountOfInsurance).min(50000)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 50000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </actionValueSetCellList>
+        </ruleColumnList>
+        <ruleColumnList ruleId="3" columnWidth="285" pRule="#/0/@ruleset/@rules.3">
+          <conditionValueSetCellList valueSet="{rootForm#A1, rootForm#A3}">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <conditionValueSetCellList valueSet="T">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <actionValueSetCellList valueSet="(R3.amountOfInsurance).min(25000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </actionValueSetCellList>
+        </ruleColumnList>
+      </ruleSection>
+    </rulesheetViewList>
+  </com.corticon.rulesemf.assetmodel:RulesheetAsset>
+  <com.corticon.rulesemf.assetmodel:RulesheetAsset majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_cHps07WoEfCK9-qmr2SgdA" externalChecksum="7824986:507989954:2146616488">
+    <languageCode>fr_FR</languageCode>
+    <ruleset vocabularyUpdateStamp="_uXQNoLWkEfCWkvDdhWZcRQ" vocabulary="../../../InsuranceSalesProcessAprilCanada.ecore#/">
+      <rule/>
+      <rule>
+        <condition>
+          <opaqueExpression expression="dw.rootForm = rootForm#C1 or dw.rootForm = rootForm#D1">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'C1' or dw.rootForm = 'D1'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="dw.rootForm" rhs="{rootForm#C1, rootForm#D1}"/>
+        </condition>
+        <condition/>
+        <action>
+          <opaqueExpression expression="R3.amountOfInsurance = (cv.amountOfInsurance/2).min(25000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( cv.amountOfInsurance / 2 ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.amountOfInsurance">
+                  <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+        </action>
+      </rule>
+      <rule>
+        <condition>
+          <opaqueExpression expression="dw.rootForm = rootForm#A1 or dw.rootForm = rootForm#A3">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="dw.rootForm" rhs="{rootForm#A1, rootForm#A3}"/>
+        </condition>
+        <condition>
+          <opaqueExpression expression="(sa.amountOfInsurance&lt;=500000)=false">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="sa.amountOfInsurance&lt;=500000" rhs="F"/>
+        </condition>
+        <action>
+          <opaqueExpression expression="R3.amountOfInsurance = (R3.amountOfInsurance).min(50000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 50000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+        </action>
+      </rule>
+      <rule>
+        <condition>
+          <opaqueExpression expression="dw.rootForm = rootForm#A1 or dw.rootForm = rootForm#A3">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="dw.rootForm" rhs="{rootForm#A1, rootForm#A3}"/>
+        </condition>
+        <condition>
+          <opaqueExpression expression="(sa.amountOfInsurance&lt;=500000)=true">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+          <viewExpressions lhs="sa.amountOfInsurance&lt;=500000" rhs="T"/>
+        </condition>
+        <action>
+          <opaqueExpression expression="R3.amountOfInsurance = (R3.amountOfInsurance).min(25000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </opaqueExpression>
+        </action>
+      </rule>
+      <filter logicalVariables="#/0/@ruleset/@logicalVariables.0 #/0/@ruleset/@logicalVariables.0/@extension.0 #/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+        <opaqueExpression expression="cv.coverageCode='Section1CoverageC'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cv.coverageCode = 'Section1CoverageC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
-              <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="cv.coverageCode">
+                <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
                 </parentTerm>
               </terms>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </filter>
+      <filter logicalVariables="#/0/@ruleset/@logicalVariables.0 #/0/@ruleset/@logicalVariables.0/@extension.0 #/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+        <opaqueExpression expression="sa.coverageCode='Section1CoverageA'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sa.coverageCode = 'Section1CoverageA'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="sa.coverageCode">
+                <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </filter>
+      <filter logicalVariables="#/0/@ruleset/@logicalVariables.0 #/0/@ruleset/@logicalVariables.0/@extension.0 #/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+        <opaqueExpression expression="R3.coverageCode='R3'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.coverageCode = 'R3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="R3.coverageCode">
+                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </filter>
+      <ruleStatement post="Info" ruleModelElements="#/0/@ruleset/@rules.1/@actions.0">
+        <text expression="Limite pour refoulement d'égout, SewerBackupLimit est {ca.sewerBackupLimit}. homeType est {co.homeType}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Limite pour refoulement d'égout, SewerBackupLimit est  + ca.sewerBackupLimit + . homeType est  + co.homeType" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
+                <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sewerBackupLimit" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.sewerBackupLimit">
+                <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatement>
+      <logicalVariable entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Request" filters="#/0/@ruleset/@filters.0 #/0/@ruleset/@filters.1 #/0/@ruleset/@filters.2">
+        <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Request/Dwellings" filters="#/0/@ruleset/@filters.0 #/0/@ruleset/@filters.1 #/0/@ruleset/@filters.2">
+          <alias value="dw"/>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/CalculationsVariables" ruleStatements="#/0/@ruleset/@ruleStatements.0">
+            <alias value="ca"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/rentedNightsNumberPremium"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//CalculationsVariables/sewerBackupLimit"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Construction">
+            <alias value="co"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Construction/homeType"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#/0/@ruleset/@filters.0">
+            <alias value="cv"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Occupancy" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Occupancy">
+            <alias value="oc"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Occupancy/occupancyType"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#/0/@ruleset/@filters.1">
+            <alias value="sa"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          </extension>
+          <extension explicit="true" association="true" entity="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages" traversedAssocRole="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/Coverages" filters="#/0/@ruleset/@filters.2">
+            <alias value="R3"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/amountOfInsurance"/>
+            <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Coverages/coverageCode"/>
+          </extension>
+          <referencedAttributes attribute="../../../InsuranceSalesProcessAprilCanada.ecore#//Dwellings/rootForm"/>
+        </extension>
+      </logicalVariable>
+    </ruleset>
+    <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightConditionsIf="20">
+      <actionSection rowCount="49" columnWidthFactor="0.5">
+        <actionItemList>
+          <valueSetCell/>
+          <expressionCell external="R3.amountOfInsurance">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </actionItemList>
+      </actionSection>
+      <scopeSection>
+        <rootNode>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="cv.coverageCode='Section1CoverageC'" filter="#/0/@ruleset/@filters.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sa.coverageCode='Section1CoverageA'" filter="#/0/@ruleset/@filters.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R3.coverageCode='R3'" filter="#/0/@ruleset/@filters.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="cv.coverageCode='Section1CoverageC'" filter="#/0/@ruleset/@filters.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sa.coverageCode='Section1CoverageA'" filter="#/0/@ruleset/@filters.1"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R3.coverageCode='R3'" filter="#/0/@ruleset/@filters.2"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.0"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="cv.coverageCode='Section1CoverageC'" filter="#/0/@ruleset/@filters.0"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2/@referencedAttributes.1"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.3">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.3/@referencedAttributes.0"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="sa.coverageCode='Section1CoverageA'" filter="#/0/@ruleset/@filters.1"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4/@referencedAttributes.1"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="R3.coverageCode='R3'" filter="#/0/@ruleset/@filters.2"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5/@referencedAttributes.1"/>
+              </children>
+            </children>
+          </children>
+        </rootNode>
+      </scopeSection>
+      <filterSection rowCount="49">
+        <filterItemList filter="#/0/@ruleset/@filters.0">
+          <expressionCell external="cv.coverageCode='Section1CoverageC'">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="cv.coverageCode = 'Section1CoverageC'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="cv.coverageCode">
+                  <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.2">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </filterItemList>
+        <filterItemList filter="#/0/@ruleset/@filters.1">
+          <expressionCell external="sa.coverageCode='Section1CoverageA'">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sa.coverageCode = 'Section1CoverageA'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="sa.coverageCode">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </filterItemList>
+        <filterItemList filter="#/0/@ruleset/@filters.2">
+          <expressionCell external="R3.coverageCode='R3'">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.coverageCode = 'R3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="coverageCode" datatype="String" termtype="ATTRIBUTE" fulltext="R3.coverageCode">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.5">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </filterItemList>
+      </filterSection>
+      <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+        <ruleStatementItemList ruleStatement="#/0/@ruleset/@ruleStatements.0">
+          <reference external="A1"/>
+          <text external="Limite pour refoulement d'égout, SewerBackupLimit est {ca.sewerBackupLimit}. homeType est {co.homeType}">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Limite pour refoulement d'égout, SewerBackupLimit est  + ca.sewerBackupLimit + . homeType est  + co.homeType" expressiontype="BRSTATEMENT">
+              <referencedTermList>
+                <terms text="homeType" datatype="String" termtype="ATTRIBUTE" fulltext="co.homeType">
+                  <parentTerm text="co" datatype="Construction" termtype="ENTITY" fulltext="co" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+                <terms text="sewerBackupLimit" datatype="Decimal" termtype="ATTRIBUTE" fulltext="ca.sewerBackupLimit">
+                  <parentTerm text="ca" datatype="CalculationsVariables" termtype="ENTITY" fulltext="ca" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </text>
+        </ruleStatementItemList>
+      </ruleStatementSection>
+      <conditionSection rowCount="50" columnWidthFactor="0.5">
+        <conditionItemList>
+          <valueSetCell/>
+          <expressionCell external="dw.rootForm">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </conditionItemList>
+        <conditionItemList>
+          <valueSetCell/>
+          <expressionCell external="sa.amountOfInsurance&lt;=500000">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sa.amountOfInsurance &lt;= 500000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </expressionCell>
+        </conditionItemList>
+      </conditionSection>
+      <ruleSection columnCount="20">
+        <ruleColumnList ruleId="0" columnWidth="119" pRule="#/0/@ruleset/@rules.0"/>
+        <ruleColumnList ruleId="1" columnWidth="358" pRule="#/0/@ruleset/@rules.1">
+          <conditionValueSetCellList valueSet="{rootForm#C1, rootForm#D1}">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'C1' or dw.rootForm = 'D1'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <conditionValueSetCellList valueSet="-"/>
+          <actionValueSetCellList valueSet="(cv.amountOfInsurance/2).min(25000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( cv.amountOfInsurance / 2 ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
-      <ruleColumnList ruleId="3" columnWidth="285" pRule="#//@ruleset/@rules.3">
-        <conditionValueSetCellList valueSet="{rootForm#A1, rootForm#A3}">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <conditionValueSetCellList valueSet="T">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
-                <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.4">
-                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="cv.amountOfInsurance">
+                  <parentTerm text="cv" datatype="Coverages" termtype="ENTITY" fulltext="cv">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </conditionValueSetCellList>
-        <actionValueSetCellList valueSet="(R3.amountOfInsurance).min(25000)">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </actionValueSetCellList>
+        </ruleColumnList>
+        <ruleColumnList ruleId="2" columnWidth="284" pRule="#/0/@ruleset/@rules.2">
+          <conditionValueSetCellList valueSet="{rootForm#A1, rootForm#A3}">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <conditionValueSetCellList valueSet="F">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <actionValueSetCellList valueSet="(R3.amountOfInsurance).min(50000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 50000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
-                <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
-              <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
-                <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </actionValueSetCellList>
+        </ruleColumnList>
+        <ruleColumnList ruleId="3" columnWidth="285" pRule="#/0/@ruleset/@rules.3">
+          <conditionValueSetCellList valueSet="{rootForm#A1, rootForm#A3}">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="dw.rootForm = 'A1' or dw.rootForm = 'A3'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="rootForm" datatype="String" termtype="ATTRIBUTE" fulltext="dw.rootForm">
+                  <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <conditionValueSetCellList valueSet="T">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( sa.amountOfInsurance &lt;= 500000 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+              <referencedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sa.amountOfInsurance">
+                  <parentTerm text="sa" datatype="Coverages" termtype="ENTITY" fulltext="sa" variable="#/0/@ruleset/@logicalVariables.0/@extension.0/@extension.4">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw" variable="#/0/@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#/0/@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </conditionValueSetCellList>
+          <actionValueSetCellList valueSet="(R3.amountOfInsurance).min(25000)">
+            <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3.amountOfInsurance = ( R3.amountOfInsurance ).min ( 25000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+              <modifiedTermList>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </modifiedTermList>
+              <referencedTermList>
+                <terms text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
                   <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
                     <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
                   </parentTerm>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
-      </ruleColumnList>
-    </ruleSection>
-  </rulesheetViewList>
-</com.corticon.rulesemf.assetmodel:RulesheetAsset>
+                </terms>
+                <terms text="amountOfInsurance" datatype="Decimal" termtype="ATTRIBUTE" fulltext="R3.amountOfInsurance">
+                  <parentTerm text="R3" datatype="Coverages" termtype="ENTITY" fulltext="R3">
+                    <parentTerm text="dw" datatype="Dwellings" termtype="ENTITY" fulltext="dw">
+                      <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                    </parentTerm>
+                  </parentTerm>
+                </terms>
+              </referencedTermList>
+            </parserOutput>
+          </actionValueSetCellList>
+        </ruleColumnList>
+      </ruleSection>
+    </rulesheetViewList>
+  </com.corticon.rulesemf.assetmodel:RulesheetAsset>
+</xmi:XMI>
