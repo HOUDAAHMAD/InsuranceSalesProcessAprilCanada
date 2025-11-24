@@ -1,31 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_-MPes7UHEfC1J4crfbyqiQ" externalChecksum="7824986:507989954:2146616488">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_KinD5cVuEfCsWMi_hx9MWg" externalChecksum="7824986:507989954:2146616488">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_tziAULUGEfC1J4crfbyqiQ" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
+  <ruleset vocabularyUpdateStamp="_hz-jocFzEfCsWMi_hx9MWg" vocabulary="../../../../InsuranceSalesProcessAprilCanada.ecore#/">
     <rule>
-      <action>
-        <opaqueExpression expression="bd.previousPremium = bd.fullTermPremium">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.previousPremium = bd.fullTermPremium" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="previousPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.previousPremium">
-                <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-              </terms>
-              <terms text="fullTermPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.fullTermPremium">
-                <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </opaqueExpression>
-      </action>
+      <action/>
       <action>
         <opaqueExpression expression="pd.policyDuration = pd.transactionDate.daysBetween(pd.expirationDate)">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyDuration = pd.transactionDate.daysBetween ( pd.expirationDate )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -80,8 +58,8 @@
         </opaqueExpression>
       </action>
       <action>
-        <opaqueExpression expression="bd.proratedPremium = bd.previousPremium*bd.prorataRate">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.proratedPremium = bd.previousPremium * bd.prorataRate" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <opaqueExpression expression="bd.proratedPremium = (bd.fullTermPremium-bd.previousPremium)*bd.prorataRate">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.proratedPremium = ( bd.fullTermPremium - bd.previousPremium ) * bd.prorataRate" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="proratedPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.proratedPremium">
                 <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -92,6 +70,11 @@
             <referencedTermList>
               <terms text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd" variable="#//@ruleset/@logicalVariables.0/@extension.0">
                 <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="fullTermPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.fullTermPremium">
+                <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
               </terms>
               <terms text="previousPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.previousPremium">
                 <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd" variable="#//@ruleset/@logicalVariables.0/@extension.0">
@@ -128,6 +111,8 @@
         <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/proratedPremium"/>
         <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/previousPremium"/>
         <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/fullTermPremium"/>
+        <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/evaluationFees"/>
+        <referencedAttributes attribute="../../../../InsuranceSalesProcessAprilCanada.ecore#//BillingDetail/serviceFees"/>
       </extension>
       <extension explicit="true" association="true" entity="../../../../InsuranceSalesProcessAprilCanada.ecore#//PolicyDetail" traversedAssocRole="../../../../InsuranceSalesProcessAprilCanada.ecore#//Request/PolicyDetail" filters="#//@ruleset/@filters.0">
         <alias value="pd"/>
@@ -142,18 +127,8 @@
   <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightConditionsIf="26">
     <actionSection rowCount="50" columnWidthFactor="0.5">
       <actionItemList>
-        <valueSetCell/>
-        <expressionCell external="bd.previousPremium">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.previousPremium" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
-            <referencedTermList>
-              <terms text="previousPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.previousPremium">
-                <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd" variable="#//@ruleset/@logicalVariables.0/@extension.0">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request" variable="#//@ruleset/@logicalVariables.0"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </expressionCell>
+        <valueSetCell valueSet=""/>
+        <expressionCell/>
       </actionItemList>
       <actionItemList>
         <valueSetCell/>
@@ -209,6 +184,8 @@
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.5"/>
           </children>
           <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
             <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
@@ -242,27 +219,7 @@
     <conditionSection rowCount="50" columnWidthFactor="0.5"/>
     <ruleSection columnCount="20">
       <ruleColumnList ruleId="0" columnWidth="559" pRule="#//@ruleset/@rules.0">
-        <actionValueSetCellList valueSet="bd.fullTermPremium">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.previousPremium = bd.fullTermPremium" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
-            <modifiedTermList>
-              <terms text="previousPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.previousPremium">
-                <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
-            </modifiedTermList>
-            <referencedTermList>
-              <terms text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd">
-                <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-              </terms>
-              <terms text="fullTermPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.fullTermPremium">
-                <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd">
-                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
-                </parentTerm>
-              </terms>
-            </referencedTermList>
-          </parserOutput>
-        </actionValueSetCellList>
+        <actionValueSetCellList/>
         <actionValueSetCellList valueSet="pd.transactionDate.daysBetween(pd.expirationDate)">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="pd.policyDuration = pd.transactionDate.daysBetween ( pd.expirationDate )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
@@ -312,8 +269,8 @@
             </referencedTermList>
           </parserOutput>
         </actionValueSetCellList>
-        <actionValueSetCellList valueSet="bd.previousPremium*bd.prorataRate">
-          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.proratedPremium = bd.previousPremium * bd.prorataRate" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+        <actionValueSetCellList valueSet="(bd.fullTermPremium-bd.previousPremium)*bd.prorataRate">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="bd.proratedPremium = ( bd.fullTermPremium - bd.previousPremium ) * bd.prorataRate" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
             <modifiedTermList>
               <terms text="proratedPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.proratedPremium">
                 <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd">
@@ -324,6 +281,11 @@
             <referencedTermList>
               <terms text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd">
                 <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+              </terms>
+              <terms text="fullTermPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.fullTermPremium">
+                <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd">
+                  <parentTerm text="Request" datatype="Request" termtype="ENTITY" fulltext="Request"/>
+                </parentTerm>
               </terms>
               <terms text="previousPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="bd.previousPremium">
                 <parentTerm text="bd" datatype="BillingDetail" termtype="ENTITY" fulltext="bd">
